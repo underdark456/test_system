@@ -1,0 +1,4 @@
+2022-01-24 16:07:40 : sys_logger - INFO - call method NmsApiDriver.__init__(args:(1, <module 'requests' from 'C:\\Users\\ish\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\requests\\__init__.py'>), kwargs:{})
+2022-01-24 16:07:40 : sys_logger - INFO - NmsApiDriver.__init__: return None
+2022-01-24 16:07:40 : sys_logger - INFO - call public method NmsApiDriver.login(args:('admin', '12345'), kwargs:{})
+2022-01-24 16:07:40 : sys_logger - INFO - NmsApiDriver.login: return None

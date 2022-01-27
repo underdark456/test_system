@@ -1,0 +1,156 @@
+
+.nms 0
+config_ver 20
+name UHP NMS
+created 1638951885
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename mf_hub_3_stations.txt
+load_filename default_config.txt
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name mf_hub
+created 1638951885
+tx_stat_num 11
+rx_stat_num 11
+rx_number 4
+rx_stations station:0
+mode MF_hub
+teleport teleport:0
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name test_net
+vnos vno:0
+controllers controller:0
+teleports teleport:0
+services service:0
+created 1638951885
+
+.route 0
+next route:3
+uprow station:0
+type IP_address
+service service:0
+ip 127.0.0.1
+id Private
+
+.route 1
+next route:4
+uprow station:1
+type IP_address
+service service:0
+ip 127.0.0.2
+id Private
+
+.route 2
+next route:5
+uprow station:2
+type IP_address
+service service:0
+ip 127.0.0.3
+id Private
+
+.route 3
+uprow station:0
+type Static_route
+service service:0
+mask /0
+gateway 127.0.0.4
+id Private
+
+.route 4
+uprow station:1
+type Static_route
+service service:0
+mask /0
+gateway 127.0.0.5
+id Private
+
+.route 5
+uprow station:2
+type Static_route
+service service:0
+mask /0
+gateway 127.0.0.6
+id Private
+
+.service 0
+uprow network:0
+name stn_service
+
+.station 0
+next station:1
+uprow vno:0
+name test_stn1
+routes route:0
+enable ON 
+serial 2
+rx_controller controller:0
+created 1638951885
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:1
+tx_number 2
+rx_number 2
+
+.station 1
+next station:2
+uprow vno:0
+name test_stn2
+routes route:1
+enable ON 
+serial 3
+rx_controller controller:0
+created 1638951885
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:2
+tx_number 3
+rx_number 3
+
+.station 2
+uprow vno:0
+name test_stn3
+routes route:2
+enable ON 
+serial 4
+rx_controller controller:0
+created 1638951885
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 4
+rx_number 4
+
+.teleport 0
+uprow network:0
+name test_tp
+sat_name test_sat
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name test_vno
+stations station:0
+created 1638951885

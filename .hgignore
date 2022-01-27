@@ -1,0 +1,12 @@
+.idea
+venv
+logs
+screenshots
+mocking
+syntax: glob
+*.log
+*local_options.py
+*__pycache__/*
+*.pyc
+src/uhp_sw_uploader/uhp_soft
+test_scenarios/experimental/fil/

@@ -1,0 +1,933 @@
+ApiDataTypesCase                                API data types validation case
+  test_data_types                                 Test each data type from meta on an individual field via API
+ApiErrorCodesCase                               NMS API expected error codes case, except for -4, -6, -7, -10, -11 error codes
+  test_12_object_exists                           Test error_code `-12` Object exists (aka `object with the same name / ID exists`)
+  test_13_cannot_delete                           Test error_code `-13` Cannot delete (aka `deletion is not possible as object is referenced in the others`)
+  test_14_bad_arguments                           Test error_code `-14` Bad arguments (aka `wrong request arguments`)
+  test_15_access_denied                           Test error_code `-15` Access denied (aka `no access to object`)
+  test_16_wrong_source                            Test error_code `-16` Wrong source (aka `wrong source supplied in request`)
+  test_17_no_such_object                          Test error_code `-17` No such object (aka `Object does not exist`)
+  test_18_string_too_long                         Test error_code `-18` String too long (aka `too long string specified`)
+  test_19_value_too_high                          Test error_code `-19` Value too high (aka `too high value for select vars`)
+  test_1_no_such_table                            Test error_code `-1` No such table (aka `wrong table name`)
+  test_20_value_too_low                           Test error_code `-20` Value too low (aka `too low value for select vars`)
+  test_21_one_time_set                            Test error_code `-21` One time set (aka `variable can be changed only in newly created objects`)
+  test_2_no_such_row                              Test error_code `-2` No such row (aka `too high row number for current table`)
+  test_3_no_such_variable                         Test error_code `-3` No such variable (aka `wrong variable name`)
+  test_5_bad_value                                Test error_code `-5` Bad value (aka `wrong variable value`)
+  test_8_table_full                               Test error_code `-8` Table full (aka `no space in table`)
+  test_9_no_hierarchy                             Test error_code `-9` No hierarchy (aka `hierarchical conditions are not met in request or storage`)
+ApiLogoutCase                                   One line string describing the test case
+  test_sample                                     One line string describing the test case
+ApiRandomRequestsCase                           Various API requests case
+  test_create_controller                          Not needed?
+  test_delete_invalid_table                       API delete non-existing objects
+  test_multiple_dashboard_calls                   API NMS dashboard requests. The test stops immediately at the assertion fault
+  test_nms_object_deletion                        API Delete non-existing objects case
+  test_nms_table_delete_nms                       API Delete NMS case
+  test_nms_table_object_write                     API Write non-existing objects to NMS case
+  test_non_digit_row                              API request to edit and delete an object with a non-digit ID
+  test_read_network                               Not needed?
+  test_write_invalid_new_item                     API write non-valid objects into Network ID 0
+  test_write_invalid_table                        API write to non-existing tables
+ApiRequiredParamsCase                           Test if objects can be created without passing all the required parameters
+  test_access                                     Test if an Access can be created without passing the required parameters: `group`
+  test_alert                                      Test if an Alert can be created without passing the required parameters: `name`
+  test_bal_controller                             Test if a BalController can be created without passing the required parameters: `name`
+  test_camera                                     Test if a Camera set can be created without passing the required parameters: `name`
+  test_controller                                 Test if a Controller can be created without passing the required params: `name`, `mode`, and `teleport`
+  test_dama_inroute                               Test if a dama_inroute can be created without passing the required parameter: `tx_controller`
+  test_dashboard                                  Test if a Dashboard can be created without passing the required parameters: `name`
+  test_device                                     Test if a Device can be created without passing the required parameters: `name`
+  test_gateway                                    Test if a gateway can be created without passing the required parameter: `tx_controller`
+  test_inroute                                    Test if an Inroute can be created without passing the required parameters: `tx_controller` and `inroute`
+  test_network                                    Test if a network can be created without passing the required parameters: `name`
+  test_policy                                     Test if a Policy can be created without passing the required parameters: `name`
+  test_policy_rule                                Test if a Policy rule can be created without passing the required parameters: `sequence`
+  test_profile_set                                Test if a Profile set can be created without passing the required parameters: `name`
+  test_qos                                        Test if Qos can be created without passing the required parameters: `name`
+  test_rip_router                                 Test if a Rip router set can be created without passing the required parameters: `service`
+  test_route                                      Test if a route set can be created without passing the required parameters: `type`, `service`
+  test_server                                     Test if a server can be created without passing the required parameters: `name`
+  test_service                                    Test if a Service can be created without passing the required parameters: `name`
+  test_shapers                                    Test if a Shaper can be created without passing the required parameters: `name`
+  test_sr_controller                              Test if an SrController can be created without passing the required parameters: `name`
+  test_sr_license                                 Test if an SrLicense can be created without passing the required parameters: `name`
+  test_sr_teleport                                Test if an SrTeleport can be created without passing the required parameters: `name`, `teleport`
+  test_station                                    Test if a Station can be created without passing the required parameters: `name`, `serial`
+  test_sw_upload                                  Test if a SwUpload set can be created without passing the required parameters: `name`
+  test_teleport                                   Test if a Teleport can be created without passing the required parameters: `name`
+  test_user                                       Test if a User can be created without passing the required parameters: `name`
+  test_user_group                                 Test if a UserGroup can be created without passing the required parameters: `name`
+  test_vno                                        Test if a VNO can be created without passing the required parameters: `name`
+MapResponseSizeCase                             API 32768 stations in map request
+  test_number_of_stations_in_map_response         One line string describing the test case
+ResponseSizeCase                                Getting lists of tables using same vars as in WEB interface to test that JSON is not truncated (ticket 7917)
+  test_alert_list                                 Test that alert list in NMS can be fully received using vars requested by frontend
+  test_bal_controller_list                        Test that bal_controller list in NMS can be fully received using vars requested by frontend
+  test_camera_list                                Test that camera list in NMS can be fully received using vars requested by frontend
+  test_controller_list                            Test that controller list in NMS can be fully received using vars requested by frontend
+  test_dashboard_list                             Test that dashboard list in NMS can be fully received using vars requested by frontend
+  test_device_list                                Test that device list in NMS can be fully received using vars requested by frontend
+  test_group_list                                 Test that group list in NMS can be fully received
+  test_license_list                               Test that sr_license list in NMS can be fully received using vars requested by frontend
+  test_nat_port_list                              Test that nat_port list in NMS can be fully received using vars requested by frontend
+  test_network_list                               Test that network list in NMS can be fully received using vars requested by frontend
+  test_policy_list                                Test that policy list in NMS can be fully received
+  test_polrule_list                               Test that polrule list in NMS can be fully received using vars requested by frontend
+  test_profile_list                               Test that profile list in NMS can be fully received using vars requested by frontend
+  test_qos_list                                   Test that qos list in NMS can be fully received using vars requested by frontend
+  test_rip_router_list                            Test that rip_router list in NMS can be fully received using vars requested by frontend
+  test_route_list                                 Test that route list in NMS can be fully received using vars requested by frontend
+  test_scheduler_list                             Test that scheduler list in NMS can be fully received using vars requested by frontend
+  test_server_list                                Test that server list in NMS can be fully received using vars requested by frontend
+  test_service_list                               Test that service list in NMS can be fully received using vars requested by frontend
+  test_shaper_list                                Test that shaper list in NMS can be fully received
+  test_sr_controller_list                         Test that sr_controller list in NMS can be fully received using vars requested by frontend
+  test_sr_teleport_list                           Test that sr_teleport list in NMS can be fully received using vars requested by frontend
+  test_station_list                               Test that station list using station tool in NMS can be fully received using vars requested by frontend
+  test_sw_upload_list                             Test that sw_upload list in NMS can be fully received using vars requested by frontend
+  test_teleport_list                              Test that teleport list in NMS can be fully received using vars requested by frontend
+  test_user_list                                  Test that user list in NMS can be fully received using vars requested by frontend
+  test_vno_list                                   Test that vno list in NMS can be fully received using vars requested by frontend
+ApiAbbreviatedCase                              API requests with abbreviated tools or objects case
+  test_abbreviated_tool_method_                   Create network using abbreviated tool and method in the URL
+  test_semi_correct_entities                      Create objects using semi_correct parent and new_item names
+ApiDashboardToolCase                            Dashboard tool test case
+  test_dashboard                                  Dashboard get for objects supported and not supported the tool
+ApiToolDbeditorCase                             API dbeditor tool using Selenium WEB driver
+  test_dbeditor_tool                              Get all dbeditor tables and rows (step 15) from access to vno. Test pages availability
+  test_tables                                     Check availability of Tables page
+  test_tables_info                                Check availability of Tables info page
+  test_vars_info                                  Checking Vars info page for all the tables
+ApiFileToolCase                                 File tool upload, download, and delete test case
+  test_get_dirs                                   Get user available directories test
+  test_invalid_path                               Get non-existing dirs test
+  test_maximum_upload_file_size                   Make sure that the current maximum file size can be uploaded to NMS
+  test_nms_paths                                  Get directory content of the upper level
+  test_non_existing_file_delete                   Deleting non-existing file (probably should trigger something)
+  test_non_existing_file_download                 Downloading non-existing file (should trigger 404)
+  test_upload_delete                              Make sure that files can be uploaded to all user dirs as well as deleted
+  test_upload_to_invalid_dir                      Upload file to a non-existing dir
+ApiGraphToolCase                                Graph tool test case
+  test_dots_number                                Number of dots in graph response test (up to 2000 dots)
+  test_graph                                      Graph get for objects supported and not supported the tool
+  test_graph_faults_on                            Setting Faults on returns faults list in the response (data is not checked)
+  test_invalid_graph_number                       Invalid graph number in graph request
+  test_start_end_range                            Start and end parameters in graph tool (up to 10 years ago)
+  test_valid_graph_number                         Valid graph number in graph request (data is not checked)
+ApiToolListCase                                 API List tool case
+  test_all_objects_list                           Getting list of every entity in the corresponding parent, i.e. controllers in network
+  test_list_networks                              List tool without options. Test all network IDs in the response
+  test_list_networks_all_options                  List tool command with `list_skip`, `list_max` and `list_vars` options
+  test_list_networks_invalid_options              List tool command with invalid options
+  test_list_networks_with_max                     List tool command with `list_max` option
+  test_list_networks_with_skip                    List tool command with `list_skip` option
+  test_list_networks_with_values                  List tool command with valid `list_vars`
+  test_many_invalid_vars                          List tool with list_vars option containing 300 random invalid vars
+  test_many_valid_vars                            List tool with list_vars option containing over 120 valid vars
+ApiLogToolCase                                  Test cases for log tool
+  test_log_tool_entities                          All NMS entities log requests both supported and unsupported
+  test_logs_time_range                            Get logs with different start/end time range
+  test_shown_logs_size                            Number of logs entries shown triggered by controllers
+ApiMapToolCase                                  Map tool request test case
+  test_beams                                      Getting map with beams (ticket 8040)
+  test_get_controller_map                         API get map controller test
+  test_get_network_map                            API get map network test
+  test_get_vno_map                                API get map vno test
+  test_invalid_map_parent                         API map tool invalid object
+  test_invalid_marker_mode                        API invalid marker mode test
+  test_invalid_tool_methods                       API map tool invalid methods
+ApiRealtimeToolCase                             Get realtime data from controller and station test case (data is NOT confirmed). MF hub + star station
+  test_controller_realtime                        Issue all controller get realtime commands specified in frontend
+  test_station_realtime                           Issue all station get realtime commands specified in frontend
+ApiSearchToolCase                               API Search Tool. Searching NMS objects by their names, IPs etc.
+  test_extra_long_payload_value                   Search tool extra long invalid item to search test
+  test_invalid_payload_key                        Search tool invalid key instead of `search` in POST request
+  test_invalid_table_row                          Search tool invalid table or row
+  test_multiple_objects_in_response               Multiple objects match the searched name. Make sure that first 1000 are returned
+  test_search_any_entity                          Search tool can find any NMS object by its name, ip or sequence
+  test_search_tool_128_networks                   Search tool response test
+  test_vno_user_can_search_use_objects            User having access to its VNO can get search result for controller there access for that user is created
+  test_vno_user_cannot_search_net                 User having access to its VNO cannot get search result for controller and network
+ApiStationsToolCase                             Test cases for station tool
+  test_stations_tool_32768_stations               Stations tool response 32768 stations
+  test_stations_tool_all_frontend_vars_10000_stn  Test station tool response upon requesting all vars that can be selected in frontend for 10000 stations
+  test_stations_tool_all_frontend_vars_1_stn      Test station tool response upon requesting all vars that can be selected in frontend for 1 station
+  test_stations_tool_all_frontend_vars_32768_stn  Test station tool response upon requesting all vars that can be selected in frontend for 32768 stations
+ApiTreeToolCase                                 API tree tool requests test case
+  test_get_nms_tree                               API parse tree test. Getting tree with 32768 stations. Check all elements: Networks, Controllers, Stations
+  test_get_tree_with_filters                      Filters ranged 0 - 2048 applied to get tree requests
+  test_get_tree_with_sequence                     Sequence ranged 0 - 1000000 applied to get tree requests
+  test_invalid_tree_object                        Getting tree of various objects, i.e. api/tree/get/service=0
+ApiStaticDropdownsCase                          API static dropdowns requests options
+  test_number_of_options                          Check if value equals to the number of options can be assigned to a static dropdown
+ApiAllFormsValidationCase                       Not needed as data types test exists? API validate form fields according to meta data
+  test_access                                     None
+  test_alert                                      None
+  test_bal_controller                             None
+  test_camera                                     None
+  test_controller                                 None
+  test_dashboard                                  None
+  test_device                                     None
+  test_group                                      None
+  test_network                                    None
+  test_nms                                        None
+  test_policy                                     None
+  test_port_map                                   None
+  test_profile_set                                None
+  test_rip_router                                 None
+  test_route                                      None
+  test_rule                                       None
+  test_server                                     None
+  test_service                                    None
+  test_shaper                                     None
+  test_sr_controller                              None
+  test_sr_license                                 None
+  test_sr_teleport                                None
+  test_station                                    None
+  test_sw_upload                                  None
+  test_teleport                                   None
+  test_user                                       None
+  test_vno                                        None
+ApiParentValidationCase                         Check if objects belonging to a network cannot be assigned to objects in another network
+  test_bal_controller                             Balance controller from network 2 cannot be assigned to a MF HUB in network1
+  test_policy                                     Policy from one network cannot be assigned to a qos in another network
+  test_profile_set                                Profile set from one network cannot be assigned to a station in another network
+  test_qos                                        Qos from one network cannot be assigned to objects in another network
+  test_rx_controller                              Controller from one network cannot be assigned to a station in another network
+  test_scheduler                                  Scheduler from network 2 cannot be assigned to station in network 1
+  test_service                                    Service from one network cannot be assigned to a controller and station route in another network,
+        controller RIP and station RIP in another network
+  test_shaper                                     Shaper from one network cannot be assigned to a controller, vno, sub-vno, service, and station in another
+  test_sr_controller                              Sr controller from network 2 cannot be assigned to MF hub in network 1
+  test_teleport                                   Teleport from one network cannot be assigned to a controller and SR controller in another network
+  test_tx_controller                              Controller from one network cannot be assigned to an Inroute, station and SW upload in another network
+ConfigConfirmationCase                          Created config with all tables filled in is in place after saving and loading it
+  test_save_load_save_load                        Created objects and their parameters are in place after saving and loading config two times
+LoadBackupPreviousVersionCase                   Loading config from previous 4.0.0.11 NMS version. Invalid vars and values should be ignored and config loaded
+  test_applying_old_backup                        Obsolete vars and invalid values should be ignored. Config is applied using only valid vars and values
+LoadNmsConfigNmsTableCase                       Loading a config having NMS table params should replace current NMS table params
+  test_load_config                                Config should populate NMS table with its values
+LoadDefaultConfigNmsTableCase                   Default config should replace all NMS table params with default values
+  test_load_default_config                        Default config should replace all NMS table parameters
+LoadDefaultConfigCase                           Default config should erase all tables except for access, group, and user
+  test_load_default_config                        Checking all table:rows
+WebLoadDefaultConfigCase                        WEB save and load config test case (ticket 8277)
+  test_web_load_config                            `Load config` should apply default_config.txt, therefore, created network will be no longer available
+  test_web_save_config                            `Save config as` should save config, therefore, the filename will appear in load_config
+MultipleBackupCallsCase                         Call same backup multiple times case
+  test_multiple_backup_calls                      Backup call multiple times
+AllQueuesTrafficHublessCase                     Traffic statistics for a hubless controller, station, vno, and network case
+  test_traffic_stats                              Get traffic stats for a hubless controller, station, vno, and network
+AllQueuesTrafficStarCase                        Traffic statistics for an MF hub controller, station, vno, and network case
+  test_traffic_stats                              Get traffic statistics for an MF hub controller, station, vno, and network
+AllQueuesTrafficTwoHubsCase                     Traffic statistics for two hubless controllers, and network case
+  test_traffic_stats                              Get traffic statistics for two hubless controllers, and network
+TrafficQueuesStarCase                           One line string describing the test case
+  test_sample                                     One line string describing the test method
+ControlModesSwitchingCase                       Switch controller control modes several times
+  test_control_modes                              Four control modes are tested in random cycle several times
+DevPasswordCase                                 NMS controlled mode with password
+  test_dev_password_length                        dev_password various length test case (up to 10 characters including)
+  test_dev_password_several_nets                  NMS controlled mode in 4 networks with different dev_password
+BigStarNetCase                                  Star network with 20 stations UP case
+  test_big_net                                    One line string describing the test method
+MfChannelsCase                                  MF hub + 3 MF inroute 16 channels UP
+  test_mf_channels                                Adding MF channels one by one. Making sure MF hub and appropriate number of MF inroutes are Up
+NetworkMfHubUpCase                              1 controller 3 stations up case
+  test_network_up                                 None
+NmsControlUhp                                   UHP under NMS control in appropriate mode
+  test_controlled_mode_change_permission          UHP runs correct profile after changing permissions' password
+  test_delete_create_controller_cycle             Delete MF hub controller in NMS, create again and make sure that UHP in MF hub profile mode
+  test_force_config_controller                    Force config applies config to controller if it has another profile running
+  test_uhp_default_nms_control                    Getting available UHPs (default is called) make sure that NMS sends config to controller (100 iterations)
+  test_uhp_reboot                                 UHP NMS controlled mode after UHP reboot (5 iterations)
+  test_uhp_reboot_with_active_profile             UHP NMS controlled mode after UHP reboot and running Star station profile (5 iterations)
+MfNetworkInstallCase                            Creation complicated MF network
+  test_mf_network_install                         None
+StationUpControllersCase                        Check if station is in UP state after switching to different controllers
+  test_station_up                                 None
+TdmaAcmTrafficCase                              One line string describing the test case
+  test_tdma_acm_legacy                            One line string describing the test method
+AllValuesCase                                   Create objects by passing all parameters
+  test_access                                     Create access by passing all parameters
+  test_alert                                      Create alert by passing all parameters
+  test_dama_hub                                   Create DAMA hub by passing all parameters
+  test_dama_inroute                               Create DAMA inroute by passing all parameters
+  test_dashboard                                  Create dashboard by passing all parameters
+  test_gateway                                    Create Gateway by passing all parameters
+  test_hubless_master                             Create Hubless master by passing all parameters
+  test_inroute                                    Create Inroute by passing all parameters
+  test_mf_hub                                     Create MF hub by passing all parameters
+  test_mf_inroute                                 Create MF inroute by passing all parameters
+  test_network                                    Create network by passing all parameters
+  test_outroute                                   Create Outroute by passing all parameters
+  test_server                                     Create server by passing all parameters
+  test_teleport                                   Create teleport by passing all parameters
+  test_user_group                                 Create user group by passing all parameters
+CreateRouteRecordsCase                          Create different types of routes test case
+  test_create_controller_ip_address               Create ip address in controller test
+  test_create_controller_ipv6_address             Create ip address on controller test
+  test_create_controller_ipv6_net_rx              Create IPv6 net RX in controller test
+  test_create_controller_ipv6_net_tx              Create IPv6 net TX in controller test
+  test_create_controller_ipv6_route               Create static route on controller test
+  test_create_controller_ipv6_to_hub              Create IPv6 route to hub in controller test. Should trigger deny to create route to hub on controllers
+  test_create_controller_l2_bridge                Create network tx route on controller test
+  test_create_controller_network_rx               Create network tx route on controller test
+  test_create_controller_network_tx               Create network tx route on controller test
+  test_create_controller_route_to_hub             Create route to hub on controller test. Should trigger deny to create route to hub on controllers
+  test_create_controller_static_route             Create static route in controller test
+  test_create_station_ip_address                  Create ip address in station test
+  test_create_station_ipv6_address                Create ip address on station test
+  test_create_station_ipv6_net_rx                 Create IPv6 net RX in station test
+  test_create_station_ipv6_net_tx                 Create IPv6 route to hub in station test
+  test_create_station_ipv6_route                  Create static route on station test
+  test_create_station_ipv6_to_hub                 Create IPv6 route to hub in station test
+  test_create_station_l2_bridge                   Create network tx route on station test
+  test_create_station_network_rx                  Create network tx route on station test
+  test_create_station_network_tx                  Create network tx route on station test
+  test_create_station_route_to_hub                Create  route to hub on station test
+  test_create_station_static_route                Create static route in station test
+RouteWithZeroIpCase                             Create routes with zero IP address
+  test_ip_address                                 Create IP_address with ip=0.0.0.0
+  test_ipv6_address                               Create IPv6_address with v6_ip=::
+  test_ipv6_route                                 Create IPv6_address with v6_gateway=::
+  test_static_route                               Create Static_route with gateway=0.0.0.0
+SameIpCase                                      Create objects with same IP addresses
+  test_controller                                 Create two controllers (control=full) with same device_ip via WEB and API
+  test_ctrl_and_device                            Create a controller and a device with the same IPv4 address
+  test_device                                     Create three devices (control=full): first with unique IP, the rest with the same via WEB and API
+  test_ip_address                                 Create IPv4 addresses with the same values
+  test_same_ip_different_stations                 Create IPv4 addresses with the same values in different stations
+SameObjectsNameCase                             Create/edit objects to get existing names
+  test_same_name_net_create                       Same name network create test
+  test_same_name_net_edit                         Same name network edit test
+  test_same_name_next_object                      Same name network edit test (ticket 8056)
+SameSerialCase                                  Station's serial number must be unique in a given controller
+  test_station_disabled                           Create disabled station with the existing serial in controller
+  test_station_disabled_no_controller             Create disabled station no rx_controller with the existing serial in controller
+  test_station_enabled                            Create enabled station with the existing serial in controller
+  test_switch_to_another_controller               Switch stations to another controller with existing stations' serials
+DamaNetworkCreationCase                         Configuring DAMA network: hub, inroute, two stations in NMS. Configuring UHP for DAMA network.
+    Start DAMA network. Checking that all UHP are in operation
+  test_switching_station_between_controllers      Switching two stations between different channels of hub and inroute
+DamaSimpleNetworkCase                           Creating simple DAMA network: hub and one station
+  test_DAMA_hub_to_no_access_switching            None
+  test_changing_rf_settings_dama_return           DAMA hub in NMS and on UHP has state `operation`
+  test_switching_dama_station_chA_chB             None
+  test_switching_off_station                      None
+TrafficBtwStationHubCase                        Run traffic between dama hub and station in both directions to check how it displays in NMS
+  test_traffic_between_dama_hub_station           None
+  test_traffic_values_comparing                   None
+ChangeLinkCase                                  Check if station's controller can be changed, as well as SW upload controller
+  test_change_station_controller                  Check if the station's controller can be changed to another one
+  test_change_sw_upload_tx_controller             Check if the SW upload `tx_controller` can be successfully changed
+CreateDeleteCase                                Create and delete objects multiple times. No backups are called between the iterations
+  test_create_delete_loop                         Create and delete every single NMS object in a loop
+MultipleCreateDeleteCase                        The scenario creates a config with a lot of NMS entities and deletes them in a cycle
+  test_create_delete_cycle                        Create maximum number of NMS objects and deletes them in a cycle
+RecursiveVnoCase                                Recursive Vno creation deletion test case
+  test_recursive_vnos                             Check if it is possible to create 511 Sub-VNOs inside each other, delete them afterwards
+DatabasePerformanceCase                         Database create/delete/edit/search/list performance
+  test_all_objects_creation_performance           Database all objects creation performance test
+  test_all_objects_deletion_performance           Database all objects deletion performance test. Performed on a full database
+  test_delete_row_performance                     Each entity delete first, last, and middle object. Performed on a full database
+  test_edit_row_performance                       Each entity edit first, last, and middle object. Performed on a full database
+  test_list_each_table_performance                List all rows performance. Performed on a full database (but list only 5000 stations)
+  test_search_entry_performance                   Search object by name or get object by ID performance. Performed on a full database
+ApiSimultaneousAccessCase                       8 users database operations in parallel
+  test_network_name_simultaneous_edit             8 users edit network name in parallel
+  test_simultaneous_controller_change             8 users change station's rx_controller in parallel
+  test_simultaneous_create_delete                 8 users create and delete networks in parallel
+DeleteHierarchicalObjectsCase                   Delete stand alone objects and parent objects containing child objects
+  test_delete_controller                          Delete controller containing all route, rip_router, port_map, and access
+  test_delete_controller_access                   Delete controller access
+  test_delete_controller_port_map                 Delete controller port_map
+  test_delete_controller_rip_router               Delete controller rip_router
+  test_delete_controller_route                    Delete controller route
+  test_delete_network                             Delete network containing all objects
+  test_delete_station                             Delete station containing all sch_task, route, rip_router, port_map
+  test_delete_station_port_map                    Delete station port_map
+  test_delete_station_rip_router                  Delete station rip_router
+  test_delete_station_route                       Delete station route
+  test_delete_station_sch_task                    Delete station sch_task
+  test_delete_vno                                 Delete vno containing all child objects: sub-vnos, stations etc.
+DeleteLinkedObjectsCase                         Linked objects deletion case
+  test_alert                                      Alert linked to NMS objects
+  test_bal_controller                             Bal_controller linked to a controller
+  test_controller                                 Controller linked to either a station or a sw upload or a gateway
+  test_external_gateway                           Gateway linked to a station as the external gateway
+  test_multiple_links                             Teleport linked to multiple controller objects
+  test_policy                                     Policy linked to a qos
+  test_profile_set                                Profile set linked to a station
+  test_qos                                        Qos linked to either to a controller route or a controller rip or station route or a station rip
+  test_sch_service                                Sch_service linked to a station's sch_task
+  test_scheduler                                  Scheduler linked to a station
+  test_service                                    Service linked to either to a controller route or a controller rip or station route or a station rip
+  test_shaper                                     Shaper linked to any of the allowed objects
+  test_sr_controller                              Sr controller linked to a controller
+  test_teleport                                   Teleport linked to either a controller or an sr_teleport
+  test_user_group                                 User group linked to an access
+Case                                            
+  test                                            None
+DamaCase                                        One line string describing the test case
+  test_2                                          None
+  test_sample                                     One line string describing the test case
+MassObjectsCreationCase                         Create maximum number of objects in tables
+  test_32768_stns_creation_deletion               Create maximum number of stations (32768) and delete them one by one
+  test_512_vnos_creating                          512 VNOs creation test
+  test_65000_routes_creation_deletion             Create maximum number of routes (65000) and delete them one by one
+  test_all_polrules                               Maximum number of pol_rule creation test
+  test_all_shapers_in_one_net                     Create maximum number of shapers in one net
+  test_station_create_delete_multiprocessing      Create and delete maximum number of stations using 8 processes (1 iteration)
+  test_stations_in_controller                     Not needed - a bigger test exists. Create 10000 stations bind to a controller
+SampleHublessUpCase                             Star network with an MF Hub and 3 stations UP test case
+  test_network_up                                 None
+SampleMfHubUpCase                               Star network with an MF Hub and 3 stations UP test case
+  test_network_up                                 None
+  test_network_up                                 None
+SimpleApiMfHubNetUp2Case                        Star network with an MF Hub and 3 stations UP test case
+  test_network_up                                 None
+SimpleApiMfHubNetUpCase                         Star network with an MF Hub and 3 stations UP test case
+  test_network_up                                 None
+  test_network_up                                 None
+  test_network_up                                 None
+SimpleApiMfHubNetUpCase                         Star network with an MF Hub and 2 stations UP test case
+  test_network_up                                 None
+LetsBreakLinkedListCase                         One line string describing the test case
+  test_sample                                     None
+UhpModOnOffCase                                 One line string describing the test case
+  test_sample                                     One line string describing the test method
+SetAlertCase                                    Not needed?
+  test_set_alert_76                               None
+WrongFileNameCase                               Not needed?
+  test_set_wrong_file_name                        None
+ControllerUhpProfileCase                        Make sure that UHP modem runs an appropriate profile upon setting the controller mode
+  test_dama_hub                                   UHP runs DAMA hub profile upon setting NMS controller to DAMA_hub mode
+  test_dama_inroute                               UHP runs DAMA inroute profile upon setting NMS controller to DAMA_inroute mode
+  test_gateway                                    UHP runs DAMA hub profile upon setting NMS controller to Gateway mode
+  test_hubless_master                             UHP runs Hubless master profile upon setting NMS controller to Hubless_master mode
+  test_inroute                                    UHP runs Inroute profile upon setting NMS controller to Inroute mode
+  test_mf_hub                                     UHP runs MF hub profile upon setting NMS controller to MF hub mode
+  test_mf_inroute                                 UHP runs MF inroute profile upon setting NMS controller to MF_inroute mode
+  test_outroute                                   UHP runs Outroute profile upon setting NMS controller to Outroute mode
+DamaHubConfirmationCase                         DAMA hub controller UHP gets all the settings
+  test_arp                                        Test ARP settings values
+  test_check_rx                                   Test check RX value
+  test_dama_return_1                              Test Return Channel 1 values
+  test_dama_return_2                              Test Return Channel 2 values
+  test_dhcp                                       TestDHCP settings values
+  test_dns                                        Test DNS settings values
+  test_ip_screening                               Test IP screening values
+  test_modulator                                  Test modulator section values
+  test_modulator_queues                           Test Modulator queues settings values
+  test_multicast                                  Test Multicast settings values
+  test_nat                                        Test NAT settings values
+  test_rip                                        Test RIP settings values
+  test_service_monitoring                         Test Service monitoring settings values
+  test_snmp                                       Test SNMP settings values
+  test_sntp                                       Test SNTP settings values
+  test_tcpa                                       Test TCPA settings values
+  test_tdm_acm                                    Test TDM ACM values
+  test_tdm_tx_section                             Test roaming section settings values
+  test_teleport                                   Test teleport values
+  test_tftp                                       Test TFTP settings values
+  test_tlc                                        Test tlc section values
+  test_traffic_protection                         Test Traffic protection settings values
+HublessControllerConfirmationCase               Confirm that UHP gets correct settings from a hubless controller
+  test_arp                                        Test ARP settings values
+  test_demodulator1                               Test demodulator1 values
+  test_demodulator2                               Test demodulator2 values
+  test_dhcp                                       TestDHCP settings values
+  test_dns                                        Test DNS settings values
+  test_ip_screening                               Test IP screening values
+  test_master_settings                            Test Master settings values
+  test_modulator                                  Test modulator section values
+  test_modulator_queues                           Test Modulator queues settings values
+  test_multicast                                  Test Multicast settings values
+  test_nat                                        Test NAT settings values
+  test_rip                                        Test RIP settings values
+  test_service_monitoring                         Test Service monitoring settings values
+  test_snmp                                       Test SNMP settings values
+  test_sntp                                       Test SNTP settings values
+  test_tcpa                                       Test TCPA settings values
+  test_tdma_bw_allocation                         Test TDMA BW allocation values
+  test_tdma_protocol                              Test TDMA protocol values
+  test_tdma_rf_setup                              Test TDMA RF setup values
+  test_teleport                                   Test teleport values
+  test_tftp                                       Test TFTP settings values
+  test_tlc                                        Test tlc section values
+  test_traffic_protection                         Test Traffic protection settings values
+MfHubControllerConfirmationCase                 Confirm that UHP gets correct settings from a hubless controller
+  test_arp                                        Test ARP settings values
+  test_demodulator1                               Test demodulator1 values
+  test_demodulator2                               Test demodulator2 values
+  test_dhcp                                       TestDHCP settings values
+  test_dns                                        Test DNS settings values
+  test_ip_screening                               Test IP screening values
+  test_modulator                                  Test modulator section values
+  test_modulator_queues                           Test Modulator queues settings values
+  test_multicast                                  Test Multicast settings values
+  test_nat                                        Test NAT settings values
+  test_rip                                        Test RIP settings values
+  test_roaming_section                            Test roaming section settings values
+  test_service_monitoring                         Test Service monitoring settings values
+  test_snmp                                       Test SNMP settings values
+  test_sntp                                       Test SNTP settings values
+  test_tcpa                                       Test TCPA settings values
+  test_tdm_tx_section                             Test roaming section settings values
+  test_tdma_bw_allocation                         Test TDMA BW allocation values
+  test_tdma_protocol                              Test TDMA protocol values
+  test_tdma_rf_setup                              Test TDMA RF setup values
+  test_teleport                                   Test teleport values
+  test_tftp                                       Test TFTP settings values
+  test_timing_section                             Test roaming section settings values
+  test_tlc                                        Test tlc section values
+  test_traffic_protection                         Test Traffic protection settings values
+AcmTdmUhp200ConfirmationCase                    UHP200 gets correct ACM TDM modcods
+  test_mf_hub_tdm_acm_sf                          Check short frames combinations
+AcmTdmUhp200xConfirmationCase                   UHP200X gets correct ACM TDM modcods
+  test_mf_hub_tdm_acm_lf                          Check long frames combinations
+  test_mf_hub_tdm_acm_sf                          Check short frames combinations
+AcmTdmaModcodConfirmationCase                   TDMA ACM Legacy, 12modcods, 16modcods confirm UHP gets correct settings
+  test_mf_hub_16modcod_acm_uhp                    TDMA ACM 16modcods mode confirmation
+  test_tdma_12_modcods                            TDMA ACM 12modcods mode confirmation (for UHP ver.3.6 only, 3.7 is skipped)
+  test_tdma_legacy                                TDMA ACM legacy mode confirmation, iterating over modulation (and thresholds for UHP 3.6 only)
+  test_tdma_mesh_acm                              TDMA mesh_acm confirmation (UHP gets correct values)
+TdmModcodConfirmationCase                       Confirm that UHP200X gets ALL correct TDM modcod from a controller
+  test_tdm_modcod_uhp                             Check that ALL applied TDM modcod are received by UHP200X
+  test_tx_modcod_nms_uhp_equality                 Make sure that NMS and UHP tx_modcod values are the same
+  test_tx_modcod_stored_name                      Test TDM modcod NMS stored names
+TdmaModcodConfirmationCase                      Confirm that UHP gets ALL correct TDMA modcod from a hubless controller
+  test_tdma_modcod_stored_name                    TDMA modcod NMS stored names
+  test_tdma_modcod_uhp                            Check that ALL applied TDMA modcod are received by UHP
+NatPortMapConfirmationCase                      One line string describing the test case
+  test_nat_mf_hub                                 Check NAT settings and port mappings in UHP controller
+  test_nat_star_station                           Check NAT settings and port mappings in UHP station
+NumberOfStationsConfirmationCase                Check if all stations (25) bound to a controller appear in the UHP stations table
+  test_dama_hub                                   None
+  test_dama_inroute                               None
+  test_hubless                                    Test stations for Hubless master controller
+  test_inroute                                    Test stations for Inroute controller
+  test_mf_hub                                     Test stations for MF hub controller
+PolicyConfigConfirmationCase                    Confirm that a simple policy containing every rule type is applied to a UHP controller and a station
+  test_controller_policy_config_confirm           Policy get by UHP controller confirmation
+  test_station_policy_config_confirm              Policy get by UHP station confirmation
+ProfileSetConfirmationCase                      Confirm that station gets correct profile set
+  test_profile_set                                Profile set get by UHP confirmation
+RipRouterConfirmationCase                       Confirm RIP router settings in UHP controller and station
+  test_controller_rip_entry                       Make sure that controller UHP get correct RIP router values
+  test_station_rip_entry                          Make sure that station UHP get correct RIP router values
+RipRouterMaxNumberCase                          Max number of RIP routers in MF hub confirmation
+  test_mf_hub_rip_router                          None
+StarStationConfirmationCase                     Confirm that UHP Star station gets correct settings from NMS
+  test_arp                                        Test ARP settings values
+  test_dhcp                                       Test DHCP settings values
+  test_dns                                        Test DNS settings values
+  test_ip_screening                               Test IP screening values
+  test_modulator_queues                           Test Modulator queues settings values
+  test_multicast                                  Test Multicast settings values
+  test_nat                                        Test NAT settings values
+  test_realtime                                   Test realtime BW allocation settings
+  test_rip                                        Test RIP settings values
+  test_service_monitoring                         Test Service monitoring settings values
+  test_snmp                                       Test SNMP settings values
+  test_sntp                                       Test SNTP settings values
+  test_station_table_settings                     Confirm settings that station goes to the stations' table in hub
+  test_tcpa                                       Test TCPA settings values
+  test_tftp                                       Test TFTP settings values
+TeleportConfirmationCase                        Confirm that UHP gets correct settings from NMS teleport form
+  test_teleport                                   Test teleport values getting by UHP
+FrameLengthCase                                 TDMA frame length must be multiple of 4
+  test_frame_length                               TDMA frame_length divisible by 4 should be applied, the rest should not
+TdmaRxInputCase                                 TDMA RX input depending on a UHP model test case
+  test_tdma_rx_input                              Only UHP200 is suitable for setting tdma_input to RX2
+UhpModelControllerModeCase                      Controller mode depending on uhp_model test case
+  test_uhp_model_controller_mode                  UHP model - Controller mode combinations
+DependingParamsCase                             Valid value of one of the parameters depends on value of another parameter(s)
+  test_bal_controller_load                        load_lower must be lower than load_higher
+  test_dhcp_start_end                             DHCP dhcp_ip_start must be lower than dhcp_ip_end
+  test_own_cn                                     own_cn_low must be lower than own_cn_high
+  test_policy_check_dscp                          Policy rule check dscp dscp_min, dscp_max
+  test_policy_check_port                          Policy rule check port DST/SRC, TCP/UDP
+  test_policy_check_tos                           Policy rule check tos tos_min, tos_max
+  test_policy_check_vlan                          Policy rule check vlan vlan_min, vlan_max
+  test_stn_low_high_cn                            None
+  test_tcpa_svlan                                 TCPA from_svlan must be lower than to_svlan
+  test_wfq_sum                                    Shaper WFQ sum must be 100
+AcmTdmSfLfValidationCase                        Short frames cannot be mixed with long frames
+  test_sf_lf_tdm_acm                              Check if short frames cannot be mixed with long frames in TDM ACM
+TdmaAcmModcodsValidationCase                    TDMA ACM validation test case
+  test_12_modcods                                 TDMA ACM 12modcods mode set in NMS
+  test_16_modcods_tdma_mc_8psk                    TDMA ACM 16modcods mode set in NMS for tdma_mc 8psk
+  test_16_modcods_tdma_mc_bpsk                    TDMA ACM 16modcods mode set in NMS for tdma_mc bpsk
+  test_16_modcods_tdma_mc_qpsk                    TDMA ACM 16modcods mode set in NMS for tdma_mc qpsk
+  test_legacy                                     TDMA ACM legacy mode set in NMS
+  test_mesh_mc                                    TDMA ACM Mesh traffic coding and modulation set in NMS
+Uhp200TdmAcmModcodValidationCase                UHP200 model TDM ACM validation
+  test_6_tdm_acm_modcods_uhp200_wrong_order       Applying 6 TDM ACM modcods for UHP200 in the wrong cn order
+  test_8_tdm_acm_modcods_uhp200                   Applying 8 TDM ACM modcods for UHP200 in the right cn order
+  test_applying_6_tdm_acm_modcods_uhp200          Applying 6 TDM ACM modcods for UHP200 in the right cn order
+Uhp200TdmModcodValidationCase                   tx_modcod for UHP200 model validation
+  test_supported_unsupported                      Applying supported and unsupported modcods for UHP200
+Uhp200xTdmAcmModcodsValidationCase              UHP200X model TDM ACM validation
+  test_8_tdm_acm_modcods_uhp200x                  Applying 8 TDM ACM modcods for UHP200X in the right cn order
+  test_8_tdm_acm_modcods_uhp200x_wrong_order      Applying 8 TDM ACM modcods for UHP200X in the wrong cn order
+Uhp200xTdmModcodValidationCase                  tx_modcod for UHP200X model validation
+  test_supported_unsupported                      Applying supported modcods for UHP200X
+ModulatorSumQueuesValidationCase                Controllers and stations modulator sum_of_all_queues validation case
+  test_controller                                 Each supported controller mod queues length test
+  test_station                                    Each supported station mod queues test
+RoutingSameMaskCase                             Valid and invalid routing combinations for controller and station, Ticket 8097
+  test_invalid_ctrl                               No routes auto generation: ctrl ip=10.0.0.1/24, ctrl tx=10.0.0.0/24, ctrl static ip=10.0.0.0/24
+  test_invalid_ctrl_auto                          Routes auto generation: ctrl ip=10.0.0.1/24, stn ip=10.0.0.2/24, ctrl static ip=10.0.0.0/24
+  test_invalid_stn                                No routes auto generation: stn ip=10.0.0.2/24, stn tx=10.0.0.0/24, stn static ip=10.0.0.0/24
+  test_invalid_stn_auto                           Routes auto generation: ctrl ip=10.0.0.1/24, stn ip=10.0.0.2/24, stn static ip=10.0.0.0/24
+  test_valid_ctrl                                 No routes auto generation: ctrl ip=10.0.0.1/24, ctrl tx=10.0.0.0/26, ctrl static ip=10.0.0.0/16
+  test_valid_ctrl_auto                            Routes auto generation: ctrl ip=10.0.0.1/24, stn ip=10.0.0.2/24, ctrl static ip=10.0.0.0/16
+  test_valid_stn                                  No routes auto generation: stn ip=10.0.0.2/24, stn tx=10.0.0.0/26, stn static ip=10.0.0.0/16
+  test_valid_stn_auto                             Routes auto generation: ctrl ip=10.0.0.1/24, stn ip=10.0.0.2/24, stn static ip=10.0.0.0/16
+ControllerStationCombinationsCase               Station's controller validation case
+  test_ext_gateway                                Star, Mesh stations valid RX controllers and External Gateway
+  test_rx_controllers                             Star, Mesh, Hubless, Dama stations valid RX controllers
+  test_rx_controllers_dama                        None
+  test_tx_controllers                             RX_only station valid TX controllers
+ControllerCase                                  Not needed? Controller (MF hub) form validation case
+  test_acceleration_section                       Controller TCP acceleration section validation
+  test_alert_section                              Controller alert section validation
+  test_arp_section                                Controller ARP section validation
+  test_binding_section                            Controller binding section validation
+  test_buffering_section                          Controller buffering section validation
+  test_device_a_section                           Controller device section validation
+  test_dhcp_section                               Controller DHCP section validation
+  test_dns_section                                Controller DNS section validation
+  test_ip_screening_section                       Controller ip screening section validation
+  test_mcast_section                              Controller multicast section validation
+  test_mod_queue_section                          Controller modulator queue section validation
+  test_modulator_section                          Controller modulator section validation
+  test_monitoring_section                         Controller monitoring section validation
+  test_mtu_section                                Controller MTU section validation
+  test_nat_section                                Controller NAT section validation
+  test_net_rf_id_section                          Controller RF feed section validation
+  test_retrying_section                           Controller retrying section validation
+  test_rip_section                                Controller RIP section validation
+  test_snmp_section                               Controller SNMP section validation
+  test_sntp_section                               Controller SNMP section validation
+  test_tdma_channels_section                      Controller TDMA channels section validation
+  test_tdma_section                               Controller TDMA section validation
+  test_teleport_and_rf_section                    Controller teleport and rf section validation
+  test_tftp_section                               Controller TFTP section validation
+  test_tlc_section                                Controller tlc section validation
+NetworkValidationCase                           Not needed? Network creation page validation
+  test_additional_setup                           Network additional setup section validation test
+  test_beams                                      Network satellite beams section validation test
+  test_settings                                   Network settings section validation test
+PolRuleValidationCase                           Not needed? Policy rule form validation
+  test_action_compress_rtp                        Policy rule action Compress_RTP validation test
+  test_action_no_tcpa                             Policy rule action No_TCPA validation test
+  test_action_set_queue                           Policy rule action Set_queue validation test
+  test_action_set_ts_ch                           Policy rule action Set_TS_ch validation test
+  test_call_policy                                Policy rule action CALL_policy validation test
+  test_check_802_1q_priority                      Policy rule check 802_1Q_priority validation test
+  test_check_dscp                                 Policy rule check DSCP validation test
+  test_check_dst_tcp_port                         Policy rule check DST_TCP_port validation test
+  test_check_dst_udp_port                         Policy rule check DST_UDP_port validation test
+  test_check_icmp_type                            Policy rule check ICMP_type validation test
+  test_check_protocol                             Policy rule check Protocol validation test
+  test_check_src_tcp_port                         Policy rule check SRC_TCP_port validation test
+  test_check_src_udp_port                         Policy rule check SRC_UDP_port validation test
+  test_check_tos                                  Policy rule check TOS validation test
+  test_check_vlan                                 Policy rule check VLAN validation test
+  test_compress_gtp                               Policy rule action Compress_GTP validation test
+  test_drop_if_station_down                       Policy rule action Drop_if_station_down validation test
+  test_dst_net                                    Policy rule check DST_NET validation test
+  test_encrypt                                    Policy rule action Encrypt validation test
+  test_goto_policy                                Policy rule action GOTO_policy validation test
+  test_no_screening                               Policy rule action No_screening validation test
+  test_set_acm_channel                            Policy rule action Set_ACM_channel validation test
+  test_set_dscp                                   Policy rule action Set_DSCP validation test
+  test_set_tos                                    Policy rule action Set_TOS validation test
+  test_src_net                                    Policy rule check SRC_NET validation test
+SrDynLicCreateCase                              Check that dynamic licenses can be created and attached. 2 Devices (MF hub, Inroute), 2 Star Stations
+  test_sr_dyn_lic_create                          None
+SrDynLicDeleteCase                              Check that dynamic licenses is removed from uhp after deleted in NMS
+  test_sr_dyn_lic_delete                          None
+SrDynLicGroupsCase                              Check that one dynamic licenses isn't attached to two UHPs
+  test_sr_dyn_lic_groups                          None
+SrDynLicUnsuitCase                              Check that controller doesn't go up with unsuitable dynamic license
+  test_sr_dyn_lic_unsuit                          None
+Sr10MhzPowerCase                                Check site setup settings in a network under SR ctrl
+  test_sr_10MHz_power                             None
+SrConnectionSettingsCase                        Check connection settings to attach different controllers
+  test_sr_connection_settings                     None
+SrDevInaccessCase                               After a short time of the device inaccessibility the net(MF-Hub+2 stations) under SR ctrl is still in UP state
+  test_sr_no_connect                              None
+SrDiffPriorityCase                              Check that controller with higher priority switches to the second device
+  test_sr_different_priority                      None
+SrRestartNmsCase                                Check that after NMS restart, network (MF-Hub and 2 stations) under SR ctrl is in UP state
+  test_sr_restart_nms                             None
+SrSimpleSwitchCase                              A test to check the switching of the controller to another device when the active device is unreachable
+  test_SR_simple_switch                           None
+SrSwitchModOffCase                              Check switching MF hub controller to another device when the modulator is turned off. 2 devices, 2 stations
+  test_SR_switch_modOff                           None
+SrSamePriorityCase                              Check that controllers with the same priorities do not switch
+  test_sr_same_priority                           None
+SrSetUpDamaCase                                 Set up DAMA topology in Smart Redundancy. 2 Devices, 2 Dama stations
+  test_SR_set_DAMA                                None
+SrSetUpDamaHubInrCase                           Set up DAMA topology in Smart Redundancy. 3 Devices, 2 Stations
+  test_SR_set_up_DamaHubInr                       None
+SrSetUpHblCase                                  Set up Hubless topology in Smart Redundancy. 2 Devices, 2 Stations
+  test_SR_set_up_HBL                              None
+SrSetUpMfCase                                   Set up Star topology in Smart Redundancy. 2 Devices, 4 Stations
+  test_SR_set_up_MF                               None
+SrSetUpMfHubMfInrCase                           Set up Star topology (MF-Hub + Mf-Inroute) in Smart Redundancy. 3 Devices, 4 Stations
+  test_SR_set_up_MFHubMfInr                       None
+SrSetUpOutInrCase                               Set up Star topology (Outroute + Inroute) in Smart Redundancy. 3 Devices, 4 Stations
+  test_SR_set_up_MF                               None
+SrCheckIdleCase                                 Check teleport switching due to check idle fault
+  test_sr_check_idle                              None
+SrHubCnMinCase                                  Check teleport switching due to Low_hub_CN fault
+  test_sr_hub_cn_min                              None
+SrMaxRxDownCase                                 The test to check teleport switching due to max rx down controllers fault
+  test_sr_max_rx_down                             None
+SrMaxRxFaultCase                                Check teleport switching due to max rx fault controllers
+  test_sr_max_rx_fault                            None
+SrMaxSwFailsCase                                Check teleport switching due max_sw_fails fault
+  test_sr_max_sw_fails                            None
+SrMaxTxDownCase                                 The test to check teleport switching due to max tx down controllers fault
+  test_sr_max_tx_down                             None
+SrMaxTxFaultCase                                Check teleport switching due to max tx fault controllers
+  test_max_tx_fault                               None
+SrMinCtrUpCase                                  Check teleport switching due to min ctr up fault
+  test_sr_min_ctr_up                              None
+SrMinStUpCase                                   Check teleport switching due to min st up fault controllers
+  test_sr_min_st_up                               None
+SrOwnCnMinCase                                  Check teleport switching due to Low_own_CN fault
+  test_sr_own_cn_min                              None
+SrStCnMinCase                                   Check teleport switching due to Low_stations_CN fault
+  test_sr_st_cn_min                               None
+SrWithRoamingCase                               The test to check teleport switching due max_sw_fails fault
+  test_sr_with_roaming                            None
+SrWithBalancerCase                              The test to check that SR works with Balancer
+  test_sr_with_balancer                           None
+MfHubControllerDashCase                         
+  test_dashboards_rf_stats                        Dashboards RF values
+HublessNetworkStatesCase                        NMS show correct controller and station states in a hubless network
+  test_controller_states                          None
+  test_overall_states                             None
+  test_station_state                              None
+StarNetworkStatisticsCase                       Dashboard statistics (excluding traffic) for a star network with 3 stations
+  test_controller_stats                           Controller dashboard statistics
+  test_network_stats                              Network dashboard statistics
+  test_stations_stats                             Stations dashboard statistics
+  test_vno_stats                                  Vno dashboard statistics
+ControllersStatesCase                           Controllers states in Network dashboard
+  test_controller_states_network_dash             4 controllers with various states in network dash case
+StationsStatesCase                              Star network with 3 real stations and numerous dummy ones (enabled, disabled, no rx_controller) check states
+  test_states                                     Check expected stations' states (Up, Down, Off, Idle)
+SimpleTrafficQueueCase                          One line string describing the test case
+  test_traffic_qos_queue                          One line string describing the test method
+TrafficEachQueueCase                            Traffic statistics for MF hub and station, setting a particular queue at a time
+  test_traffic_qos_queue                          Controller statistics for traffic in each queue at a time
+TrafficAllQueueCase                             MF hub and 7 stations, traffic in all queues
+  test_controller_traffic                         Traffic stats for controller
+UserMultiProcCase                               Case multiple user processes station creation
+  test_concurrently_station_create                Several users concurrent station creation test
+UsersGroupsAccessesCase                         Case tests users, user groups, and access capabilities of NMS
+  test_apply_same_password                        Submitting existing user form without editing password field
+  test_apply_same_username                        Create users with the same names in different groups
+  test_change_credentials                         Check if it is possible to login after changing username and password
+  test_delete_own_user_group_access               Try to delete own user and its group while it is logged in (WEB and API)
+  test_disabled_users                             Check if disabled users cannot login
+  test_edit_disable                               Check if user cannot create objects with edit disable access
+  test_extremely_long_password                    Check the maximum length of the user password. Does not cause fail if 800 or less characters are allowed
+  test_invalid_credentials                        Login 1000 times using wrong credentials case
+  test_limited_access                             Check that users' access scope is correct (e.g. VNO users get access to their VNO only)
+  test_login_loop_with_long_pass                  Login loop for a single user having 50 characters long password, 1000 login logout iterations
+  test_modified_cookies_access                    API requests with modified cookies case
+  test_multiple_access                            Multiple access with the same credentials case. Login 1000 times without logout
+  test_no_cookies_access                          API requests with no cookies case
+  test_unauthorized_access                        WEB unauthorized access test. Invalid credentials used to load various NMS pages
+  test_users_login                                Max number of groups and users with full access. Check that all of them can login via API
+  test_users_no_access                            Max number of users (unique usernames and passwords) with no access. Check that they cannot login
+  test_vno_users_correct_redirect                 Vno group having access to the Vno and a controller login case (ticket 8067)
+  test_wrong_credentials                          Check if wrong credentials cannot be used to login and manipulate NMS
+WebUsersUseCase                                 Users having access to particular areas use objects with granted access
+  test_vno_user                                   VNO user use controller, service, and shaper
+CompareMetaCase                                 Compare already existed meta data with the current version meta
+  test_new_fields_and_vars                        Compare all key-value pairs in new meta data according to the reference meta data
+  test_reference_meta                             Compare all key-value pairs in the reference meta according to the new meta data
+WebModelModcodCase                              All valid modcodes for UHP-200 and UHP-200X as well as invalid for UHP-200 case
+  test_model_uhp200                               Valid and invalid modcodes for UHP model 200 test
+  test_model_uhp200x                              Valid modcodes for UHP model 200X test
+WebRealtimeCase                                 WEB Realtime page for MF_hub and stn: start of output of buttons, refresh, direct command (ticket 8254)
+  test_controller_direct_command                  Controller Realtime direct command send
+  test_controller_realtime                        Controller Realtime output of pressed buttons (all except for config section)
+  test_controller_refresh                         Controller Realtime refresh checkbox should trigger auto update of output
+  test_station_direct_command                     Station Realtime direct command send
+  test_station_realtime                           Station Realtime output of pressed buttons (all except for config section)
+  test_station_refresh                            Station Realtime refresh checkbox should trigger auto update of output
+WebFastClicksCase                               Clicking at menu and tree items as as fast as possible
+  test_all_fast_clicks                            None
+  test_fast_clicks_investigator_servers           None
+  test_menu_fast_clicks                           Clicking at the menu elements without waiting the response
+  test_tree_fast_clicks                           Clicking at the tree elements without waiting the response. Counting number of stations
+WebAllFormsValidationCase                       Not needed as data types test exists? Web all forms validation according to meta
+  test_access                                     None
+  test_alert                                      None
+  test_bal_controller                             None
+  test_camera                                     None
+  test_controller                                 None
+  test_dashboard                                  None
+  test_debug                                      None
+  test_device                                     None
+  test_group                                      None
+  test_network                                    None
+  test_nms                                        None
+  test_policy                                     None
+  test_policy_rule                                None
+  test_port_map                                   None
+  test_profile_set                                None
+  test_rip_router                                 None
+  test_route                                      None
+  test_server                                     None
+  test_service                                    None
+  test_shaper                                     None
+  test_sr_controller                              None
+  test_sr_license                                 None
+  test_sr_teleport                                None
+  test_station                                    None
+  test_sw_upload                                  None
+  test_teleport                                   None
+  test_user                                       None
+  test_vno                                        None
+WebMaxResponseTimeCase                          ! Not ready. Maximum response time to some time consuming requests
+  test_response_time                              None
+WebMap10000StationsCase                         ! Not entirely ready - under development
+  test_map_performance                            None
+WebRandomRequestsCase                           Bombarding WEB server with random requests
+  test_semi_correct_requests                      Semi correct requests via WEB
+WebAsyncThroughputCase                          NMS WEB server throughput case using async requests
+  test_throughput_async                           WEB server throughput via async requests
+WebThroughputCase                               NMS WEB server throughput case
+  test_web_get_throughput                         WEB server throughput for GET requests test
+WebBrokenLinksCase                              Test that all links and most buttons do not cause 404 or 400
+  test_all_links                                  Recursively test all links in NMS and make sure that they are not 404 or 400
+  test_logout                                     Simple logout test (logout do not cause 404 or 400)
+WebBrokenLinksJSCase                            One line string describing the test case
+  test_sample                                     One line string describing the test case
+WebDataTypesCase                                Web forms data types case
+  test_data_types                                 Test each data type from meta on an individual field via WEB browser
+  test_sample                                     None
+WebDynamicDropdownsCase                         WEB check items in dynamic dropdowns case. The number of items are maximum
+  test_dynamic_dropdowns                          Test all type 14 fields in WEB
+WebDefaultValuesCase                            WEB create objects by passing only minimum required parameters to check if there are wrong defaults in meta
+  test_default_parameters                         One line string describing the test case
+WebEditEveryTableCase                           WEB interface edit each table: first, middle, and last entries
+  test_edit_access                                Edit second, middle, and last entries of Access table
+  test_edit_alert                                 Edit first, middle, and last entries of Alert table
+  test_edit_bal_controller                        Edit first, middle, and last entries of Bal Controller table
+  test_edit_camera                                Edit first, middle, and last entries of Camera table
+  test_edit_controller                            Edit first, middle, and last entries of Controller table
+  test_edit_dashboard                             Edit first, middle, and last entries of Dashboard table
+  test_edit_device                                Edit first, middle, and last entries of Device table
+  test_edit_group                                 Edit second, middle, and last entries of Group table
+  test_edit_network                               Edit first, middle, and last entries of Network table
+  test_edit_pol_rule                              Edit first, middle, and last entries of Policy Rules table
+  test_edit_policy                                Edit first, middle, and last entries of Policy table
+  test_edit_port_map                              Edit first, middle, and last entries of Port Map table
+  test_edit_profile_Set                           Edit first, middle, and last entries of Profile Set table
+  test_edit_rip_router                            Edit first, middle, and last entries of RIP router table
+  test_edit_route                                 Edit first, middle, and last entries of Route table
+  test_edit_sch_range                             Edit first, middle, and last entries of Sch Range table
+  test_edit_sch_service                           Edit first, middle, and last entries of Sch Service table
+  test_edit_scheduler                             Edit first, middle, and last entries of Scheduler table
+  test_edit_server                                Edit first, middle, and last entries of Server table
+  test_edit_service                               Edit first, middle, and last entries of Service table
+  test_edit_shaper                                Edit first, middle, and last entries of Shaper table
+  test_edit_sr_controller                         Edit first, middle, and last entries of SR Controller table
+  test_edit_sr_license                            Edit first, middle, and last entries of SR License table
+  test_edit_sr_teleport                           Edit first, middle, and last entries of SR Teleport table
+  test_edit_station                               Edit first, middle, and last entries of Station table
+  test_edit_sw_upload                             Edit first, middle, and last entries of SW Upload table
+  test_edit_teleport                              Edit first, middle, and last entries of Teleport table
+  test_edit_user                                  Edit second, middle, and last entries of User table
+  test_edit_vno                                   Edit first, middle, and last entries of VNO table
+WebGetListAllTablesCase                         WEB interface get list of all objects in every table
+  test_get_list_access                            WEB interface getting list of all Accesses
+  test_get_list_alert                             WEB interface getting list of all Alert
+  test_get_list_bal_controller                    WEB interface getting list of all Bal Controller
+  test_get_list_camera                            WEB interface getting list of all Camera
+  test_get_list_controller                        WEB interface getting list of all Controller
+  test_get_list_dashboard                         WEB interface getting list of all Dashboard
+  test_get_list_device                            WEB interface getting list of all Device
+  test_get_list_group                             WEB interface getting list of all Groups
+  test_get_list_network                           WEB interface getting list of all Networks
+  test_get_list_policy                            WEB interface getting list of all Policies
+  test_get_list_polrule                           WEB interface getting list of all Policy Rules
+  test_get_list_port_map                          WEB interface getting list of all Port Maps
+  test_get_list_profile_set                       WEB interface getting list of all Profile Sets
+  test_get_list_rip_router                        WEB interface getting list of all RIP routers
+  test_get_list_route                             WEB interface getting list of all Routes
+  test_get_list_sch_range                         WEB interface getting list of all Sch Ranges
+  test_get_list_sch_service                       WEB interface getting list of all Sch Services
+  test_get_list_scheduler                         WEB interface getting list of all Schedulers
+  test_get_list_server                            WEB interface getting list of all Servers
+  test_get_list_service                           WEB interface getting list of all Services
+  test_get_list_shaper                            WEB interface getting list of all Shapers
+  test_get_list_sr_controller                     WEB interface getting list of all Sr Controllers
+  test_get_list_sr_license                        WEB interface getting list of all Sr Licenses
+  test_get_list_sr_teleport                       WEB interface getting list of all Sr Teleports
+  test_get_list_station                           WEB interface getting list of all Stations
+  test_get_list_sw_upload                         WEB interface getting list of all Sw Uploads
+  test_get_list_teleport                          WEB interface getting list of all Teleports
+  test_get_list_user                              WEB interface getting list of all Users
+  test_get_list_vno                               WEB interface getting list of all VNOs
+WebMapPerformanceCase                           10000 stations map performance test case
+  test_map_controller                             2000 stations in 1 controller browser performance
+  test_map_network                                10000 stations in one network browser performance
+  test_map_station                                Station browser performance
+  test_map_vno                                    10000 stations in one vno browser performance
+WebMissingFormFieldsCase                        Each NMS entity missing form fields according to meta data case
+  test_access                                     Missing fields in access form
+  test_alert                                      Missing fields in alert form
+  test_bal_controller                             Missing fields in bal_controller form
+  test_camera                                     Missing fields in camera form
+  test_controller                                 Missing fields in controller form
+  test_dashboard                                  Missing fields in dashboard form
+  test_device                                     Missing fields in sr_teleport form
+  test_group                                      Missing fields in group form
+  test_network                                    Missing fields in network form
+  test_policy                                     Missing fields in policy form
+  test_polrule                                    Missing fields in pol_rule form
+  test_port_map                                   Missing fields in port_map form
+  test_profile_set                                Missing fields in profile_set form
+  test_rip_router                                 Missing fields in rip_router form
+  test_route                                      Missing fields in route form
+  test_sch_range                                  Missing fields in sch_range form
+  test_sch_service                                Missing fields in sch_service form
+  test_sch_task                                   Missing fields in sch_task form
+  test_scheduler                                  Missing fields in scheduler form
+  test_server                                     Missing fields in server form
+  test_service                                    Missing fields in service form
+  test_shaper                                     Missing fields in shaper form
+  test_sr_controller                              Missing fields in sr_controller form
+  test_sr_license                                 None
+  test_sr_teleport                                Missing fields in sr_teleport form
+  test_station                                    Missing fields in station form
+  test_sw_upload                                  Missing fields in sw_upload form
+  test_teleport                                   Missing fields in teleport form
+  test_user                                       Missing fields in user form
+  test_vno                                        Missing fields in vno form
+WebSimultaneousAccessCase                       Two users edit/delete same form
+  test_apply_deleted_linked_object                First user applies a form with a linked object that has just been deleted by the second user
+  test_apply_form_in_deleted_parent               First user applies a new object while the second one has just deleted the parent object
+  test_apply_modified_linked_object               First user applies a form with a linked object that has just been modified by the second user
+  test_delete_same_object                         Two users delete the same object
+  test_edit_deleted_form                          First user starts editing form while the second one has just deleted the form object
+  test_edit_same_object                           Two users edit the same form
+  test_edit_same_table                            Two users edit the same table
+  test_modify_newly_created_object                First user opens controller edit form while the second one deletes and creates a new controller with another mode
+  test_realtime_deleted_controller                First user applies getting controller realtime while the second one has just deleted the object
+  test_user_deletes_another_user                  User is being deleted upon editing a form

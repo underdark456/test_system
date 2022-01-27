@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Возможности системы &mdash; NMS TEST SYSTEM</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_system" href="modules.html" />
+    <link rel="prev" title="Начало работы" href="getting_started_rus.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NMS TEST SYSTEM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started_rus.html">Начало работы</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Возможности системы</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rst-detail-description-options">Ридер конфигурационных файлов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rst-detail-description-backup-manager">Менеджер бэкапов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rst-detail-description-nms-driver">Драйвер взаимодействия с НМС</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uhp">Драйвер взаимодействия с UHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rst-detail-description-entities">НМС сущности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pycharm">Темплейты PyCharm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">test_system</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NMS TEST SYSTEM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Возможности системы</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Возможности системы<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt>Содержание:</dt><dd><p><a class="reference internal" href="#rst-detail-description-options"><span class="std std-ref">Ридер конфигурационных файлов</span></a></p>
+<p><a class="reference internal" href="#rst-detail-description-backup-manager"><span class="std std-ref">Менеджер бэкапов</span></a></p>
+<p><a class="reference internal" href="#rst-detail-description-nms-driver"><span class="std std-ref">Драйвер взаимодействия с НМС</span></a></p>
+<p><a class="reference internal" href="#rst-detail-description-uhp-driver"><span class="std std-ref">Драйвер взаимодействия с UHP</span></a></p>
+<p><a class="reference internal" href="#rst-detail-description-entities"><span class="std std-ref">НМС сущности</span></a></p>
+<p><a class="reference internal" href="#rst-detail-description-pycharm"><span class="std std-ref">Темплейты PyCharm</span></a></p>
+</dd>
+</dl>
+<div class="section" id="rst-detail-description-options">
+<span id="id2"></span><h2>Ридер конфигурационных файлов<a class="headerlink" href="#rst-detail-description-options" title="Permalink to this headline">¶</a></h2>
+<p>В тестовой системе используется следующая иерархия параметров (опций) тест-кейсов:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Глобальные опции <cite>test_system.global_options.options.py</cite></p>
+<blockquote>
+<div><ol class="arabic" start="2">
+<li><p>Глобальные локальные опции <cite>test_system.global_options.local_options.py</cite></p>
+<blockquote>
+<div><ol class="arabic" start="3">
+<li><p>Опции тест-кейса <cite>test_system.test_scenarios.&lt;путь_до_директории_тест_кейса&gt;.options.py</cite></p>
+<blockquote>
+<div><ol class="arabic simple" start="4">
+<li><p>Локальные опции тест-кейса <cite>test_system.test_scenarios.&lt;путь_до_директории_тест_кейса&gt;.local_options.py</cite></p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Локальные опции, как глобальные так и тест-кейсов, не отслеживаются системой контроля версий, а служат
+для переопределения параметров тест-кейсов при локальном использовании</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Не следует переопределять параметры глобальных опций. Вместо этого необходимо отредактировать файл глобальных локальных опций</p>
+</div>
+<p>Для установки параметров соединения с вашей НМС необходимо создать файл глобальных локальных опций:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test_system.global_options.local_options.py</span>
+<span class="kn">from</span> <span class="nn">src.custom_logger</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.options_providers.options_provider</span> <span class="kn">import</span> <span class="n">CHROME_CONNECT</span><span class="p">,</span> <span class="n">API_CONNECT</span><span class="p">,</span> <span class="n">CONNECTION</span>
+
+<span class="n">_host</span> <span class="o">=</span> <span class="s1">&#39;http://some_nms_address:port_number/&#39;</span>  <span class="c1"># IP адрес и порт вашей НМС</span>
+
+<span class="n">system</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">CHROME_CONNECT</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;address&#39;</span><span class="p">:</span> <span class="n">_host</span><span class="p">,</span>
+        <span class="s1">&#39;no_gui&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">API_CONNECT</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;address&#39;</span><span class="p">:</span> <span class="n">_host</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="c1"># тип драйвера НМС (возможные варианты CHROME_CONNECT, API_CONNECT)</span>
+    <span class="n">CONNECTION</span><span class="p">:</span> <span class="n">API_CONNECT</span><span class="p">,</span>  <span class="c1"># будет использован API драйвер</span>
+
+    <span class="s1">&#39;default_config&#39;</span><span class="p">:</span> <span class="s1">&#39;default_config.txt&#39;</span><span class="p">,</span>  <span class="c1"># default NMS backup file</span>
+
+    <span class="c1"># Установка уровня логирования (возможные варианты DEBUG, INFO, WARNING, ERROR, CRITICAL)</span>
+    <span class="n">LOGGING</span><span class="p">:</span> <span class="n">DEBUG</span>  <span class="c1"># будет установлен уровень логирования DEBUG</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>В файлах опций может быть задано два словаря с именами <cite>system</cite> и <cite>options</cite>. Словарь <cite>system</cite> используется для установки параметров соединения, уровня логирования и т.п.
+Словарь <cite>options</cite> используется для определения параметров, используемых в тест-кейсах, например, параметры контроллера.</p>
+<p>Для загрузки опций применяется ридер конфигурационных файлов, с помощью которого осуществляется переопределение опций начиная с глобальных и заканчивая локальными опциями тест-кейса.
+Опции переопределяются в следующем порядке:</p>
+<blockquote>
+<div><p>Глобальные опции -&gt; Глобальные локальные опции -&gt; Опции тест-кейса -&gt; Локальные опции тест-кейса</p>
+</div></blockquote>
+<p>Пример использования ридера конфигурационных файлов:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.options_providers.options_provider</span> <span class="kn">import</span> <span class="n">OptionsProvider</span>
+
+<span class="n">options_path</span> <span class="o">=</span> <span class="s2">&quot;test_scenarios/путь_до_директории_тест_кейса&quot;</span>
+
+<span class="k">class</span> <span class="nc">SomeNameTestCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_options</span><span class="p">(</span><span class="n">options_path</span><span class="p">)</span>
+        <span class="c1"># после этого загруженные опции доступны в обычных методах текущего модуля как `self.options`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rst-detail-description-backup-manager">
+<span id="id3"></span><h2>Менеджер бэкапов<a class="headerlink" href="#rst-detail-description-backup-manager" title="Permalink to this headline">¶</a></h2>
+<p>В тестовой системе используется менеджер бэкапов для создания бэкапа текущей конфигурации НМС и загрузки конфигурации НМС из бэкапа.
+Менеджер бэкапов находится в <cite>test_system.src.backup_manager</cite>. Бэкапы хранятся в <cite>test_system.nms_backups</cite>.
+Пример загрузки бэкапа:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.backup_manager.backup_manager</span> <span class="kn">import</span> <span class="n">BackupManager</span>
+
+
+<span class="k">class</span> <span class="nc">SomeNameTestCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">backup</span> <span class="o">=</span> <span class="n">BackupManager</span><span class="p">()</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">apply_backup</span><span class="p">(</span><span class="s1">&#39;default_config.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Пример сохранения текущий конфигурации НМС:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.backup_manager.backup_manager</span> <span class="kn">import</span> <span class="n">BackupManager</span>
+
+
+<span class="k">class</span> <span class="nc">SomeNameTestCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">backup</span> <span class="o">=</span> <span class="n">BackupManager</span><span class="p">()</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">create_backup</span><span class="p">(</span><span class="s1">&#39;nms_config_name.txt&#39;</span><span class="p">)</span>
+        <span class="c1"># В обычных методах данного класса драйвер доступен как `self.backup`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rst-detail-description-nms-driver">
+<span id="id4"></span><h2>Драйвер взаимодействия с НМС<a class="headerlink" href="#rst-detail-description-nms-driver" title="Permalink to this headline">¶</a></h2>
+<p>В тестовой системе используется концепция драйвера взаимодействия с НМС. Драйвер необходим при использовании в тест-кейсе обёрток сущностей НМС.
+В текущей реализации используются следующие два драйвера: API и CHROME. Тип драйвера как правило определяется в глобальных опциях в словаре <cite>system</cite> по ключу <cite>CONNECTION</cite>,
+параметры драйверов определяются там же по ключам <cite>API_CONNECT</cite> и <cite>CHROME_CONNECT</cite>. Также возможно переопределение драйвера для отдельного тест-кейса в файле опций этого тест-кейса.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Экземпляр драйвера используется как первый аргумент при инициализации обёрток сущностей НМС.</p>
+</div>
+<p>Описание методов драйверов приводится в <a class="reference internal" href="test_system.src.drivers.http.html"><span class="doc">test_system.src.drivers.http package</span></a></p>
+<p>Пример инициализации драйвера с параметрами из глобальных опций:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.drivers.drivers_provider</span> <span class="kn">import</span> <span class="n">DriversProvider</span>
+<span class="kn">from</span> <span class="nn">src.constants</span> <span class="kn">import</span> <span class="n">NEW_OBJECT_ID</span>
+
+
+<span class="k">class</span> <span class="nc">SomeNameTestCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="c1"># Инициализация драйвера всегда выглядит так</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">DriversProvider</span><span class="o">.</span><span class="n">get_driver_instance</span><span class="p">(</span>
+            <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="c1"># Далее инициализированный драйвер можно использовать для работы с сущностями НМС, например для создания новой сети</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">network</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;default_network&#39;</span><span class="p">})</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="c1"># В обычных методах данного класса драйвер доступен как `self.driver`</span>
+</pre></div>
+</div>
+<p>Если драйвер переопределён в опциях конкретного тест-кейса, его инициализация будет выглядеть следующим образом:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.drivers.drivers_provider</span> <span class="kn">import</span> <span class="n">DriversProvider</span>
+<span class="kn">from</span> <span class="nn">src.constants</span> <span class="kn">import</span> <span class="n">NEW_OBJECT_ID</span>
+
+
+<span class="k">class</span> <span class="nc">SomeNameTestCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="c1"># Инициализация драйвера всегда выглядит так</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">DriversProvider</span><span class="o">.</span><span class="n">get_driver_instance</span><span class="p">(</span>
+            <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">(</span><span class="s1">&#39;test_scenarios/путь_до_директории_тест_кейса&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="c1"># Далее инициализированный драйвер можно использовать для работы с сущностями НМС, например для создания новой сети</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">network</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;default_network&#39;</span><span class="p">})</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="c1"># В обычных методах данного класса драйвер доступен как `self.driver`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="uhp">
+<span id="rst-detail-description-uhp-driver"></span><h2>Драйвер взаимодействия с UHP<a class="headerlink" href="#uhp" title="Permalink to this headline">¶</a></h2>
+<p>В тестовой системе используется драйвер взаимодействия с UHP для тест-кейсов, в которых необходимо получать данные непосредственно с модемов.
+Драйвер взаимодействия с UHP находится в <a class="reference internal" href="test_system.src.drivers.uhp.html"><span class="doc">test_system.src.drivers.uhp package</span></a></p>
+<p>Пример использования драйвера UHP:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.drivers.uhp.uhp_requests_driver</span> <span class="kn">import</span> <span class="n">UhpRequestsDriver</span>
+
+<span class="k">class</span> <span class="nc">SomeNameTestCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">uhp_driver</span> <span class="o">=</span> <span class="n">UhpRequestsDriver</span><span class="p">(</span><span class="n">router_address</span><span class="o">=</span><span class="s1">&#39;ip_адрес_роутера&#39;</span><span class="p">)</span>
+        <span class="c1"># В обычных методах данного класса драйвер доступен как `self.uhp_driver`</span>
+
+    <span class="k">def</span> <span class="nf">test_modulator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># В переменной `uhp_data` будет записан словарь с ключами и значениями формы `modulator` профиля 1 UHP</span>
+        <span class="n">uhp_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uhp_driver</span><span class="o">.</span><span class="n">get_modulator_form</span><span class="p">()</span>
+        <span class="c1"># Проверка соответствия значения TX level в UHP величине 20.3</span>
+        <span class="n">assertEqual</span><span class="p">(</span><span class="s1">&#39;20.3&#39;</span><span class="p">,</span> <span class="n">uhp_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tx_level&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rst-detail-description-entities">
+<span id="id5"></span><h2>НМС сущности<a class="headerlink" href="#rst-detail-description-entities" title="Permalink to this headline">¶</a></h2>
+<p>В тестовой системе используются обёртки сущностей НМС. Для их использования необходимо предварительно инициализировать драйвер.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Драйвер всегда передаётся первым аргументом.</p></li>
+<li><p>Вторым аргументом передаётся ID родительского объекта, например, для телепорта это будет ID сети.</p></li>
+<li><p>Третьим аргументом передаётся ID самого объекта, если ID равен <cite>-1</cite> будет создан новый объект.</p></li>
+<li><p>Четвёртый аргумент необязателен - это словарь с параметрами объекта.</p></li>
+</ul>
+</div></blockquote>
+<p>Описание методов обёрток сущностей НМС приводится в соответствующем разделе <a class="reference internal" href="test_system.src.nms_entities.basic_entities.html"><span class="doc">test_system.src.nms_entities.basic_entities package</span></a>:</p>
+<p>Пример создания простой конфигурации НМС:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test_system/utilities/create_typical_nms_config/basic_nms_config.py</span>
+<span class="kn">from</span> <span class="nn">src.constants</span> <span class="kn">import</span> <span class="n">NEW_OBJECT_ID</span>
+<span class="kn">from</span> <span class="nn">src.drivers.drivers_provider</span> <span class="kn">import</span> <span class="n">DriversProvider</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.alert</span> <span class="kn">import</span> <span class="n">Alert</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.controller</span> <span class="kn">import</span> <span class="n">Controller</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.network</span> <span class="kn">import</span> <span class="n">Network</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.profile</span> <span class="kn">import</span> <span class="n">Profile</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.shaper</span> <span class="kn">import</span> <span class="n">Shaper</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.station</span> <span class="kn">import</span> <span class="n">Station</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.teleport</span> <span class="kn">import</span> <span class="n">Teleport</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.user_group</span> <span class="kn">import</span> <span class="n">UserGroup</span>
+<span class="kn">from</span> <span class="nn">src.nms_entities.basic_entities.vno</span> <span class="kn">import</span> <span class="n">Vno</span>
+<span class="kn">from</span> <span class="nn">src.options_providers.options_provider</span> <span class="kn">import</span> <span class="n">OptionsProvider</span><span class="p">,</span> <span class="n">API_CONNECT</span>
+
+
+<span class="k">def</span> <span class="nf">get_drivers</span><span class="p">():</span>
+    <span class="n">connection_options</span> <span class="o">=</span> <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">(</span><span class="s1">&#39;global_options&#39;</span><span class="p">,</span> <span class="n">API_CONNECT</span><span class="p">)</span>
+    <span class="n">api</span> <span class="o">=</span> <span class="n">DriversProvider</span><span class="o">.</span><span class="n">get_driver_instance</span><span class="p">(</span><span class="n">connection_options</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">api</span>
+
+
+<span class="k">def</span> <span class="nf">create_basic_nms_config</span><span class="p">():</span>
+    <span class="n">api</span> <span class="o">=</span> <span class="n">get_drivers</span><span class="p">()</span>
+
+    <span class="n">alert</span> <span class="o">=</span> <span class="n">Alert</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_alert&#39;</span><span class="p">})</span>
+    <span class="n">alert</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">network</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;default_network&#39;</span><span class="p">})</span>
+    <span class="n">network</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_profile&#39;</span><span class="p">})</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">shaper</span> <span class="o">=</span> <span class="n">Shaper</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_shaper&#39;</span><span class="p">})</span>
+    <span class="n">shaper</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">teleport</span> <span class="o">=</span> <span class="n">Teleport</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_teleport&#39;</span><span class="p">})</span>
+    <span class="n">teleport</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">controller</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span>
+                            <span class="p">{</span>
+                                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_mf_hub&#39;</span><span class="p">,</span>
+                                <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+                                <span class="s1">&#39;teleport&#39;</span><span class="p">:</span> <span class="sa">F</span><span class="s2">&quot;teleport:</span><span class="si">{</span><span class="n">teleport</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+                            <span class="p">}</span>
+                            <span class="p">)</span>
+    <span class="n">controller</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">vno</span> <span class="o">=</span> <span class="n">Vno</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_vno&#39;</span><span class="p">})</span>
+    <span class="n">vno</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">station</span> <span class="o">=</span> <span class="n">Station</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">vno</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span>
+                      <span class="p">{</span>
+                          <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;test_station&#39;</span><span class="p">,</span>
+                          <span class="s1">&#39;serial&#39;</span><span class="p">:</span> <span class="s1">&#39;12345&#39;</span>
+                      <span class="p">}</span>
+                      <span class="p">)</span>
+    <span class="n">station</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">user_group</span> <span class="o">=</span> <span class="n">UserGroup</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NEW_OBJECT_ID</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;operators&#39;</span><span class="p">})</span>
+    <span class="n">user_group</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pycharm">
+<span id="rst-detail-description-pycharm"></span><h2>Темплейты PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">¶</a></h2>
+<p>При использовании IDE PyCharm возможно загрузить настройки темплейтов тестовой системы. Для импортирования настроек:</p>
+<blockquote>
+<div><p><cite>File -&gt; Manage IDE settings -&gt; Import Settings…</cite></p>
+<p>Выбрать файл <cite>settings.zip</cite> в корневой директории тестовой системы, дважды подтвердить выбор и согласится на перезапуск IDE.</p>
+</div></blockquote>
+<p>После этого возможно создавать готовые <cite>__init__.py</cite> файлы тест-кейсов и шаблоны опций следующим способом:
+вызвать кликом правой кнопкой мыши на новой директории тест-кейса контекстное меню в котором выбрать <cite>New -&gt; test init</cite>
+согласиться на отслеживание файла системой контроля версий.</p>
+<a class="reference internal image-reference" href="_images/init.png"><img alt="sample __init__.py" src="_images/init.png" style="width: 400px;" /></a>
+<p>Аналогично создаются темплейты глобальных локальных опций (global local options), опций тест-кейсов (options), локальные опции тест-кейсов (local options)</p>
+<hr class="docutils" />
+<p>Также существует возможность вызова темплейтов тест-кейсов. Для этого после создания файла <cite>case_название_тест_кейса.py</cite> набрать в редакторе <cite>case</cite> и выбрать один из трёх предложенных вариантов:</p>
+<a class="reference internal image-reference" href="_images/case.png"><img alt="sample case_sample" src="_images/case.png" style="width: 400px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="modules.html" class="btn btn-neutral float-right" title="test_system" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started_rus.html" class="btn btn-neutral float-left" title="Начало работы" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Memotech.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

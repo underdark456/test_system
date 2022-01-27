@@ -1,0 +1,6 @@
+2022-01-18 14:19:34 - RUN - ConfigMFNetHub2Stn - Initializing test case, running set_up_class...
+ERROR - test_ - Exception in test set up: False is not true : MF hub is not ready
+FAIL - test_ - AssertionError: False is not true : MF hub is not ready
+INFO - test_ - test execution time is 38.8 seconds
+2022-01-18 14:21:09 - INFO - ConfigMFNetHub2Stn - Test case execution time is 95.84 seconds
+

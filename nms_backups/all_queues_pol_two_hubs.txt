@@ -1,0 +1,443 @@
+
+.nms 0
+config_ver 17
+name UHP NMS
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename all_queues_pol_two_hubs.txt
+load_filename default_config.txt
+load_bkp_file None
+alert_mode Off
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+next controller:1
+uprow network:0
+name HL_MAS
+routes route:0
+tx_stat_num 11
+rx_stat_num 11
+mode Hubless_master
+up_timeout 60
+device_ip 127.0.0.1
+teleport teleport:0
+tx_on ON 
+tx_level 20.0
+rx1_input OFF
+current_ip 127.0.0.1
+
+.controller 1
+uprow network:0
+name HL_MAS2
+routes route:7
+tx_stat_num 11
+rx_stat_num 11
+mode Hubless_master
+up_timeout 60
+device_ip 127.0.0.2
+teleport teleport:0
+tx_on ON 
+tx_level 20.0
+rx1_input OFF
+mf1_tx 960000
+mf1_rx 960000
+current_ip 127.0.0.2
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name net-0
+controllers controller:0
+teleports teleport:0
+services service:0
+policies policy:0
+
+.policy 0
+next policy:1
+uprow network:0
+name pol-1
+rules polrule:0
+
+.policy 1
+next policy:2
+uprow network:0
+name pol-2
+rules polrule:1
+
+.policy 2
+next policy:3
+uprow network:0
+name pol-3
+rules polrule:2
+
+.policy 3
+next policy:4
+uprow network:0
+name pol-4
+rules polrule:3
+
+.policy 4
+next policy:5
+uprow network:0
+name pol-5
+rules polrule:4
+
+.policy 5
+next policy:6
+uprow network:0
+name pol-6
+rules polrule:5
+
+.policy 6
+uprow network:0
+name pol-7
+rules polrule:6
+
+.polrule 0
+uprow policy:0
+sequence 1
+type Action
+action_type Set_queue
+queue Low
+
+.polrule 1
+uprow policy:1
+sequence 1
+type Action
+action_type Set_queue
+
+.polrule 2
+uprow policy:2
+sequence 1
+type Action
+action_type Set_queue
+queue P3
+
+.polrule 3
+uprow policy:3
+sequence 1
+type Action
+action_type Set_queue
+queue Medium
+
+.polrule 4
+uprow policy:4
+sequence 1
+type Action
+action_type Set_queue
+queue P5
+
+.polrule 5
+uprow policy:5
+sequence 1
+type Action
+action_type Set_queue
+queue P6
+
+.polrule 6
+uprow policy:6
+sequence 1
+type Action
+action_type Set_queue
+queue High
+
+.route 0
+next route:1
+uprow controller:0
+type Network_TX
+service service:0
+ip 172.16.111.3
+
+.route 1
+next route:2
+uprow controller:0
+type Network_TX
+service service:1
+ip 172.16.111.3
+
+.route 2
+next route:3
+uprow controller:0
+type Network_TX
+service service:2
+ip 172.16.111.3
+
+.route 3
+next route:4
+uprow controller:0
+type Network_TX
+service service:3
+ip 172.16.111.3
+
+.route 4
+next route:5
+uprow controller:0
+type Network_TX
+service service:4
+ip 172.16.111.3
+
+.route 5
+next route:6
+uprow controller:0
+type Network_TX
+service service:5
+ip 172.16.111.3
+
+.route 6
+uprow controller:0
+type Network_TX
+service service:6
+ip 172.16.111.3
+
+.route 7
+next route:8
+uprow controller:1
+type Network_TX
+service service:7
+ip 172.16.111.3
+
+.route 8
+next route:9
+uprow controller:1
+type Network_TX
+service service:8
+ip 172.16.111.3
+
+.route 9
+next route:10
+uprow controller:1
+type Network_TX
+service service:9
+ip 172.16.111.3
+
+.route 10
+next route:11
+uprow controller:1
+type Network_TX
+service service:10
+ip 172.16.111.3
+
+.route 11
+next route:12
+uprow controller:1
+type Network_TX
+service service:11
+ip 172.16.111.3
+
+.route 12
+next route:13
+uprow controller:1
+type Network_TX
+service service:12
+ip 172.16.111.3
+
+.route 13
+uprow controller:1
+type Network_TX
+service service:13
+ip 172.16.111.3
+
+.service 0
+next service:1
+uprow network:0
+name ser-0
+hub_priority Policy
+hub_policy policy:0
+hub_vlan 2006
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 1
+next service:10
+uprow network:0
+name ser-1
+hub_priority Policy
+hub_policy policy:1
+hub_vlan 2007
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 2
+next service:3
+uprow network:0
+name ser-2
+hub_priority Policy
+hub_policy policy:2
+hub_vlan 2008
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 3
+next service:4
+uprow network:0
+name ser-3
+hub_priority Policy
+hub_policy policy:3
+hub_vlan 2009
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 4
+next service:5
+uprow network:0
+name ser-4
+hub_priority Policy
+hub_policy policy:4
+hub_vlan 2010
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 5
+next service:6
+uprow network:0
+name ser-5
+hub_priority Policy
+hub_policy policy:5
+hub_vlan 2011
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 6
+next service:7
+uprow network:0
+name ser-6
+hub_priority Policy
+hub_policy policy:6
+hub_vlan 2012
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 7
+next service:8
+uprow network:0
+name ser-7
+hub_priority Policy
+hub_policy policy:0
+hub_vlan 2013
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 8
+next service:9
+uprow network:0
+name ser-8
+hub_priority Policy
+hub_policy policy:1
+hub_vlan 2014
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 9
+uprow network:0
+name ser-9
+hub_priority Policy
+hub_policy policy:2
+hub_vlan 2015
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 10
+next service:11
+uprow network:0
+name ser-10
+hub_priority Policy
+hub_policy policy:3
+hub_vlan 2016
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 11
+next service:12
+uprow network:0
+name ser-11
+hub_priority Policy
+hub_policy policy:4
+hub_vlan 2017
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 12
+next service:13
+uprow network:0
+name ser-12
+hub_priority Policy
+hub_policy policy:5
+hub_vlan 2018
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.service 13
+next service:2
+uprow network:0
+name ser-13
+hub_priority Policy
+hub_policy policy:6
+hub_vlan 2019
+ctr_normal OFF
+ctr_gateway OFF
+ctr_mesh OFF
+stn_gateway OFF
+stn_mesh OFF
+
+.teleport 0
+uprow network:0
+name tp-0
+sat_name dummy_sat
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120

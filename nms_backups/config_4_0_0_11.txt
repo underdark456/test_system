@@ -1,0 +1,177 @@
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+next controller:1
+uprow network:0
+name mf_hub
+tx_stat_num 11
+rx_stat_num 11
+rx_number 3
+rx_stations station:0
+mode MF_hub
+teleport teleport:0
+ver_global 2
+ver_profile 2
+ver_routing 2
+ver_policy 1
+ver_shaper 1
+ver_station 2
+ver_map 1
+ver_beamsw 1
+cs_global 249220416
+cs_profile 122955175
+cs_routing 4118
+cs_station 55
+
+.controller 1
+uprow network:0
+name mf_hub2
+tx_stat_num 11
+rx_stat_num 11
+mode MF_hub
+teleport teleport:0
+
+.controller 2
+uprow network:1
+name mf_hub_net2
+tx_stat_num 11
+rx_stat_num 11
+rx_number 2
+rx_stations station:2
+mode MF_hub
+teleport teleport:1
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+next network:1
+uprow nms:0
+name net1
+vnos vno:0
+controllers controller:0
+teleports teleport:0
+services service:0
+shapers shaper:0
+policies policy:0
+max_traffic 5000
+max_level 30
+dev_password pass1
+
+.network 1
+uprow nms:0
+name net2
+vnos vno:1
+controllers controller:2
+teleports teleport:1
+services service:1
+dev_password pass2
+
+.nms 0
+name UHP NMS
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename config_4_0_0_11.txt
+
+.policy 0
+uprow network:0
+name pol1
+
+.service 0
+uprow network:0
+name ser1
+hub_priority Policy
+hub_policy policy:0
+hub_shaper shaper:0
+hub_vlan 2006
+stn_priority Policy
+stn_policy policy:0
+stn_shaper shaper:0
+stn_vlan 3006
+
+.service 1
+uprow network:1
+name ser_net2
+
+.shaper 0
+uprow network:0
+name shp1
+
+.station 0
+next station:1
+uprow vno:0
+name stn1
+enable ON 
+serial 12345
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:1
+tx_number 2
+rx_number 2
+lat_deg 90
+lon_deg 180
+
+.station 1
+uprow vno:0
+name stn2
+enable ON 
+serial 11111
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 3
+rx_number 3
+
+.station 2
+uprow vno:1
+name stn_net2
+enable ON 
+serial 22222
+rx_controller controller:2
+rx_ctr_dyn controller:2
+rx_ctr_act controller:2
+tx_number 2
+rx_number 2
+lat_deg 44
+lat_min 33
+lon_deg 22
+lon_min 11
+
+.teleport 0
+uprow network:0
+name tp1
+sat_name Eutelsat16A
+
+.teleport 1
+uprow network:1
+name tp2
+sat_name Intelsat20
+lat_deg 11
+lat_min 22
+lon_deg 33
+lon_min 44
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name vno1
+stations station:0
+
+.vno 1
+uprow network:1
+name vno2
+stations station:2

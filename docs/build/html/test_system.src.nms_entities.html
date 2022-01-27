@@ -1,0 +1,981 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>test_system.src.nms_entities package &mdash; NMS TEST SYSTEM</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_system.src.nms_entities.basic_entities package" href="test_system.src.nms_entities.basic_entities.html" />
+    <link rel="prev" title="test_system.src.drivers.uhp package" href="test_system.src.drivers.uhp.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NMS TEST SYSTEM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started_rus.html">Начало работы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage_rus.html">Возможности системы</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">test_system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="test_system.html">test_system package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="test_system.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="test_system.examples.html">test_system.examples package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.global_options.html">test_system.global_options package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="test_system.src.html">test_system.src package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.test_scenarios.html">test_system.test_scenarios package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.utilities.html">test_system.utilities package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.print_tests_list">test_system.print_tests_list module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.snmp_example">test_system.snmp_example module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.starter">test_system.starter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NMS TEST SYSTEM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">test_system</a> &raquo;</li>
+        
+          <li><a href="test_system.html">test_system package</a> &raquo;</li>
+        
+          <li><a href="test_system.src.html">test_system.src package</a> &raquo;</li>
+        
+      <li>test_system.src.nms_entities package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-system-src-nms-entities-package">
+<h1>test_system.src.nms_entities package<a class="headerlink" href="#test-system-src-nms-entities-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html">test_system.src.nms_entities.basic_entities package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.alert">test_system.src.nms_entities.basic_entities.alert module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.controller">test_system.src.nms_entities.basic_entities.controller module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.controller_route">test_system.src.nms_entities.basic_entities.controller_route module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.network">test_system.src.nms_entities.basic_entities.network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.nms">test_system.src.nms_entities.basic_entities.nms module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.policy">test_system.src.nms_entities.basic_entities.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.policy_rule">test_system.src.nms_entities.basic_entities.policy_rule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.profile">test_system.src.nms_entities.basic_entities.profile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.service">test_system.src.nms_entities.basic_entities.service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.shaper">test_system.src.nms_entities.basic_entities.shaper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.station">test_system.src.nms_entities.basic_entities.station module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.station_route">test_system.src.nms_entities.basic_entities.station_route module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.teleport">test_system.src.nms_entities.basic_entities.teleport module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.user">test_system.src.nms_entities.basic_entities.user module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.user_group">test_system.src.nms_entities.basic_entities.user_group module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities.vno">test_system.src.nms_entities.basic_entities.vno module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_system.src.nms_entities.basic_entities.html#module-test_system.src.nms_entities.basic_entities">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-test_system.src.nms_entities.abstract_basic_object">
+<span id="test-system-src-nms-entities-abstract-basic-object-module"></span><h2>test_system.src.nms_entities.abstract_basic_object module<a class="headerlink" href="#module-test_system.src.nms_entities.abstract_basic_object" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.abstract_basic_object.</span></span><span class="sig-name descname"><span class="pre">AbstractBasicObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base class of NMS entities. Encapsulates CRUD operations for various drivers.
+Can be used to either create a new Entity instance or manage an existing one.
+If object_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>parent_id</cite> and <cite>object_id</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>parent_id</strong> (<em>int</em>) – ID of the parent object</p></li>
+<li><p><strong>object_id</strong> (<em>int</em>) – ID of the object. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new object is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the object.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if object ID is not found</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new object. Internally the class constructor is called,
+the parameters are sent to NMS, and the instance of object is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an instance of <cite>src.drivers.abstract_http_driver.AbstractHttpDriver</cite> class</p></li>
+<li><p><strong>parent_id</strong> (<em>int</em>) – ID of the parent object</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns AbstractBasicObject obj</dt>
+<dd class="field-even"><p>an instance of the class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recursively</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the existing object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>recursively</strong> (<em>bool</em>) – True to apply recursive deletion, otherwise False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.get_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ID of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>self._object_id (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) - object ID</p></li>
+<li><p>None - if the controller cannot be found</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.get_param">
+<span class="sig-name descname"><span class="pre">get_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.get_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a parameter value by its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> (<em>str</em>) – the name of the parameter to get</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>param_value (str) - a corresponding value of the passed parameter</p></li>
+<li><p>None - if the passed parameter does not exist for the given object</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.get_realtime">
+<span class="sig-name descname"><span class="pre">get_realtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.get_realtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method is redefined for controller and station objects in order to get their Realtime stats.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.has_param_error">
+<span class="sig-name descname"><span class="pre">has_param_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.has_param_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the error status of the passed parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>(bool) - False if the parameter is not applied to the NMS object, otherwise True</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the object from NMS. The parameters either passed to the class constructor or set via <cite>set_param</cite> or
+<cite>set_params</cite> are loaded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.InvalidIdException" title="test_system.src.exceptions.InvalidIdException"><strong>InvalidIdException</strong></a> – if ID &lt; 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.read_param">
+<span class="sig-name descname"><span class="pre">read_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.read_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameter value by its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>(str) - value of the requested parameter</p></li>
+<li><p>None - if there is no such parameter for the given object</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send to NMS the parameters either passed to the constructor or set by calling
+<cite>set_param</cite> or <cite>set_params</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotCreatedException" title="test_system.src.exceptions.ObjectNotCreatedException"><strong>src.exceptions.ObjectNotCreatedException</strong></a> – if the object cannot be created</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.send_param">
+<span class="sig-name descname"><span class="pre">send_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.send_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method applies the passed parameter value to an object and sends it to NMS.
+Can be used to update the existing object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> (<em>str</em>) – the name of the parameter to apply</p></li>
+<li><p><strong>param_value</strong> (<em>any</em>) – the value of the parameter to apply</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.send_params">
+<span class="sig-name descname"><span class="pre">send_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.send_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method applies the passed parameters to an object and sends them to NMS.
+Can be used to update the existing object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – a dictionary of parameters to apply to the object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.set_param">
+<span class="sig-name descname"><span class="pre">set_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.set_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the passed parameter value to the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> (<em>str</em>) – the parameter name to set</p></li>
+<li><p><strong>param_value</strong> (<em>any</em>) – the parameter value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the multiple passed parameter values to the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – a dictionary containing parameters and their respective values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.abstract_basic_object.AbstractBasicObject.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update an existing object. Internally the parameters are sent to NMS,
+and the instance of object is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an instance of <cite>src.drivers.abstract_http_driver.AbstractHttpDriver</cite> class</p></li>
+<li><p><strong>parent_id</strong> (<em>int</em>) – ID of the parent object</p></li>
+<li><p><strong>object_id</strong> (<em>int</em>) – ID of the object to update</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns AbstractBasicObject obj</dt>
+<dd class="field-even"><p>an instance of the class</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.has_up_state_object">
+<span id="test-system-src-nms-entities-has-up-state-object-module"></span><h2>test_system.src.nms_entities.has_up_state_object module<a class="headerlink" href="#module-test_system.src.nms_entities.has_up_state_object" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.has_up_state_object.</span></span><span class="sig-name descname"><span class="pre">HasUpState</span></span><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.DOWN">
+<span class="sig-name descname"><span class="pre">DOWN</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Down'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.FAULT">
+<span class="sig-name descname"><span class="pre">FAULT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Fault'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.FAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.IDLE">
+<span class="sig-name descname"><span class="pre">IDLE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Idle'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.IDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.OFF">
+<span class="sig-name descname"><span class="pre">OFF</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Off'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.REDUNDANT">
+<span class="sig-name descname"><span class="pre">REDUNDANT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Redundant'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.REDUNDANT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.SERVICE">
+<span class="sig-name descname"><span class="pre">SERVICE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Service'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.SERVICE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Unknown'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.UNREACHABLE">
+<span class="sig-name descname"><span class="pre">UNREACHABLE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Unreachable'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.UNREACHABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.UNSPECIFIED">
+<span class="sig-name descname"><span class="pre">UNSPECIFIED</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Unspecified'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.UNSPECIFIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.UP">
+<span class="sig-name descname"><span class="pre">UP</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Up'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.UP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.WARNING">
+<span class="sig-name descname"><span class="pre">WARNING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Warning'</span></em><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.await_up">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">await_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.await_up" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.get_id">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.get_state">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.get_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.wait_all">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">wait_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_timeout</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controllers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.wait_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Асинхронное ожидание выхода объектов из списков controllers, stations в состояние Up</p>
+<dl>
+<dt>Params</dt><dd><dl>
+<dt>timeout<span class="classifier"><cite>int</cite></span></dt><dd><p>Время ожидания объектов</p>
+</dd>
+<dt>step_timeout<span class="classifier"><cite>int</cite></span></dt><dd><p>Задержка между проверками состояния</p>
+</dd>
+<dt>controllers<span class="classifier"><cite>list&lt;Controller&gt;</cite></span></dt><dd><p>Список контроллеров</p>
+</dd>
+<dt>stations<span class="classifier"><cite>list&lt;Station&gt;</cite></span></dt><dd><p>Список станций</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns</dt><dd><dl>
+<dt>{</dt><dd><dl>
+<dt>‘up’: [{</dt><dd><p>‘up_after’:<cite>int</cite>,</p>
+<p>‘instance’: <cite>AbstractBasicObject</cite></p>
+</dd>
+</dl>
+<p>}…],</p>
+<dl>
+<dt>‘fail’: [{</dt><dd><p>‘up_after’:<cite>None</cite>,</p>
+<p>‘instance’: <cite>AbstractBasicObject</cite></p>
+</dd>
+</dl>
+<p>}…]],</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.has_up_state_object.HasUpState.wait_up">
+<span class="sig-name descname"><span class="pre">wait_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.has_up_state_object.HasUpState.wait_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Блокирующее ожидание</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.paths_manager">
+<span id="test-system-src-nms-entities-paths-manager-module"></span><h2>test_system.src.nms_entities.paths_manager module<a class="headerlink" href="#module-test_system.src.nms_entities.paths_manager" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.paths_manager.</span></span><span class="sig-name descname"><span class="pre">PathsManager</span></span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.alert_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">alert_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.alert_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.alert_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">alert_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alert_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.alert_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.alert_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">alert_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.alert_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.alert_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">alert_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alert_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.alert_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.alert_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">alert_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alert_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.alert_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_route_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_route_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_route_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_route_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_route_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_route_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_route_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_route_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_route_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_route_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_route_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_route_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_status">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controller_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controller_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controller_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.controllers_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">controllers_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.controllers_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.group_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">group_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.group_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.group_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">group_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.group_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.group_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">group_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.group_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.group_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">group_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.group_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.network_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">network_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.network_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.network_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">network_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.network_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.network_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">network_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.network_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.network_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">network_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.network_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.networks_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">networks_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.networks_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.nms_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">nms_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.nms_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.nms_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">nms_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.nms_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_rule_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_rule_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_rule_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_rule_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_rule_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.policy_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">policy_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.policy_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.profile_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">profile_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.profile_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.profile_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">profile_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.profile_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.profile_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">profile_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.profile_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.profile_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">profile_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.profile_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.profiles_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">profiles_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.profiles_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.realtime">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">realtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.realtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a path corresponding to the Realtime monitor of a specific entity</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.service_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">service_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.service_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.service_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">service_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.service_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.service_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">service_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.service_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.service_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">service_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.service_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.shaper_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">shaper_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.shaper_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.shaper_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">shaper_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shaper_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.shaper_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.shaper_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">shaper_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shaper_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.shaper_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.shaper_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">shaper_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shaper_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.shaper_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.shapers_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">shapers_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.shapers_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_route_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_route_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_route_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_route_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_route_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_route_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_route_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_route_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_route_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_route_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_route_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_route_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_status">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.station_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">station_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.station_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.stations_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">stations_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.stations_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.teleport_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">teleport_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.teleport_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.teleport_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">teleport_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">teleport_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.teleport_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.teleport_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">teleport_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">teleport_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.teleport_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.teleport_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">teleport_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">teleport_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.teleport_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.teleports_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">teleports_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.teleports_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.user_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">user_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.user_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.user_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">user_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.user_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.user_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">user_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.user_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.user_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">user_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.user_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.vno_create">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">vno_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.vno_create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.vno_delete">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">vno_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.vno_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.vno_read">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">vno_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.vno_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.vno_update">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">vno_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.vno_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.paths_manager.PathsManager.vnos_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">vnos_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.paths_manager.PathsManager.vnos_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test_system.src.nms_entities" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test_system.src.nms_entities.basic_entities.html" class="btn btn-neutral float-right" title="test_system.src.nms_entities.basic_entities package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test_system.src.drivers.uhp.html" class="btn btn-neutral float-left" title="test_system.src.drivers.uhp package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Memotech.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

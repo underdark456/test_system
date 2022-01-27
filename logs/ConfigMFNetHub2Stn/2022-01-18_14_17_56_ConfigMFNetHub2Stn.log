@@ -1,0 +1,4 @@
+2022-01-18 14:17:57 - RUN - ConfigMFNetHub2Stn - Initializing test case, running set_up_class...
+2022-01-18 14:18:45 - ERROR - ConfigMFNetHub2Stn - Exception in test case set up: Cookies are not received yet. Call `connect` function first
+2022-01-18 14:18:45 - INFO - ConfigMFNetHub2Stn - Test case execution time is 47.4 seconds
+

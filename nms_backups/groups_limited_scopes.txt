@@ -1,0 +1,236 @@
+
+.nms 0
+config_ver 20
+name UHP NMS
+created 1638950740
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename groups_limited_scopes.txt
+load_filename default_config.txt
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.access 1
+uprow network:0
+group group:1
+edit ON 
+use ON 
+
+.access 2
+uprow vno:0
+group group:2
+edit ON 
+use ON 
+
+.access 3
+uprow vno:1
+group group:3
+edit ON 
+use ON 
+
+.access 4
+uprow controller:0
+group group:4
+edit ON 
+use ON 
+
+.access 5
+uprow network:1
+group group:5
+edit ON 
+use ON 
+
+.access 6
+uprow vno:2
+group group:6
+edit ON 
+use ON 
+
+.access 7
+uprow vno:3
+group group:7
+edit ON 
+use ON 
+
+.access 8
+uprow controller:1
+group group:8
+edit ON 
+use ON 
+
+.controller 0
+uprow network:0
+name ctrl-1
+accesses access:4
+created 1638950740
+tx_stat_num 11
+rx_stat_num 11
+mode Hubless_master
+teleport teleport:0
+
+.controller 1
+uprow network:1
+name ctrl-2
+accesses access:8
+created 1638950741
+tx_stat_num 11
+rx_stat_num 11
+mode Hubless_master
+teleport teleport:1
+
+.group 0
+next group:4
+uprow nms:0
+name Admins
+users user:0
+
+.group 1
+uprow network:0
+name group_net_1
+users user:1
+
+.group 2
+uprow vno:0
+name group_vno_1
+users user:2
+
+.group 3
+uprow vno:1
+name group_sub_vno_1
+users user:3
+
+.group 4
+next group:8
+uprow nms:0
+name group_ctrl_1
+users user:4
+
+.group 5
+uprow network:1
+name group_net_2
+users user:5
+
+.group 6
+uprow vno:2
+name group_vno_2
+users user:6
+
+.group 7
+uprow vno:3
+name group_sub_vno_2
+users user:7
+
+.group 8
+uprow nms:0
+name group_ctrl_2
+users user:8
+
+.network 0
+next network:1
+uprow nms:0
+name net-1
+vnos vno:0
+groups group:1
+accesses access:1
+controllers controller:0
+teleports teleport:0
+created 1638950740
+
+.network 1
+uprow nms:0
+name net-2
+vnos vno:2
+groups group:5
+accesses access:5
+controllers controller:1
+teleports teleport:1
+created 1638950740
+
+.teleport 0
+uprow network:0
+name tp-1
+sat_name sat-1
+
+.teleport 1
+uprow network:1
+name tp-2
+sat_name sat2
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.user 1
+uprow group:1
+name user_net_1
+password 510629626
+
+.user 2
+uprow group:2
+name user_vno_1
+password 510629626
+
+.user 3
+uprow group:3
+name user_sub_vno_1
+password 510629626
+
+.user 4
+uprow group:4
+name user_ctrl_1
+
+.user 5
+uprow group:5
+name user_net_2
+password 510629626
+
+.user 6
+uprow group:6
+name user_vno_2
+password 510629626
+
+.user 7
+uprow group:7
+name user_sub_vno_2
+password 510629626
+
+.user 8
+uprow group:8
+name user_ctrl_2
+
+.vno 0
+uprow network:0
+name vno-1
+vnos vno:1
+groups group:2
+accesses access:2
+created 1638950740
+
+.vno 1
+uprow vno:0
+name subvno-1
+groups group:3
+accesses access:3
+created 1638950740
+
+.vno 2
+uprow network:1
+name vno-2
+vnos vno:3
+groups group:6
+accesses access:6
+created 1638950741
+
+.vno 3
+uprow vno:2
+name subvno-2
+groups group:7
+accesses access:7
+created 1638950741

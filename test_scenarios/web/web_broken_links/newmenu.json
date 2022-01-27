@@ -1,0 +1,150 @@
+{
+
+    "nms": [
+        { "icon": "list", "title": "Logs", "url": "/logs/get/nms=" },
+        { "icon": "network-wired", "title": "Networks", "url": "/list/get/nms=", "ext": "/list_items=network", "list": "1" },
+        { "icon": "window-restore", "title": "Servers", "url": "/list/get/nms=", "ext": "/list_items=server", "list": "1" },
+        { "title": "NMS_config", "url": "/form/edit/nms=", "config": "1" },
+        { "title": "TDMA nets_config", "url": "/list/edit/nms=", "ext": "/list_items=network", "list": "1", "config": "1" },
+        { "title": "Servers_config", "url": "/list/edit/nms=", "ext": "/list_items=server", "list": "1", "config": "1" },
+        { "title": "User groups_config", "url": "/list/edit/nms=", "ext": "/list_items=group", "list": "1", "config": "1" },
+        { "title": "Alerts_config", "url": "/list/edit/nms=", "ext": "/list_items=alert", "list": "1", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/nms=", "ext": "/list_items=access", "list": "1", "config": "1" },
+        { "title": "Files_config", "url": "/fs/dirs/nms=", "list": "1", "config": "1" },
+        { "title": "Dashboards_config", "url": "/list/edit/nms=", "ext": "/list_items=dashboard", "config": "1" }
+    ],
+
+    "network": [
+        { "icon": "chart-area", "title": "Graphs", "url": "/graph/get/network=" },
+        { "icon": "list", "title": "Logs", "url": "/logs/get/network=" },
+        { "icon": "globe", "title": "Map", "url": "/map/get/network=" },
+        { "icon": "sitemap", "title": "VNOs", "url": "/list/get/network=", "ext": "/list_items=vno", "list": "1" },
+        { "icon": "hdd", "title": "Controllers", "url": "/list/get/network=", "ext": "/list_items=controller", "list": "1" },
+        { "icon": "vector-square", "title": "SR_ctrlr", "url": "/list/get/network=", "ext": "/list_items=sr_controller", "list": "1" },
+        { "icon": "server", "title": "Stations", "url": "/station/list/network=" },
+        { "icon": "upload", "title": "SW upload", "url": "/list/get/network=", "ext": "/list_items=sw_upload", "list": "1" },
+        { "icon": "camera", "title": "Cameras", "url": "/cameras/get/network=" },
+        { "icon": "stream", "title": "Schedulers", "url": "/list/get/network=", "ext": "/list_items=scheduler", "list": "1" },
+        {"icon": "chart-line", "title": "Dashboards", "url": "/list/get/network=", "ext": "/list_items=dashboard", "list": "1"},
+        { "title": "Network_config", "url": "/form/edit/network=", "config": "1" },
+        { "title": "Teleports_config", "url": "/list/edit/network=", "ext": "/list_items=teleport", "list": "1", "config": "1" },
+        { "title": "Controllers_config", "url": "/list/edit/network=", "ext": "/list_items=controller", "list": "1", "config": "1" },
+        { "title": "VNOs_config", "url": "/list/edit/network=", "ext": "/list_items=vno", "list": "1", "config": "1" },
+        { "title": "Services_config", "url": "/list/edit/network=", "ext": "/list_items=service", "list": "1", "config": "1" },
+        { "title": "Shapers_config", "url": "/list/edit/network=", "ext": "/list_items=shaper", "list": "1", "config": "1" },
+        { "title": "Policies_config", "url": "/list/edit/network=", "ext": "/list_items=policy", "list": "1", "config": "1" },
+        { "title": "User groups_config", "url": "/list/edit/network=", "ext": "/list_items=group", "list": "1", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/network=", "ext": "/list_items=access", "list": "1", "config": "1" },
+        { "title": "SR_ctrlrs_config", "url": "/list/edit/network=", "ext": "/list_items=sr_controller", "list": "1", "config": "1" },
+        { "title": "SR_license_config", "url": "/list/edit/network=", "ext": "/list_items=sr_license", "list": "1", "config": "1" },
+        { "title": "Bal_ctrlrs_config", "url": "/list/edit/network=", "ext": "/list_items=bal_controller", "list": "1", "config": "1" },
+        { "title": "Profiles_config", "url": "/list/edit/network=", "ext": "/list_items=profile_set", "list": "1", "config": "1" },
+        { "title": "SW upload_config", "url": "/list/edit/network=", "ext": "/list_items=sw_upload", "list": "1", "config": "1" },
+        { "title": "Cameras_config", "url": "/list/edit/network=", "ext": "/list_items=camera", "list": "1", "config": "1" },
+        { "title": "Dashboards_config", "url": "/list/edit/network=", "ext": "/list_items=dashboard", "config": "1" },
+        { "title": "Schedulers_config", "url": "/list/edit/network=", "ext": "/list_items=scheduler", "config": "1" },
+        { "title": "QoS_config", "url": "/list/edit/network=", "ext": "/list_items=qos", "config": "1" }
+    ],
+
+    "vno": [
+        { "icon": "chart-area", "title": "Graphs", "url": "/graph/get/vno=" },
+        { "icon": "list", "title": "Logs", "url": "/logs/get/vno=" },
+        { "icon": "sitemap", "title": "VNOs", "url": "/list/get/vno=", "ext": "/list_items=vno", "list": "1" },
+        { "icon": "server", "title": "Stations", "url": "/station/list/vno=" },
+        { "icon": "globe", "title": "Map", "url": "/map/get/vno=" },
+        { "title": "VNO_config", "url": "/form/edit/vno=", "config": "1" },
+        { "title": "Sub-VNOs_config", "url": "/list/edit/vno=", "ext": "/list_items=vno", "list": "1", "config": "1" },
+        { "title": "Stations_config", "url": "/list/edit/vno=", "ext": "/list_items=station", "list": "1", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/vno=", "ext": "/list_items=access", "list": "1", "config": "1" },
+        { "title": "User groups_config", "url": "/list/edit/vno=", "ext": "/list_items=group", "list": "1", "config": "1" },
+        { "title": "Dashboards_config", "url": "/list/edit/vno=", "ext": "/list_items=dashboard", "config": "1" }
+    ],
+
+    "controller": [
+        { "icon": "chart-area", "title": "Graphs", "url": "/graph/get/controller=" },
+        { "icon": "list", "title": "Logs", "url": "/logs/get/controller=" },
+        { "icon": "server", "title": "Stations", "url": "/station/list/controller=" },
+        { "icon": "globe", "title": "Map", "url": "/map/get/controller=" },
+        { "icon": "desktop", "title": "Realtime", "url": "/realtime/get/controller=" },
+        { "icon": "border-none", "title": "Spectrum", "url": "/spectrum/get/controller=" },
+        { "title": "Controller_config", "url": "/form/edit/controller=", "config": "1" },
+        { "title": "Routing_config", "url": "/list/edit/controller=", "ext": "/list_items=route", "list": "1", "config": "1" },
+        { "title": "RIP_config", "url": "/list/edit/controller=", "ext": "/list_items=rip_router", "list": "1", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/controller=", "ext": "/list_items=access", "list": "1", "config": "1" },
+        { "title": "port_map_config", "url": "/list/edit/controller=", "ext": "/list_items=port_map", "list": "1", "config": "1" }
+    ],
+    "sr_controller": [
+        { "icon": "list", "title": "Logs", "url": "/logs/get/sr_controller=" },
+        { "icon": "satellite-dish", "title": "SR teleports", "url": "/list/get/sr_controller=", "ext": "/list_items=sr_teleport" },
+        { "title": "SR_ctrlr_config", "url": "/form/edit/sr_controller=", "config": "1" },
+        { "title": "SR teleport_config", "url": "/list/edit/sr_controller=", "ext": "/list_items=sr_teleport", "list": "1", "config": "1" }
+    ],
+    "bal_controller": [
+        { "icon": "list", "title": "Logs", "url": "/logs/get/bal_controller=" },
+        { "title": "Bal_ctrlr_config", "url": "/form/edit/bal_controller=", "config": "1" }
+    ],
+    "sw_upload": [
+        { "icon": "list", "title": "Logs", "url": "/logs/get/sw_upload=" },
+        { "title": "SW upload_config", "url": "/form/edit/sw_upload=", "config": "1" }
+    ],
+    "station": [
+        { "icon": "chart-area", "title": "Graphs", "url": "/graph/get/station=" },
+        { "icon": "list", "title": "Logs", "url": "/logs/get/station=" },
+        { "icon": "globe", "title": "Map", "url": "/map/get/station=" },
+        { "icon": "desktop", "title": "Realtime", "url": "/realtime/get/station=" },
+        { "icon": "border-none", "title": "Spectrum", "url": "/spectrum/get/station=" },
+        { "title": "Station_config", "url": "/form/edit/station=", "config": "1" },
+        { "title": "Routing_config", "url": "/list/edit/station=", "ext": "/list_items=route", "list": "1", "config": "1" },
+        { "title": "RIP_config", "url": "/list/edit/station=", "ext": "/list_items=rip_router", "list": "1", "config": "1" },
+        { "title": "port_map_config", "url": "/list/edit/station=", "ext": "/list_items=port_map", "list": "1", "config": "1" },
+        { "title": "Sch Task_config", "url": "/list/edit/station=", "ext": "/list_items=sch_task", "list": "1", "config": "1" }
+    ],
+
+    "sr_teleport": [
+        { "icon": "list", "title": "Logs", "url": "/logs/get/sr_teleport=" },
+        { "title": "SR teleport_config", "url": "/form/edit/sr_teleport=", "config": "1" },
+        { "title": "Devices_config", "url": "/list/edit/sr_teleport=", "ext": "/list_items=device", "list": "1", "config": "1" }
+    ],
+
+    "device": [
+        { "icon": "list", "title": "Logs", "url": "/logs/get/device=" },
+        { "icon": "desktop", "title": "Realtime", "url": "/realtime/get/device=" },
+        { "title": "Device_config", "url": "/form/edit/device=", "config": "1" }
+    ],
+
+    "group": [
+        { "title": "Users_config", "url": "/list/edit/group=", "ext": "/list_items=user", "list": "1", "config": "1" }
+    ],
+
+    "alert": [
+        { "title": "Alert_config", "url": "/form/edit/alert=", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/alert=", "ext": "/list_items=access", "list": "1", "config": "1" }
+    ],
+
+    "service": [
+        { "title": "Service_config", "url": "/form/edit/service=", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/service=", "ext": "/list_items=access", "list": "1", "config": "1" }
+    ],
+
+    "shaper": [
+        { "title": "Shaper_config", "url": "/form/edit/shaper=", "config": "1" },
+        { "title": "Access_config", "url": "/list/edit/shaper=", "ext": "/list_items=access", "list": "1", "config": "1" },
+        { "title": "Sub-shapers_config", "url": "/list/edit/shaper=", "ext": "/list_items=shaper", "list": "1", "config": "1" }
+    ],
+
+    "policy": [
+        { "title": "Policy_config", "url": "/form/edit/policy=", "config": "1" },
+        { "title": "Rules_config", "url": "/list/edit/policy=", "ext": "/list_items=polrule", "list": "1", "config": "1" }
+    ],
+
+    "dashboard": [
+        {"title": "Dashboard_config", "url": ""},
+        {"title": "Edit_config", "url": "", "config": "1", "id" : "dashEdit", "type": "checkbox"}
+    ],
+
+    "scheduler": [
+        { "title": "Sch Range_config", "url": "/list/edit/scheduler=", "ext": "/list_items=sch_range", "list": "1", "config": "1" },
+        { "title": "Sch Service_config", "url": "/list/edit/scheduler=", "ext": "/list_items=sch_service", "list": "1", "config": "1" }
+    ]
+
+}

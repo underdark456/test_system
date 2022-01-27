@@ -1,0 +1,97 @@
+[
+    {
+        "value": "6",
+        "name": "SF QPSK 2/3",
+        "acm_thr": "3.8"
+    },
+    {
+        "value": "7",
+        "name": "SF QPSK 3/4",
+        "acm_thr": "4.6"
+    },
+    {
+        "value": "8",
+        "name": "SF QPSK 4/5",
+        "acm_thr": "5.3"
+    },
+    {
+        "value": "9",
+        "name": "SF QPSK 5/6",
+        "acm_thr": "5.7"
+    },
+    {
+        "value": "12",
+        "name": "SF 8PSK 3/5",
+        "acm_thr": "6.3"
+    },
+    {
+        "value": "10",
+        "name": "SF QPSK 8/9",
+        "acm_thr": "6.8"
+    },
+    {
+        "value": "13",
+        "name": "SF 8PSK 2/3",
+        "acm_thr": "7.3"
+    },
+    {
+        "value": "14",
+        "name": "SF 8PSK 3/4",
+        "acm_thr": "8.6"
+    },
+    {
+        "value": "18",
+        "name": "SF 16APSK 2/3",
+        "acm_thr": "9.8"
+    },
+    {
+        "value": "15",
+        "name": "SF 8PSK 5/6",
+        "acm_thr": "9.9"
+    },
+    {
+        "value": "19",
+        "name": "SF 16APSK 3/4",
+        "acm_thr": "11.0"
+    },
+    {
+        "value": "16",
+        "name": "SF 8PSK 8/9",
+        "acm_thr": "11.4"
+    },
+    {
+        "value": "20",
+        "name": "SF 16APSK 4/5",
+        "acm_thr": "11.8"
+    },
+    {
+        "value": "21",
+        "name": "SF 16APSK 5/6",
+        "acm_thr": "12.5"
+    },
+    {
+        "value": "22",
+        "name": "SF 16APSK 8/9",
+        "acm_thr": "13.8"
+    },
+    {
+        "value": "24",
+        "name": "SF 32APSK 3/4",
+        "acm_thr": "14.7"
+    },
+    {
+        "value": "25",
+        "name": "SF 32APSK 4/5",
+        "acm_thr": "16.1"
+    },
+    {
+        "value": "26",
+        "name": "SF 32APSK 5/6",
+        "acm_thr": "17.0"
+    },
+    {
+        "value": "27",
+        "name": "SF 32APSK 8/9",
+        "acm_thr": "18.7"
+    }
+]

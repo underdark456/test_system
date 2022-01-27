@@ -1,0 +1,53 @@
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name CTRL-1
+mode MF_hub
+teleport teleport:0
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name NW-1
+controllers controller:0
+teleports teleport:0
+
+.nms 0
+name UHP NMS
+config_descr For_HUB_creating
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename default_net_tel_ctrl.txt
+load_filename default_config.txt
+in_key1 11111
+in_key2 22222
+alert_mode Off
+
+.teleport 0
+uprow network:0
+name TP-1
+
+.user 0
+uprow group:0
+name admin
+enable ON 
+password 3664045120
+
+.vno 0
+uprow network:0
+name VNO-01
+vnos vno:1
+stations station:0
+alert_mode Specify

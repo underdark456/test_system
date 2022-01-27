@@ -1,0 +1,171 @@
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name test_ctrl
+routes route:5
+tx_stat_num 11
+rx_stat_num 11
+rx_number 3
+rx_stations station:0
+mode MF_hub
+control No_access
+binding Smart
+sr_controller sr_controller:0
+net_id 132
+model UHP200
+tx_modcod 7
+tx_on ON 
+tx_level 42.0
+no_stn_check ON 
+ver_global 3
+ver_profile 3
+ver_routing 7
+ver_policy 1
+ver_shaper 1
+ver_station 6
+ver_map 2
+ver_beamsw 1
+smart_device device:1
+cs_global 2227208923
+cs_profile 130921522
+cs_routing 1950231047
+cs_station 2253132
+cs_map 21
+
+.device 0
+next device:1
+uprow sr_teleport:0
+name Device1
+mode used
+mask /24
+dem2_connect Outroute_sync
+
+.device 1
+uprow sr_teleport:0
+name Device2
+mode used
+mask /24
+dem2_connect Outroute_sync
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name test_net
+vnos vno:0
+controllers controller:0
+sr_controllers sr_controller:0
+teleports teleport:0
+services service:0
+dev_password teste
+
+.nms 0
+name UHP NMS
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename case_SR_A.txt
+load_filename default_config.txt
+alert_mode Off
+
+.route 0
+uprow controller:0
+type IP_address
+service service:1
+ip 192.168.1.1
+
+.route 1
+uprow station:0
+type IP_address
+service service:1
+ip 192.168.2.1
+
+.route 2
+uprow station:1
+type IP_address
+service service:1
+ip 192.168.3.1
+
+.route 5
+next route:0
+uprow controller:0
+type Network_RX
+service service:1
+
+.service 0
+next service:1
+uprow network:0
+name Local
+
+.service 1
+uprow network:0
+name ping_service
+hub_vlan 2006
+stn_vlan 3006
+stn_normal ON 
+
+.sr_controller 0
+uprow network:0
+name SR_test
+sr_teleports sr_teleport:0
+
+.sr_teleport 0
+uprow sr_controller:0
+name SR_teleport
+devices device:0
+teleport teleport:0
+
+.station 0
+next station:1
+uprow vno:0
+name Station1
+routes route:1
+serial 1
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:1
+tx_number 2
+rx_number 2
+nms_version 2
+config_csum 1196443330
+
+.station 1
+uprow vno:0
+name Station2
+routes route:2
+serial 2
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 3
+rx_number 3
+nms_version 2
+config_csum 1196443843
+
+.teleport 0
+uprow network:0
+name test_tp
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name vno_test
+stations station:0

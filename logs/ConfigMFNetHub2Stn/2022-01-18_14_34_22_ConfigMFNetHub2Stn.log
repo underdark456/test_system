@@ -1,0 +1,4 @@
+2022-01-18 14:34:23 - RUN - ConfigMFNetHub2Stn - Initializing test case, running set_up_class...
+2022-01-18 14:34:35 - ERROR - ConfigMFNetHub2Stn - Exception in test case set up: The total number of the requested UHP modems is 3, the number of the available UHP modems is 0
+2022-01-18 14:34:35 - INFO - ConfigMFNetHub2Stn - Test case execution time is 11.36 seconds
+

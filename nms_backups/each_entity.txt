@@ -1,0 +1,187 @@
+
+.nms 0
+config_ver 20
+name UHP NMS
+created 1638949215
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+alerts alert:0
+servers server:0
+save_filename each_entity.txt
+load_filename default_config.txt
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.alert 0
+uprow nms:0
+name test_alert
+popup ON 
+
+.bal_controller 0
+uprow network:0
+name test_bal_ctrl
+
+.camera 0
+uprow network:0
+name test_camera
+
+.controller 0
+uprow network:0
+name test_ctrl
+routes route:0
+rip_routers rip_router:0
+port_maps port_map:0
+created 1638949215
+tx_stat_num 11
+rx_stat_num 11
+mode MF_hub
+device_ip 127.0.0.1
+teleport teleport:0
+
+.dashboard 0
+uprow network:0
+name net_dash
+
+.device 0
+uprow sr_teleport:0
+name test_device
+ip 127.0.0.2
+created 1638949215
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name test_network
+vnos vno:0
+controllers controller:0
+sr_controllers sr_controller:0
+sr_licenses sr_license:0
+teleports teleport:0
+bal_controllers bal_controller:0
+services service:0
+qoses qos:0
+shapers shaper:0
+policies policy:0
+profile_sets profile_set:0
+sw_uploads sw_upload:0
+cameras camera:0
+dashboards dashboard:0
+schedulers scheduler:0
+created 1638949215
+
+.policy 0
+uprow network:0
+name test_policy
+rules polrule:0
+
+.polrule 0
+uprow policy:0
+sequence 1
+
+.port_map 0
+uprow controller:0
+internal_ip 127.0.0.4
+
+.profile_set 0
+uprow network:0
+name test_profile
+
+.qos 0
+uprow network:0
+name test_qos
+
+.rip_router 0
+uprow controller:0
+service service:0
+
+.route 0
+uprow controller:0
+type IP_address
+service service:0
+ip 127.0.0.3
+
+.sch_range 0
+uprow scheduler:0
+name test_sch_range
+
+.sch_service 0
+uprow scheduler:0
+name test_sch_service
+
+.sch_task 0
+uprow station:0
+name test_sch_task
+
+.scheduler 0
+uprow network:0
+name test_scheduler
+sch_ranges sch_range:0
+sch_services sch_service:0
+
+.server 0
+uprow nms:0
+name test_server
+ip 127.0.0.10
+
+.service 0
+uprow network:0
+name test_service
+
+.shaper 0
+uprow network:0
+name test_shaper
+
+.sr_controller 0
+uprow network:0
+name test_sr_ctrl
+sr_teleports sr_teleport:0
+created 1638949215
+
+.sr_license 0
+uprow network:0
+name test_sr_lic
+license_key 123456
+
+.sr_teleport 0
+uprow sr_controller:0
+name test_sr_tp
+devices device:0
+teleport teleport:0
+
+.station 0
+uprow vno:0
+name test_stn
+sch_tasks sch_task:0
+serial 12345
+created 1638949215
+
+.sw_upload 0
+uprow network:0
+name test_sw_up
+sw_file dummy_soft.240
+
+.teleport 0
+uprow network:0
+name test_teleport
+sat_name test_sat
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name test_vno
+stations station:0
+created 1638949215

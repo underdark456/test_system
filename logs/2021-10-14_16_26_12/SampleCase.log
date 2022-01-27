@@ -1,0 +1,4 @@
+FAIL - test_sample - teamcity.diff_tools.EqualsAssertionError:  :: None != -20.0
+INFO - test_sample - test execution time is 0.05 seconds
+
+Test case execution time is 70.01 seconds

@@ -1,0 +1,12 @@
+aiohttp==3.7.4.post0
+beautifulsoup4==4.8.2
+numpy==1.19.5
+pysnmp==4.4.12
+requests==2.24.0
+selenium==3.141.0
+scapy==2.4.5
+xmltodict==0.12.0
+Django~=3.2.8
+tftpy~=0.8.2
+matplotlib~=3.4.3
+keyboard~=0.13.5

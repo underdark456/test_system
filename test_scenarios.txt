@@ -1,0 +1,167 @@
+ApiDataTypesCase                                API data types validation case
+ApiErrorCodesCase                               NMS API expected error codes case, except for -4, -6, -7, -10, -11 error codes
+ApiLogoutCase                                   One line string describing the test case
+ApiRandomRequestsCase                           Various API requests case
+ApiRequiredParamsCase                           Test if objects can be created without passing all the required parameters
+MapResponseSizeCase                             API 32768 stations in map request
+ResponseSizeCase                                Getting lists of tables using same vars as in WEB interface to test that JSON is not truncated (ticket 7917)
+ApiAbbreviatedCase                              API requests with abbreviated tools or objects case
+ApiDashboardToolCase                            Dashboard tool test case
+ApiToolDbeditorCase                             API dbeditor tool using Selenium WEB driver
+ApiFileToolCase                                 File tool upload, download, and delete test case
+ApiGraphToolCase                                Graph tool test case
+ApiToolListCase                                 API List tool case
+ApiLogToolCase                                  Test cases for log tool
+ApiMapToolCase                                  Map tool request test case
+ApiRealtimeToolCase                             Get realtime data from controller and station test case (data is NOT confirmed). MF hub + star station
+ApiSearchToolCase                               API Search Tool. Searching NMS objects by their names, IPs etc.
+ApiStationsToolCase                             Test cases for station tool
+ApiTreeToolCase                                 API tree tool requests test case
+ApiStaticDropdownsCase                          API static dropdowns requests options
+ApiAllFormsValidationCase                       Not needed as data types test exists? API validate form fields according to meta data
+ApiParentValidationCase                         Check if objects belonging to a network cannot be assigned to objects in another network
+ConfigConfirmationCase                          Created config with all tables filled in is in place after saving and loading it
+LoadBackupPreviousVersionCase                   Loading config from previous 4.0.0.11 NMS version. Invalid vars and values should be ignored and config loaded
+LoadNmsConfigNmsTableCase                       Loading a config having NMS table params should replace current NMS table params
+LoadDefaultConfigNmsTableCase                   Default config should replace all NMS table params with default values
+LoadDefaultConfigCase                           Default config should erase all tables except for access, group, and user
+WebLoadDefaultConfigCase                        WEB save and load config test case (ticket 8277)
+MultipleBackupCallsCase                         Call same backup multiple times case
+AllQueuesTrafficHublessCase                     Traffic statistics for a hubless controller, station, vno, and network case
+AllQueuesTrafficStarCase                        Traffic statistics for an MF hub controller, station, vno, and network case
+AllQueuesTrafficTwoHubsCase                     Traffic statistics for two hubless controllers, and network case
+TrafficQueuesStarCase                           One line string describing the test case
+ControlModesSwitchingCase                       Switch controller control modes several times
+DevPasswordCase                                 NMS controlled mode with password
+BigStarNetCase                                  Star network with 20 stations UP case
+MfChannelsCase                                  MF hub + 3 MF inroute 16 channels UP
+NetworkMfHubUpCase                              1 controller 3 stations up case
+NmsControlUhp                                   UHP under NMS control in appropriate mode
+MfNetworkInstallCase                            Creation complicated MF network
+StationUpControllersCase                        Check if station is in UP state after switching to different controllers
+TdmaAcmTrafficCase                              One line string describing the test case
+AllValuesCase                                   Create objects by passing all parameters
+CreateRouteRecordsCase                          Create different types of routes test case
+RouteWithZeroIpCase                             Create routes with zero IP address
+SameIpCase                                      Create objects with same IP addresses
+SameObjectsNameCase                             Create/edit objects to get existing names
+SameSerialCase                                  Station's serial number must be unique in a given controller
+DamaNetworkCreationCase                         Configuring DAMA network: hub, inroute, two stations in NMS. Configuring UHP for DAMA network.
+    Start DAMA network. Checking that all UHP are in operation
+DamaSimpleNetworkCase                           Creating simple DAMA network: hub and one station
+TrafficBtwStationHubCase                        Run traffic between dama hub and station in both directions to check how it displays in NMS
+ChangeLinkCase                                  Check if station's controller can be changed, as well as SW upload controller
+CreateDeleteCase                                Create and delete objects multiple times. No backups are called between the iterations
+MultipleCreateDeleteCase                        The scenario creates a config with a lot of NMS entities and deletes them in a cycle
+RecursiveVnoCase                                Recursive Vno creation deletion test case
+DatabasePerformanceCase                         Database create/delete/edit/search/list performance
+ApiSimultaneousAccessCase                       8 users database operations in parallel
+DeleteHierarchicalObjectsCase                   Delete stand alone objects and parent objects containing child objects
+DeleteLinkedObjectsCase                         Linked objects deletion case
+Case                                            
+DamaCase                                        One line string describing the test case
+MassObjectsCreationCase                         Create maximum number of objects in tables
+SampleHublessUpCase                             Star network with an MF Hub and 3 stations UP test case
+SampleMfHubUpCase                               Star network with an MF Hub and 3 stations UP test case
+SimpleApiMfHubNetUp2Case                        Star network with an MF Hub and 3 stations UP test case
+SimpleApiMfHubNetUpCase                         Star network with an MF Hub and 3 stations UP test case
+SimpleApiMfHubNetUpCase                         Star network with an MF Hub and 2 stations UP test case
+LetsBreakLinkedListCase                         One line string describing the test case
+UhpModOnOffCase                                 One line string describing the test case
+SetAlertCase                                    Not needed?
+WrongFileNameCase                               Not needed?
+ControllerUhpProfileCase                        Make sure that UHP modem runs an appropriate profile upon setting the controller mode
+DamaHubConfirmationCase                         DAMA hub controller UHP gets all the settings
+HublessControllerConfirmationCase               Confirm that UHP gets correct settings from a hubless controller
+MfHubControllerConfirmationCase                 Confirm that UHP gets correct settings from a hubless controller
+AcmTdmUhp200ConfirmationCase                    UHP200 gets correct ACM TDM modcods
+AcmTdmUhp200xConfirmationCase                   UHP200X gets correct ACM TDM modcods
+AcmTdmaModcodConfirmationCase                   TDMA ACM Legacy, 12modcods, 16modcods confirm UHP gets correct settings
+TdmModcodConfirmationCase                       Confirm that UHP200X gets ALL correct TDM modcod from a controller
+TdmaModcodConfirmationCase                      Confirm that UHP gets ALL correct TDMA modcod from a hubless controller
+NatPortMapConfirmationCase                      One line string describing the test case
+NumberOfStationsConfirmationCase                Check if all stations (25) bound to a controller appear in the UHP stations table
+PolicyConfigConfirmationCase                    Confirm that a simple policy containing every rule type is applied to a UHP controller and a station
+ProfileSetConfirmationCase                      Confirm that station gets correct profile set
+RipRouterConfirmationCase                       Confirm RIP router settings in UHP controller and station
+RipRouterMaxNumberCase                          Max number of RIP routers in MF hub confirmation
+StarStationConfirmationCase                     Confirm that UHP Star station gets correct settings from NMS
+TeleportConfirmationCase                        Confirm that UHP gets correct settings from NMS teleport form
+FrameLengthCase                                 TDMA frame length must be multiple of 4
+TdmaRxInputCase                                 TDMA RX input depending on a UHP model test case
+UhpModelControllerModeCase                      Controller mode depending on uhp_model test case
+DependingParamsCase                             Valid value of one of the parameters depends on value of another parameter(s)
+AcmTdmSfLfValidationCase                        Short frames cannot be mixed with long frames
+TdmaAcmModcodsValidationCase                    TDMA ACM validation test case
+Uhp200TdmAcmModcodValidationCase                UHP200 model TDM ACM validation
+Uhp200TdmModcodValidationCase                   tx_modcod for UHP200 model validation
+Uhp200xTdmAcmModcodsValidationCase              UHP200X model TDM ACM validation
+Uhp200xTdmModcodValidationCase                  tx_modcod for UHP200X model validation
+ModulatorSumQueuesValidationCase                Controllers and stations modulator sum_of_all_queues validation case
+RoutingSameMaskCase                             Valid and invalid routing combinations for controller and station, Ticket 8097
+ControllerStationCombinationsCase               Station's controller validation case
+ControllerCase                                  Not needed? Controller (MF hub) form validation case
+NetworkValidationCase                           Not needed? Network creation page validation
+PolRuleValidationCase                           Not needed? Policy rule form validation
+SrDynLicCreateCase                              Check that dynamic licenses can be created and attached. 2 Devices (MF hub, Inroute), 2 Star Stations
+SrDynLicDeleteCase                              Check that dynamic licenses is removed from uhp after deleted in NMS
+SrDynLicGroupsCase                              Check that one dynamic licenses isn't attached to two UHPs
+SrDynLicUnsuitCase                              Check that controller doesn't go up with unsuitable dynamic license
+Sr10MhzPowerCase                                Check site setup settings in a network under SR ctrl
+SrConnectionSettingsCase                        Check connection settings to attach different controllers
+SrDevInaccessCase                               After a short time of the device inaccessibility the net(MF-Hub+2 stations) under SR ctrl is still in UP state
+SrDiffPriorityCase                              Check that controller with higher priority switches to the second device
+SrRestartNmsCase                                Check that after NMS restart, network (MF-Hub and 2 stations) under SR ctrl is in UP state
+SrSimpleSwitchCase                              A test to check the switching of the controller to another device when the active device is unreachable
+SrSwitchModOffCase                              Check switching MF hub controller to another device when the modulator is turned off. 2 devices, 2 stations
+SrSamePriorityCase                              Check that controllers with the same priorities do not switch
+SrSetUpDamaCase                                 Set up DAMA topology in Smart Redundancy. 2 Devices, 2 Dama stations
+SrSetUpDamaHubInrCase                           Set up DAMA topology in Smart Redundancy. 3 Devices, 2 Stations
+SrSetUpHblCase                                  Set up Hubless topology in Smart Redundancy. 2 Devices, 2 Stations
+SrSetUpMfCase                                   Set up Star topology in Smart Redundancy. 2 Devices, 4 Stations
+SrSetUpMfHubMfInrCase                           Set up Star topology (MF-Hub + Mf-Inroute) in Smart Redundancy. 3 Devices, 4 Stations
+SrSetUpOutInrCase                               Set up Star topology (Outroute + Inroute) in Smart Redundancy. 3 Devices, 4 Stations
+SrCheckIdleCase                                 Check teleport switching due to check idle fault
+SrHubCnMinCase                                  Check teleport switching due to Low_hub_CN fault
+SrMaxRxDownCase                                 The test to check teleport switching due to max rx down controllers fault
+SrMaxRxFaultCase                                Check teleport switching due to max rx fault controllers
+SrMaxSwFailsCase                                Check teleport switching due max_sw_fails fault
+SrMaxTxDownCase                                 The test to check teleport switching due to max tx down controllers fault
+SrMaxTxFaultCase                                Check teleport switching due to max tx fault controllers
+SrMinCtrUpCase                                  Check teleport switching due to min ctr up fault
+SrMinStUpCase                                   Check teleport switching due to min st up fault controllers
+SrOwnCnMinCase                                  Check teleport switching due to Low_own_CN fault
+SrStCnMinCase                                   Check teleport switching due to Low_stations_CN fault
+SrWithRoamingCase                               The test to check teleport switching due max_sw_fails fault
+SrWithBalancerCase                              The test to check that SR works with Balancer
+MfHubControllerDashCase                         
+HublessNetworkStatesCase                        NMS show correct controller and station states in a hubless network
+StarNetworkStatisticsCase                       Dashboard statistics (excluding traffic) for a star network with 3 stations
+ControllersStatesCase                           Controllers states in Network dashboard
+StationsStatesCase                              Star network with 3 real stations and numerous dummy ones (enabled, disabled, no rx_controller) check states
+SimpleTrafficQueueCase                          One line string describing the test case
+TrafficEachQueueCase                            Traffic statistics for MF hub and station, setting a particular queue at a time
+TrafficAllQueueCase                             MF hub and 7 stations, traffic in all queues
+UserMultiProcCase                               Case multiple user processes station creation
+UsersGroupsAccessesCase                         Case tests users, user groups, and access capabilities of NMS
+WebUsersUseCase                                 Users having access to particular areas use objects with granted access
+CompareMetaCase                                 Compare already existed meta data with the current version meta
+WebModelModcodCase                              All valid modcodes for UHP-200 and UHP-200X as well as invalid for UHP-200 case
+WebRealtimeCase                                 WEB Realtime page for MF_hub and stn: start of output of buttons, refresh, direct command (ticket 8254)
+WebFastClicksCase                               Clicking at menu and tree items as as fast as possible
+WebAllFormsValidationCase                       Not needed as data types test exists? Web all forms validation according to meta
+WebMaxResponseTimeCase                          ! Not ready. Maximum response time to some time consuming requests
+WebMap10000StationsCase                         ! Not entirely ready - under development
+WebRandomRequestsCase                           Bombarding WEB server with random requests
+WebAsyncThroughputCase                          NMS WEB server throughput case using async requests
+WebThroughputCase                               NMS WEB server throughput case
+WebBrokenLinksCase                              Test that all links and most buttons do not cause 404 or 400
+WebBrokenLinksJSCase                            One line string describing the test case
+WebDataTypesCase                                Web forms data types case
+WebDynamicDropdownsCase                         WEB check items in dynamic dropdowns case. The number of items are maximum
+WebDefaultValuesCase                            WEB create objects by passing only minimum required parameters to check if there are wrong defaults in meta
+WebEditEveryTableCase                           WEB interface edit each table: first, middle, and last entries
+WebGetListAllTablesCase                         WEB interface get list of all objects in every table
+WebMapPerformanceCase                           10000 stations map performance test case
+WebMissingFormFieldsCase                        Each NMS entity missing form fields according to meta data case
+WebSimultaneousAccessCase                       Two users edit/delete same form

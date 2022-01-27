@@ -1,0 +1,23 @@
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.nms 0
+name UHP NMS
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+
+.user 0
+uprow group:0
+name admin
+enable ON 
+password 3664045120

@@ -1,0 +1,82 @@
+[
+    {
+        "value": "0",
+        "name": "BPSK 1/2",
+        "acm_thr": "0.0"
+    },
+    {
+        "value": "1",
+        "name": "BPSK 2/3",
+        "acm_thr": "0.3"
+    },
+    {
+        "value": "2",
+        "name": "BPSK 3/4",
+        "acm_thr": "1.2"
+    },
+    {
+        "value": "3",
+        "name": "BPSK 5/6",
+        "acm_thr": "2.2"
+    },
+    {
+        "value": "4",
+        "name": "QPSK 1/2",
+        "acm_thr": "2.8"
+    },
+    {
+        "value": "5",
+        "name": "QPSK 2/3",
+        "acm_thr": "4.1"
+    },
+    {
+        "value": "6",
+        "name": "QPSK 3/4",
+        "acm_thr": "5.1"
+    },
+    {
+        "value": "7",
+        "name": "QPSK 5/6",
+        "acm_thr": "6.4"
+    },
+    {
+        "value": "8",
+        "name": "8PSK 1/2",
+        "acm_thr": "9.3"
+    },
+    {
+        "value": "9",
+        "name": "8PSK 2/3",
+        "acm_thr": "9.3"
+    },
+    {
+        "value": "10",
+        "name": "8PSK 3/4",
+        "acm_thr": "9.8"
+    },
+    {
+        "value": "11",
+        "name": "8PSK 5/6",
+        "acm_thr": "11.2"
+    },
+    {
+        "value": "12",
+        "name": "16APSK 1/2",
+        "acm_thr": "13.6"
+    },
+    {
+        "value": "13",
+        "name": "16APSK 2/3",
+        "acm_thr": "13.6"
+    },
+    {
+        "value": "14",
+        "name": "16APSK 3/4",
+        "acm_thr": "13.6"
+    },
+    {
+        "value": "15",
+        "name": "16APSK 5/6",
+        "acm_thr": "14.6"
+    }
+]

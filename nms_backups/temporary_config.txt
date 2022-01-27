@@ -1,0 +1,127 @@
+
+.nms 0
+config_ver 24
+name UHP NMS
+created 1643011715
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename temporary_config.txt
+load_filename default_config.txt
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name mf_hub
+created 1643011715
+tx_stat_num 11
+rx_stat_num 11
+rx_number 3
+rx_stations station:0
+mode MF_hub
+device_ip 10.56.33.20
+device_gateway 10.56.33.1
+teleport teleport:0
+tx_on ON 
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name Network
+vnos vno:0
+controllers controller:0
+teleports teleport:0
+services service:0
+created 1643011715
+
+.route 0
+next route:1
+uprow station:0
+type IP_address
+service service:0
+ip 10.56.33.21
+id Private
+
+.route 1
+uprow station:0
+type Static_route
+service service:0
+mask /0
+gateway 10.56.33.1
+id Private
+
+.route 2
+next route:3
+uprow station:1
+type IP_address
+service service:0
+ip 10.56.33.22
+id Private
+
+.route 3
+uprow station:1
+type Static_route
+service service:0
+mask /0
+gateway 10.56.33.1
+id Private
+
+.service 0
+uprow network:0
+name Service
+
+.station 0
+next station:1
+uprow vno:0
+name station_01
+routes route:0
+enable ON 
+serial 43338146
+rx_controller controller:0
+created 1643011715
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:1
+tx_number 2
+rx_number 2
+
+.station 1
+uprow vno:0
+name station_02
+routes route:2
+enable ON 
+serial 41336867
+rx_controller controller:0
+created 1643011715
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 3
+rx_number 3
+
+.teleport 0
+uprow network:0
+name Teleport
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name VNO
+stations station:0
+created 1643011715

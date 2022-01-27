@@ -1,0 +1,295 @@
+
+.nms 0
+config_ver 20
+name UHP NMS
+created 1638951960
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+alerts alert:0
+servers server:0
+dashboards dashboard:0
+save_filename case_web_broken_links.txt
+load_filename default_config.txt
+
+.access 0
+next access:1
+uprow nms:0
+group group:0
+edit ON 
+
+.access 1
+uprow nms:0
+group group:1
+
+.alert 0
+uprow nms:0
+name test_alert
+popup ON 
+
+.bal_controller 0
+uprow network:0
+name test_bal_ctrl
+
+.camera 0
+uprow network:0
+name test_camera
+
+.controller 0
+uprow network:0
+name test_ctrl
+routes route:0
+rip_routers rip_router:0
+port_maps port_map:0
+created 1638951960
+tx_stat_num 11
+rx_stat_num 11
+rx_number 3
+rx_stations station:1
+mode MF_hub
+device_ip 127.0.0.1
+teleport teleport:0
+
+.dashboard 0
+uprow nms:0
+name nms_dash
+
+.dashboard 1
+uprow network:0
+name net_dash
+
+.dashboard 2
+uprow vno:0
+name vno_dash
+
+.dashboard 3
+uprow vno:1
+name sub_vno_dash
+
+.device 0
+uprow sr_teleport:0
+name test_device
+ip 127.0.0.2
+created 1638951961
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.group 1
+uprow network:0
+name test_group_net
+users user:1
+
+.network 0
+uprow nms:0
+name test_network
+vnos vno:0
+groups group:1
+controllers controller:0
+sr_controllers sr_controller:0
+sr_licenses sr_license:0
+teleports teleport:0
+bal_controllers bal_controller:0
+services service:0
+qoses qos:0
+shapers shaper:0
+policies policy:0
+profile_sets profile_set:0
+sw_uploads sw_upload:0
+cameras camera:0
+dashboards dashboard:1
+schedulers scheduler:0
+created 1638951960
+
+.policy 0
+uprow network:0
+name test_policy
+rules polrule:0
+
+.polrule 0
+next polrule:1
+uprow policy:0
+sequence 1
+
+.polrule 1
+uprow policy:0
+sequence 2
+type Action
+
+.port_map 0
+uprow controller:0
+internal_ip 127.0.0.4
+
+.port_map 1
+uprow station:0
+
+.port_map 2
+uprow station:1
+
+.profile_set 0
+uprow network:0
+name test_profile
+
+.qos 0
+uprow network:0
+name test_qos
+
+.rip_router 0
+uprow controller:0
+service service:0
+
+.rip_router 1
+uprow station:0
+service service:0
+
+.rip_router 2
+uprow station:1
+service service:0
+
+.route 0
+uprow controller:0
+type IP_address
+service service:0
+ip 127.0.0.3
+
+.route 1
+next route:2
+uprow station:0
+type IP_address
+service service:0
+ip 127.0.0.10
+
+.route 2
+uprow station:0
+type IP_address
+service service:0
+ip 127.0.0.11
+
+.sch_range 0
+uprow scheduler:0
+name test_sch_range
+
+.sch_service 0
+uprow scheduler:0
+name test_sch_service
+
+.sch_task 0
+uprow station:0
+name sch_task1
+sch_service sch_service:0
+
+.sch_task 1
+uprow station:1
+name sch_task2
+sch_service sch_service:0
+
+.scheduler 0
+uprow network:0
+name test_scheduler
+sch_ranges sch_range:0
+sch_services sch_service:0
+
+.server 0
+uprow nms:0
+name test_server
+ip 127.0.0.10
+
+.service 0
+uprow network:0
+name test_service
+
+.shaper 0
+uprow network:0
+name test_shaper
+shapers shaper:1
+
+.shaper 1
+uprow shaper:0
+name test_sub_shaper
+
+.sr_controller 0
+uprow network:0
+name test_sr_ctrl
+sr_teleports sr_teleport:0
+created 1638951961
+
+.sr_license 0
+uprow network:0
+name test_sr_lic
+license_key 123456
+
+.sr_teleport 0
+uprow sr_controller:0
+name test_sr_tp
+devices device:0
+teleport teleport:0
+
+.station 0
+uprow vno:0
+name test_stn_vno
+routes route:1
+rip_routers rip_router:1
+port_maps port_map:1
+sch_tasks sch_task:0
+enable ON 
+serial 111111
+rx_controller controller:0
+created 1638951961
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 3
+rx_number 3
+
+.station 1
+uprow vno:1
+name test_stn_vno
+rip_routers rip_router:2
+port_maps port_map:2
+sch_tasks sch_task:1
+enable ON 
+serial 222222
+rx_controller controller:0
+created 1638951961
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:0
+tx_number 2
+rx_number 2
+
+.sw_upload 0
+uprow network:0
+name test_sw_up
+sw_file dummy_soft.240
+
+.teleport 0
+uprow network:0
+name test_teleport
+sat_name test_sat
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.user 1
+uprow group:1
+name test_user_net
+
+.vno 0
+uprow network:0
+name test_vno
+vnos vno:1
+stations station:0
+dashboards dashboard:2
+created 1638951961
+
+.vno 1
+uprow vno:0
+name test_sub_vno
+stations station:1
+dashboards dashboard:3
+created 1638951961

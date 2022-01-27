@@ -1,0 +1,5 @@
+2021-12-22 13:05:45 - RUN - SampleCase - Initializing test case, running set_up_class...
+2021-12-22 13:05:50 - ERROR - SampleCase - Exception in test case set up: `teleport` is not created in `network:0`. Reason: error_code: `-5` error_log: `Bad value: sat_name
+`
+2021-12-22 13:05:50 - INFO - SampleCase - Test case execution time is 4.85 seconds
+

@@ -1,0 +1,968 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>test_system.src.nms_entities.basic_entities package &mdash; NMS TEST SYSTEM</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_system.src.options_providers package" href="test_system.src.options_providers.html" />
+    <link rel="prev" title="test_system.src.nms_entities package" href="test_system.src.nms_entities.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NMS TEST SYSTEM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started_rus.html">Начало работы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage_rus.html">Возможности системы</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">test_system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="test_system.html">test_system package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="test_system.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="test_system.examples.html">test_system.examples package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.global_options.html">test_system.global_options package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="test_system.src.html">test_system.src package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.test_scenarios.html">test_system.test_scenarios package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.utilities.html">test_system.utilities package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.print_tests_list">test_system.print_tests_list module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.snmp_example">test_system.snmp_example module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.starter">test_system.starter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NMS TEST SYSTEM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">test_system</a> &raquo;</li>
+        
+          <li><a href="test_system.html">test_system package</a> &raquo;</li>
+        
+          <li><a href="test_system.src.html">test_system.src package</a> &raquo;</li>
+        
+          <li><a href="test_system.src.nms_entities.html">test_system.src.nms_entities package</a> &raquo;</li>
+        
+      <li>test_system.src.nms_entities.basic_entities package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-system-src-nms-entities-basic-entities-package">
+<h1>test_system.src.nms_entities.basic_entities package<a class="headerlink" href="#test-system-src-nms-entities-basic-entities-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.alert">
+<span id="test-system-src-nms-entities-basic-entities-alert-module"></span><h2>test_system.src.nms_entities.basic_entities.alert module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.alert" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.alert.Alert">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.alert.</span></span><span class="sig-name descname"><span class="pre">Alert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alert_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.alert.Alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Alert class.
+Can be used to either create a new Alert instance or manage an existing one.
+If alert_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>nms_id</cite> and ‘alert_id`.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alrt</span> <span class="o">=</span> <span class="n">Alert</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_ALRT&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alrt</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Alert named `TEST_ALRT` for NMS ID 0.</span>
+<span class="go">Applies the Alert to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alrt</span> <span class="o">=</span> <span class="n">Alert</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Load the parameters of Alert ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>nms_id</strong> (<em>int</em>) – ID of the parent NMS object</p></li>
+<li><p><strong>alert_id</strong> (<em>int</em>) – ID of the alert. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new alert is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the alert.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if alert ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.controller">
+<span id="test-system-src-nms-entities-basic-entities-controller-module"></span><h2>test_system.src.nms_entities.basic_entities.controller module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.controller" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.controller.Controller">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.controller.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.has_up_state_object.HasUpState</span></code></p>
+<p>NMS Controller class.
+Can be used to either create a new Controller instance or manage an existing one.
+If controller_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>controller_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctrl</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_CTRL&#39;</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;Hubless_master&#39;</span><span class="p">,</span> <span class="s1">&#39;teleport&#39;</span><span class="p">:</span> <span class="s1">&#39;teleport:0&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctrl</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Hubless controller named `TEST_CTRL` and using a Teleport ID 0 in the Network ID 0.</span>
+<span class="go">Applies the controller to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctrl</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Controller ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>controller_id</strong> (<em>int</em>) – ID of the controller. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new controller is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the controller.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if controller ID is not found</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.controller.Controller.get_realtime">
+<span class="sig-name descname"><span class="pre">get_realtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.controller.Controller.get_realtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Realtime controller data of the passed command from NMS.
+The commands correspond to the existing show commands in UHP.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctrl</span><span class="o">.</span><span class="n">get_realtime</span><span class="p">(</span><span class="s1">&#39;show system&#39;</span><span class="p">)</span>
+<span class="go">Gets the `show system` output</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>) – the command that is executed for getting the Realtime controller data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>reply (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) - a string containing the data of the response</p></li>
+<li><p>None - if there is either an error or <cite>No reply</cite> response from NMS</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.controller.Controller.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.controller.Controller.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current state of the controller NMS object. The state parameters are the following:</p>
+<blockquote>
+<div><p>‘state’;</p>
+<p>‘stn_cn_avg’, ‘hub_cn_avg’, ‘rq_total’, ‘rq_cir’, ‘rq_for_rq’, ‘tx_stn_cn_low’, ‘tx_stn_cn_high’,
+‘mf_channels’, ‘hub_own_cn’, ‘hub_tx_level’, ‘hub_rf_lvl’, ‘rx_hub_cn_low’, ‘rx_stn_cn_high’;</p>
+<p>‘forward_rate_all’, ‘forward_rate1’, ‘forward_rate2’, ‘forward_rate3’, ‘forward_rate4’, ‘forward_rate5’;
+‘forward_rate6’, ‘forward_rate7’,</p>
+<p>‘return_rate_all’, ‘return_rate1’, ‘return_rate2’, ‘return_rate3’, ‘return_rate4’, ‘return_rate5’,
+‘return_rate6’, and ‘return_rate7’.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns dict</dt>
+<dd class="field-odd"><p>a dictionary containing the key-value pairs of the controller state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.controller.Controller.search_by_name">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">search_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.controller.Controller.search_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a controller NMS object by its name.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctrl</span> <span class="o">=</span> <span class="n">Controller</span><span class="o">.</span><span class="n">search_by_name</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;TEST_CTRL&#39;</span><span class="p">)</span>
+<span class="go">Returns an instance of the controller named `TEST_CTRL` in the Network ID 0.</span>
+<span class="go">The parameters are loaded from NMS.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an instance of <cite>src.drivers.abstract_http_driver.AbstractHttpDriver</cite> class</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – the name of a controller to search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>an instance of the found controller NMS object.</p></li>
+<li><p>None - if the controller cannot be found</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.controller_route">
+<span id="test-system-src-nms-entities-basic-entities-controller-route-module"></span><h2>test_system.src.nms_entities.basic_entities.controller_route module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.controller_route" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.controller_route.ControllerRoute">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.controller_route.</span></span><span class="sig-name descname"><span class="pre">ControllerRoute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.controller_route.ControllerRoute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Controller routing class.
+Can be used to either create a new Controller route instance or manage an existing one.
+If route_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>controller_id</cite> and <cite>route_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="n">ControllerRoute</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Static_route&#39;</span><span class="p">,</span> <span class="s1">&#39;service&#39;</span><span class="p">:</span> <span class="s1">&#39;service:0&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Controller route of type `Static_route` and service ID 0 for the Controller ID 0.</span>
+<span class="go">The rest parameters are default. Applies the route to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="n">ControllerRoute</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Controller route ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>controller_id</strong> (<em>int</em>) – ID of the parent controller object</p></li>
+<li><p><strong>route_id</strong> (<em>int</em>) – ID of the route. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new controller route is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the controller route.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if controller route ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.network">
+<span id="test-system-src-nms-entities-basic-entities-network-module"></span><h2>test_system.src.nms_entities.basic_entities.network module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.network" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.network.Network">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.network.</span></span><span class="sig-name descname"><span class="pre">Network</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.network.Network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Network class.
+Can be used to either create a new Network instance or manage an existing one.
+If network_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>nms_id</cite> and <cite>network_id</cite>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">net</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_NET&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">net</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Network named `TEST_NET` and using for NMS ID 0.</span>
+<span class="go">Applies the network to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">net</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Load the parameters of Network ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>nms_id</strong> (<em>int</em>) – ID of the parent NMS object</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the network. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new network is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the network.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if network ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.nms">
+<span id="test-system-src-nms-entities-basic-entities-nms-module"></span><h2>test_system.src.nms_entities.basic_entities.nms module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.nms" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.nms.Nms">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.nms.</span></span><span class="sig-name descname"><span class="pre">Nms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.nms.Nms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS global config class.
+Can be used to manage the settings of NMS.
+Note: NMS cannot be neither created nor deleted.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nms</span> <span class="o">=</span> <span class="n">Nms</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">Loads the parameters of NMS ID 0 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>parent_id</strong> (<em>int</em>) – the parameter value is irrelevant. Used for compability with the parent interface.</p></li>
+<li><p><strong>nms_id</strong> (<em>int</em>) – ID of the NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the controller.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if NMS ID is not found</p></li>
+<li><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.InvalidIdException" title="test_system.src.exceptions.InvalidIdException"><strong>src.exceptions.InvalidIdException</strong></a> – if nms_id &lt; 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.policy">
+<span id="test-system-src-nms-entities-basic-entities-policy-module"></span><h2>test_system.src.nms_entities.basic_entities.policy module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.policy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.policy.Policy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.policy.</span></span><span class="sig-name descname"><span class="pre">Policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.policy.Policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Policy class.
+Can be used to either create a new Policy instance or manage an existing one.
+If policy_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>policy_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pol</span> <span class="o">=</span> <span class="n">Policy</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_POL&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pol</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Policy named `TEST_POL` in the Network ID 0.</span>
+<span class="go">Applies the policy to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pol</span> <span class="o">=</span> <span class="n">Policy</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Policy ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>policy_id</strong> (<em>int</em>) – ID of the policy. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new policy is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the policy.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if policy ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.policy_rule">
+<span id="test-system-src-nms-entities-basic-entities-policy-rule-module"></span><h2>test_system.src.nms_entities.basic_entities.policy_rule module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.policy_rule" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.policy_rule.PolicyRule">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.policy_rule.</span></span><span class="sig-name descname"><span class="pre">PolicyRule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.policy_rule.PolicyRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Policy rule class.
+Can be used to either create a new Policy rule instance or manage an existing one.
+If policy_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>policy_id</cite> and <cite>rule_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rule</span> <span class="o">=</span> <span class="n">PolicyRule</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sequence&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Check&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rule</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Policy rule of type `Check` in the Policy ID 0.</span>
+<span class="go">Applies the rule to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rule</span> <span class="o">=</span> <span class="n">PolicyRule</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Policy rule ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>policy_id</strong> (<em>int</em>) – ID of the parent policy object</p></li>
+<li><p><strong>rule_id</strong> (<em>int</em>) – ID of the rule. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new rule is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the rule.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if Policy rule ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.profile">
+<span id="test-system-src-nms-entities-basic-entities-profile-module"></span><h2>test_system.src.nms_entities.basic_entities.profile module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.profile" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.profile.Profile">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.profile.</span></span><span class="sig-name descname"><span class="pre">Profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.profile.Profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Profile class.
+Can be used to either create a new Profile instance or manage an existing one.
+If profile_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>profile_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prfl</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_PRFL&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prfl</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Profile named `TEST_PRFL` in the Network ID 0</span>
+<span class="go">Applies the profile to NMS</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prfl</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Profile ID 3 from NMS. Raises an exception if the given ID is not found</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>profile_id</strong> (<em>int</em>) – ID of the profile. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new profile is created. Otherwise, the parameters are loaded from NMS</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the profile.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if profile ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.service">
+<span id="test-system-src-nms-entities-basic-entities-service-module"></span><h2>test_system.src.nms_entities.basic_entities.service module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.service" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.service.Service">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.service.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.service.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Service class.
+Can be used to either create a new Service instance or manage an existing one.
+If service_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>service_id</cite>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">srvc</span> <span class="o">=</span> <span class="n">Service</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_SRVC&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">srvc</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Service named `TEST_SRVC` the Network ID 0.</span>
+<span class="go">Applies the service to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">srvc</span> <span class="o">=</span> <span class="n">Service</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Service ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>service_id</strong> (<em>int</em>) – ID of the service. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new service is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the service.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if service ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.shaper">
+<span id="test-system-src-nms-entities-basic-entities-shaper-module"></span><h2>test_system.src.nms_entities.basic_entities.shaper module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.shaper" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.shaper.Shaper">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.shaper.</span></span><span class="sig-name descname"><span class="pre">Shaper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shaper_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.shaper.Shaper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Shaper class.
+Can be used to either create a new Shaper instance or manage an existing one.
+If shaper_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>shaper_id</cite>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">shpr</span> <span class="o">=</span> <span class="n">Shaper</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_SHPR&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shpr</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Hubless controller named `TEST_SHPR` and using a Teleport ID 0 in the Network ID 0.</span>
+<span class="go">Applies the shaper to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">shpr</span> <span class="o">=</span> <span class="n">Shaper</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Shaper ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>shaper_id</strong> (<em>int</em>) – ID of the shaper. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new shaper is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the shaper.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if shaper ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.station">
+<span id="test-system-src-nms-entities-basic-entities-station-module"></span><h2>test_system.src.nms_entities.basic_entities.station module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.station" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.station.Station">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.station.</span></span><span class="sig-name descname"><span class="pre">Station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.station.Station" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.has_up_state_object.HasUpState</span></code></p>
+<p>NMS Station class.
+Can be used to either create a new Station instance or manage an existing one.
+If station_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>vno_id</cite> and <cite>station_id</cite>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stn</span> <span class="o">=</span> <span class="n">Station</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_STN&#39;</span><span class="p">,</span> <span class="s1">&#39;serial&#39;</span><span class="p">:</span> <span class="s1">&#39;12345&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stn</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Station named `TEST_STN` with the serial number `12345` in VNO ID 0.</span>
+<span class="go">Applies the station to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stn</span> <span class="o">=</span> <span class="n">Station</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Load the parameters of Station ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>vno_id</strong> (<em>int</em>) – ID of the parent VNO object</p></li>
+<li><p><strong>station_id</strong> (<em>int</em>) – ID of the station. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new station is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the station.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if station ID is not found</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.station.Station.get_realtime">
+<span class="sig-name descname"><span class="pre">get_realtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.station.Station.get_realtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Realtime station data of the passed command from NMS.
+The commands correspond to the existing show commands in UHP.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stn</span><span class="o">.</span><span class="n">get_realtime</span><span class="p">(</span><span class="s1">&#39;show system&#39;</span><span class="p">)</span>
+<span class="go">Gets the `show system` output</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>) – the command that is executed for getting the Realtime station data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>reply (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) - a string containing the data of the response</p></li>
+<li><p>None - if there is either an error or <cite>No reply</cite> response from NMS</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.station.Station.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.station.Station.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current state of the station NMS object. The state parameters are the following:</p>
+<blockquote>
+<div><p>‘state’;</p>
+<p>‘station_cn’, ‘cn_on_hub’, ‘station_tx’, ‘tx_margin’, ‘station_2_cn’, ‘bw_rq’, ‘rx_errors’;</p>
+<p>‘forward_rate_all’, ‘forward_rate1’, ‘forward_rate2’, ‘forward_rate3’, ‘forward_rate4’,
+‘forward_rate5’, ‘forward_rate6’, ‘forward_rate7’;</p>
+<p>‘return_rate_all’, ‘return_rate1’, ‘return_rate2’, ‘return_rate3’, ‘return_rate4’, ‘return_rate5’,
+‘return_rate6’, and ‘return_rate7’.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns dict</dt>
+<dd class="field-odd"><p>a dictionary containing the key-value pairs of the station state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.station_route">
+<span id="test-system-src-nms-entities-basic-entities-station-route-module"></span><h2>test_system.src.nms_entities.basic_entities.station_route module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.station_route" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.station_route.StationRoute">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.station_route.</span></span><span class="sig-name descname"><span class="pre">StationRoute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">station_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.station_route.StationRoute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Station routing class.
+Can be used to either create a new Station route instance or manage an existing one.
+If route_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>station_id</cite> and <cite>route_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="n">StationRoute</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Static_route&#39;</span><span class="p">,</span> <span class="s1">&#39;service&#39;</span><span class="p">:</span> <span class="s1">&#39;service:0&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Station route of type `Static_route` and service ID 0 for the Station ID 0.</span>
+<span class="go">The rest parameters are default. Applies the route to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="n">StationRoute</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Station route ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>station_id</strong> (<em>int</em>) – ID of the parent station object</p></li>
+<li><p><strong>route_id</strong> (<em>int</em>) – ID of the route. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new station route is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the station route.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if station route ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.teleport">
+<span id="test-system-src-nms-entities-basic-entities-teleport-module"></span><h2>test_system.src.nms_entities.basic_entities.teleport module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.teleport" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.teleport.Teleport">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.teleport.</span></span><span class="sig-name descname"><span class="pre">Teleport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">teleport_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.teleport.Teleport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS Teleport class.
+Can be used to either create a new Teleport instance or manage an existing one.
+If teleport_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>teleport_id</cite>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span> <span class="o">=</span> <span class="n">Teleport</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_TP&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new Teleport named `TEST_CTRL` in the Network ID 0.</span>
+<span class="go">Applies the teleport to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tp</span> <span class="o">=</span> <span class="n">Teleport</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of Teleport ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>teleport_id</strong> (<em>int</em>) – ID of the teleport. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new teleport is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the teleport.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if teleport ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.user">
+<span id="test-system-src-nms-entities-basic-entities-user-module"></span><h2>test_system.src.nms_entities.basic_entities.user module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.user" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.user.User">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.user.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.user.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS User class.
+Can be used to either create a new User instance or manage an existing one.
+If user_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>group_id</cite> and <cite>user_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">usr</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_USR&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">usr</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new User named `TEST_USR` in the User group ID 0.</span>
+<span class="go">Applies the user to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">usr</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of User ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>group_id</strong> (<em>int</em>) – ID of the parent user group object</p></li>
+<li><p><strong>user_id</strong> (<em>int</em>) – ID of the user. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new user is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the user.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if user ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.user_group">
+<span id="test-system-src-nms-entities-basic-entities-user-group-module"></span><h2>test_system.src.nms_entities.basic_entities.user_group module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.user_group" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.user_group.UserGroup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.user_group.</span></span><span class="sig-name descname"><span class="pre">UserGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.user_group.UserGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS User groups class.
+Can be used to either create a new User groups instance or manage an existing one.
+If group_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>nms_id</cite> and <cite>group_id</cite></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grp</span> <span class="o">=</span> <span class="n">UserGroup</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_GRP&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grp</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new UserGroup named `TEST_GRP` and using for NMS ID 0.</span>
+<span class="go">Applies the User group to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grp</span> <span class="o">=</span> <span class="n">UserGroup</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of User group ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>nms_id</strong> (<em>int</em>) – ID of the parent NMS object</p></li>
+<li><p><strong>group_id</strong> (<em>int</em>) – ID of the group. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new User group is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the group.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if group ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities.vno">
+<span id="test-system-src-nms-entities-basic-entities-vno-module"></span><h2>test_system.src.nms_entities.basic_entities.vno module<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities.vno" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.nms_entities.basic_entities.vno.Vno">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.nms_entities.basic_entities.vno.</span></span><span class="sig-name descname"><span class="pre">Vno</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">src.drivers.abstract_http_driver.AbstractHttpDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vno_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.nms_entities.basic_entities.vno.Vno" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">src.nms_entities.abstract_basic_object.AbstractBasicObject</span></code></p>
+<p>NMS VNO class.
+Can be used to either create a new VNO instance or manage an existing one.
+If vno_id &gt; <cite>src.constants.NEW_OBJECT_ID</cite> the values of the parameters
+are loaded from NMS using the passed <cite>network_id</cite> and <cite>vno_id</cite>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vno</span> <span class="o">=</span> <span class="n">Vno</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TEST_VNO&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vno</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">Instantiates a new VNO named `TEST_VNO` in the Network ID 0.</span>
+<span class="go">Applies the VNO to NMS.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vno</span> <span class="o">=</span> <span class="n">Vno</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Loads the parameters of VNO ID 3 from NMS. Raises an exception if the given ID is not found.</span>
+</pre></div>
+</div>
+<p>See the rest methods in the Base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> (<a class="reference internal" href="test_system.src.drivers.html#test_system.src.drivers.abstract_http_driver.AbstractHttpDriver" title="test_system.src.drivers.abstract_http_driver.AbstractHttpDriver"><em>AbstractHttpDriver</em></a>) – an inherited instance of the driver</p></li>
+<li><p><strong>network_id</strong> (<em>int</em>) – ID of the parent network object</p></li>
+<li><p><strong>vno_id</strong> (<em>int</em>) – ID of the VNO. If ID equals to <cite>src.constants.NEW_OBJECT_ID</cite>,
+a new VNO is created. Otherwise, the parameters are loaded from NMS.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – a dictionary that contains the parameters of the VNO.
+Initial dictionary is not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.ObjectNotFoundException" title="test_system.src.exceptions.ObjectNotFoundException"><strong>src.exceptions.ObjectNotFoundException</strong></a> – if VNO ID is not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.nms_entities.basic_entities">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test_system.src.nms_entities.basic_entities" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test_system.src.options_providers.html" class="btn btn-neutral float-right" title="test_system.src.options_providers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test_system.src.nms_entities.html" class="btn btn-neutral float-left" title="test_system.src.nms_entities package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Memotech.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

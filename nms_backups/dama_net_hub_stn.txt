@@ -1,0 +1,129 @@
+
+.nms 0
+config_ver 19
+name UHP NMS
+created 1641897860
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename dama_net_hub_stn.txt
+load_filename default_config.txt
+map_source User
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name DAMA_HUB
+routes route:3
+created 1641897860
+tx_stat_num 2
+rx_stat_num 2
+dama_stn1 station:0
+mode DAMA_hub
+net_id 192
+teleport teleport:0
+tx_frq 1500000
+tx_sr 5500
+tx_level 25.0
+stn_number 2
+a_dama_tx_frq 1510000
+a_dama_rx_frq 1510000
+a_dama_tx On
+a_dama_level 25.0
+b_dama_tx_frq 1513000
+b_dama_rx_frq 1513000
+b_dama_tx On
+b_dama_level 25.0
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name DAMA_net
+vnos vno:0
+controllers controller:0
+teleports teleport:0
+services service:1
+created 1641897860
+dev_password nms40
+
+.route 0
+next route:1
+uprow station:0
+type IP_address
+service service:0
+ip 111.111.111.111
+
+.route 1
+next route:2
+uprow station:0
+type Static_route
+service service:0
+mask /0
+gateway 111.111.111.1
+
+.route 2
+uprow station:0
+type IP_address
+service service:1
+ip 101.1.1.11
+
+.route 3
+uprow controller:0
+type IP_address
+service service:1
+ip 101.0.0.11
+
+.service 0
+uprow network:0
+name station_ips
+
+.service 1
+next service:0
+uprow network:0
+name service-01_Tr
+hub_vlan 100
+stn_vlan 110
+stn_normal ON 
+
+.station 0
+uprow vno:0
+name dama_station_01
+routes route:0
+enable ON 
+serial 111
+mode DAMA
+rx_controller controller:0
+created 1641897860
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 1
+rx_number 1
+
+.teleport 0
+uprow network:0
+name TELEPORTNAME
+sat_name test_sat
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name vno_name
+stations station:0
+created 1641897860

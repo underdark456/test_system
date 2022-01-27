@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>test_system.src.drivers.uhp package &mdash; NMS TEST SYSTEM</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_system.src.nms_entities package" href="test_system.src.nms_entities.html" />
+    <link rel="prev" title="test_system.src.drivers.snmp package" href="test_system.src.drivers.snmp.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NMS TEST SYSTEM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started_rus.html">Начало работы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage_rus.html">Возможности системы</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">test_system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="test_system.html">test_system package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="test_system.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="test_system.examples.html">test_system.examples package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.global_options.html">test_system.global_options package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="test_system.src.html">test_system.src package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.test_scenarios.html">test_system.test_scenarios package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.utilities.html">test_system.utilities package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.print_tests_list">test_system.print_tests_list module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.snmp_example">test_system.snmp_example module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.starter">test_system.starter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NMS TEST SYSTEM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">test_system</a> &raquo;</li>
+        
+          <li><a href="test_system.html">test_system package</a> &raquo;</li>
+        
+          <li><a href="test_system.src.html">test_system.src package</a> &raquo;</li>
+        
+          <li><a href="test_system.src.drivers.html">test_system.src.drivers package</a> &raquo;</li>
+        
+      <li>test_system.src.drivers.uhp package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-system-src-drivers-uhp-package">
+<h1>test_system.src.drivers.uhp package<a class="headerlink" href="#test-system-src-drivers-uhp-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-test_system.src.drivers.uhp.constants">
+<span id="test-system-src-drivers-uhp-constants-module"></span><h2>test_system.src.drivers.uhp.constants module<a class="headerlink" href="#module-test_system.src.drivers.uhp.constants" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-test_system.src.drivers.uhp.uhp_requests_driver">
+<span id="test-system-src-drivers-uhp-uhp-requests-driver-module"></span><h2>test_system.src.drivers.uhp.uhp_requests_driver module<a class="headerlink" href="#module-test_system.src.drivers.uhp.uhp_requests_driver" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.drivers.uhp.uhp_requests_driver.</span></span><span class="sig-name descname"><span class="pre">UhpRequestsDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">router_address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'12345'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_retries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class features methods to get data from UHP routers as well as set parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>router_address</strong> (<em>str</em>) – UHP router IP address</p></li>
+<li><p><strong>serial_number</strong> (<em>str</em>) – UHP serial number</p></li>
+<li><p><strong>timeout</strong> (<em>int</em>) – GET requests timeout value in seconds</p></li>
+<li><p><strong>max_retries</strong> (<em>int</em>) – number of GET requests retries</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a GET request to the UHP using the IP-address provided during the class instantiation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if there is a response</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.UhpResponseException" title="test_system.src.exceptions.UhpResponseException"><strong>UhpResponseException</strong></a> – if the target UHP does not respond</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_arp_form">
+<span class="sig-name descname"><span class="pre">get_arp_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_arp_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP ARP settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘arp_timeout’, and ‘proxy_arp’.
+The dictionary values are taken from the page unmodified except for ‘proxy_arp’ which is either ‘1’ or ‘0’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_current_profile_number">
+<span class="sig-name descname"><span class="pre">get_current_profile_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_current_profile_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current active UHP profile number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>profile_number (:py:class:’str’) - current active profile number</p></li>
+<li><p>None - if the current profile number cannot be established</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_demodulator_form">
+<span class="sig-name descname"><span class="pre">get_demodulator_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_demodulator_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TDM/SCPC RX page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘rx1_input’, ‘rx1_frq’, ‘rx1_sr’, ‘check_rx’,
+‘rx2_input’, ‘rx2_frq’, ‘rx2_sr’, and ‘rx_voltage’.
+The dictionary values are taken from the page unmodified, except for ‘rx1_input’ and ‘rx2_input’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_dhcp_stats">
+<span class="sig-name descname"><span class="pre">get_dhcp_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_dhcp_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP DHCP statistics page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘dhcp_mode’, ‘dhcp_vlan’, ‘dhcp_ip_start’, ‘dhcp_ip_end’,
+‘dhcp_mask’, ‘dhcp_gateway’, ‘dhcp_dns’, and ‘dhcp_timeout’.
+The dictionary values are taken from the page using regular expressions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_dns_stats">
+<span class="sig-name descname"><span class="pre">get_dns_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_dns_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP DNS statistics page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘dns_caching’, and ‘dns_timeout’.
+The dictionary values are taken from the page using regular expressions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_interfaces_form">
+<span class="sig-name descname"><span class="pre">get_interfaces_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_interfaces_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Interfaces page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘mod_queue1’, ‘mod_queue2’, ‘mod_queue3’, ‘mod_queue4’, ‘mod_queue5’,
+‘mod_queue6’, ‘mod_queue7’, ‘mod_que_ctl’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_ip_routing_stats">
+<span class="sig-name descname"><span class="pre">get_ip_routing_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_ip_routing_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP IP routing statistics page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘ip_screening’.
+The dictionary values are taken from the page using regular expressions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_modulator_form">
+<span class="sig-name descname"><span class="pre">get_modulator_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_modulator_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Profile Modulator page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘tx_on’, and ‘tx_level’.
+The dictionary values are taken from the page unmodified, except for ‘tx_level’
+because it is represented as two separated fields each.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_multicast_form">
+<span class="sig-name descname"><span class="pre">get_multicast_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_multicast_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Multicast settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘mcast_mode’, ‘mcast_timeout’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_nat_form">
+<span class="sig-name descname"><span class="pre">get_nat_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_nat_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP NAT settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘nat_enable’, ‘nat_ext_ip’, ‘nat_int_ip’, ‘nat_int_mask’.
+The dictionary values are taken from the page unmodified, except for the internal mask
+that is converted to the prefix format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_nms_controlled_mode">
+<span class="sig-name descname"><span class="pre">get_nms_controlled_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_nms_controlled_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the state of UHP NMS controlled mode.
+If there is a message ‘NMS controlled mode!’ in the site setup page,
+the modem is under the control</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns bool</dt>
+<dd class="field-odd"><p>True if UHP is under NMS control, otherwise False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_nms_state">
+<span class="sig-name descname"><span class="pre">get_nms_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_nms_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_realtime_bw_form">
+<span class="sig-name descname"><span class="pre">get_realtime_bw_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_realtime_bw_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TDMA Realtime BW allocation as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘rt_codec’, ‘rt_threshold’, and ‘rt_timeout’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_request">
+<span class="sig-name descname"><span class="pre">get_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a GET request using the passed URL, get a response</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>req (:py:class:’str’) - the response object</p></li>
+<li><p>False - if the status code of the response is not OK</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_rip_form">
+<span class="sig-name descname"><span class="pre">get_rip_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_rip_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP RIPv2 settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘rip_mode’, ‘rip_update’, ‘rip_timeout’, ‘rip_cost’, ‘rip_auth’, ‘rip_pass’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_router_address">
+<span class="sig-name descname"><span class="pre">get_router_address</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_router_address" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns str</dt>
+<dd class="field-odd"><p>the UHP IP address passed into the class constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_security_form">
+<span class="sig-name descname"><span class="pre">get_security_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_security_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Security system settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘ctl_protect’, ‘ctl_key’.
+The dictionary values are taken from the page unmodified, except for ctl_protect
+that is converted to either ‘1’ or ‘0’ depending on the mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_serial_number">
+<span class="sig-name descname"><span class="pre">get_serial_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns str</dt>
+<dd class="field-odd"><p>the UHP serial number passed into the class constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_service_monitoring_form">
+<span class="sig-name descname"><span class="pre">get_service_monitoring_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_service_monitoring_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Service monitoring page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘sm_enable’, ‘sm_interval’, ‘sm_losts’, ‘poll_enable1’, ‘poll_ip1’,
+‘poll_vlan1’, ‘chk_delay1’, ‘max_delay1’, ‘poll_enable2’, ‘poll_ip2’,
+‘poll_vlan2’, ‘chk_delay2’, ‘max_delay2’, and ‘rx_check_rate’,
+‘tx_check_rate’, ‘bkp_enable’, ‘bkp_ip’, ‘auto_reboot’, ‘reboot_delay’,
+‘lan_rx_check’, and ‘lan_tx_check’.
+The dictionary values are taken from the page unmodified, except for tcpa_version
+that is converted to the corresponding NMS value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_snmp_form">
+<span class="sig-name descname"><span class="pre">get_snmp_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_snmp_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP SNMP form page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘snmp_mode’, ‘snmp_user’, ‘snmp_auth’, ‘snmp_user’, ‘comm_read’, ‘comm_write’, ‘access1_ip’, and ‘access2_ip’.
+The dictionary values are taken from the page using regular expressions.
+All the values are lowercased.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_snmp_stats">
+<span class="sig-name descname"><span class="pre">get_snmp_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_snmp_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP SNMP statistics page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘snmp_mode’, ‘snmp_user’, ‘snmp_auth’, ‘snmp_user’, ‘snmp_read’, ‘snmp_write’, ‘access1_ip’, and ‘access2_ip’.
+The dictionary values are taken from the page using regular expressions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_sntp_form">
+<span class="sig-name descname"><span class="pre">get_sntp_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_sntp_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP SNTP settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘sntp_mode’, ‘sntp_server’, ‘sntp_vlan’.
+The dictionary values are taken from the page unmodified, except for the sntp_mode
+that is converted to the corresponding NMS value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_software_version">
+<span class="sig-name descname"><span class="pre">get_software_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_software_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the software version of the currently instantiated UHP. On success the software version
+is placed into an instance variable self.uhp_software_version</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>self.uhp_software_version (:py:class:’str’) - the software version of the UHP</p></li>
+<li><p>None - if the software version cannot be determined</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="test_system.src.html#test_system.src.exceptions.UhpResponseException" title="test_system.src.exceptions.UhpResponseException"><strong>UhpResponseException</strong></a> – if the router does not respond</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_station_edit_form">
+<span class="sig-name descname"><span class="pre">get_station_edit_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">station_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_station_edit_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Advanced-&gt;Network-&gt;Stations-&gt;Station# page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘hub_shaper’, ‘rq_profile’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>station_number</strong> (<em>int</em>) – station number to get data from</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_support_info_value">
+<span class="sig-name descname"><span class="pre">get_support_info_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_support_info_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value from the UHP support info page</p>
+<p>Example:
+uhp.get_support_info( self, regex=re.compile(r’timezone:s[0-9]+’) ) returns the current set timezone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>regex</strong> (<em>re.Pattern</em>) – a regular expression pattern to find</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>value (:py:class:’str’)</p></li>
+<li><p>None - if value cannot be find</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tcpa_form">
+<span class="sig-name descname"><span class="pre">get_tcpa_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tcpa_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TCP Acceleration settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘tcpa_enable’, ‘from_svlan’, ‘to_svlan’, ‘tcpa_mss’, ‘max_rx_win’,
+‘rx_win_upd’, ‘sessions’, ‘buf_coef’, ‘max_pkts’, ‘max_qlen’,
+‘retry_time’, ‘tcpa_retries’, ‘tcpa_timeout’, and ‘ack_period’.
+The dictionary values are taken from the page unmodified, except for tcpa_version
+that is converted to the corresponding NMS value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tdma_bw_form">
+<span class="sig-name descname"><span class="pre">get_tdma_bw_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tdma_bw_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TDMA BW page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘act_on_traf’, ‘mir_limit’, ‘opt_latency’, ‘rt_to_cir’, ‘bw_rq_scale’,
+‘td_rq_act1’, ‘td_rq_act2’, ‘td_rq_act3’, ‘td_rq_act4’, ‘td_rq_idl1’,
+‘td_rq_idl2’, ‘td_rq_idl3’, ‘td_rq_idl4’, ‘td_rq_dwn1’, ‘td_rq_dwn2’,
+‘td_rq_dwn3’, ‘td_rq_dwn4’, ‘td_rq_tout1’, ‘td_rq_tout2’, ‘td_rq_tout3’,
+‘td_rq_tout4’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tdma_protocol_form">
+<span class="sig-name descname"><span class="pre">get_tdma_protocol_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tdma_protocol_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TDMA prot page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘stn_number’, ‘frame_length’, ‘slot_length’ and ‘no_stn_check’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tdma_rf_form">
+<span class="sig-name descname"><span class="pre">get_tdma_rf_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tdma_rf_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TDMA RF page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘tdma_input’, ‘tdma_sr’, ‘tdma_roll’, ‘tdma_mc’, ‘enh_tables’
+‘mf1_en’, ‘mf1_tx’, ‘mf1_rx’, ‘mf2_en’, ‘mf2_tx’, ‘mf2_rx’, ‘mf3_en’,
+‘mf3_tx’, ‘mf3_rx’, ‘mf4_en’, ‘mf4_tx’, ‘mf4_rx’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_teleport_values">
+<span class="sig-name descname"><span class="pre">get_teleport_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_teleport_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the teleport data from the corresponding UHP pages as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘name’, ‘lat_deg’, ‘lat_min’, ‘lon_deg’, ‘lon_min’, ‘rx1_lo’, ‘rx_dc_power’,
+‘rx_10m’, ‘rx1_spi’, ‘rx1_offset’, ‘rx2_lo’, ‘rx2_spi’, ‘rx2_offset’, ‘tx_lo’,
+‘tx_dc_power’, ‘tx_10m’, ‘tx_spi’, ‘tx_offset’, ‘dvb_search’, ‘net_id’,
+‘rf_id’, ‘lat_south’, ‘lon_west’, ‘tdma_search’, ‘time_zone’, ‘sat_lon_deg’,
+and ‘sat_lon_min’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tftp_form">
+<span class="sig-name descname"><span class="pre">get_tftp_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tftp_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP TFTP settings page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘tftp_server’, ‘tftp_vlan’.
+The dictionary values are taken from the page unmodified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-odd"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_timing_values">
+<span class="sig-name descname"><span class="pre">get_timing_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_timing_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the timing data from the UHP profile timing page as a dictionary.
+The dictionary keys correspond to the NMS naming convention:
+‘sat_lon_deg’, ‘sat_lon_min’.
+The dictionary values are taken from the corresponding fields.
+The satellite longitude degrees are converted to the -180 +180 format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tlc_form">
+<span class="sig-name descname"><span class="pre">get_tlc_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.get_tlc_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from the UHP Profile TLC page as a dictionary
+The dictionary keys correspond to the NMS naming convention:
+‘tlc_enable’, ‘tlc_max_lvl’, ‘tlc_net_own’, ‘tlc_avg_min’, ‘tlc_cn_stn’, and ‘tlc_cn_hub’.
+The dictionary values are taken from the page unmodified, except for ‘tlc_cn_hub’ and ‘tlc_cn_stn’
+because they are represented as two separated fields each</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile_number</strong> (<em>int</em>) – UHP profile number. By default NMS uses profile number 1</p>
+</dd>
+<dt class="field-even">Returns Dict[str, str] uhp_values</dt>
+<dd class="field-even"><p>a dictionary containing the field names and their corresponding values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.set_nms_permission">
+<span class="sig-name descname"><span class="pre">set_nms_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vlan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'none'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_local_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.drivers.uhp.uhp_requests_driver.UhpRequestsDriver.set_nms_permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set NMS permissions to the UHP (Monitoring, Control, Allow local config)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vlan</strong> (<em>int</em>) – VLAN ID to be used for access</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – password to be used for access</p></li>
+<li><p><strong>monitoring</strong> (<em>bool</em>) – allow monitoring by NMS</p></li>
+<li><p><strong>control</strong> – allow control by NMS</p></li>
+<li><p><strong>allow_local_config</strong> – allow local config along with NMS</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns bool</dt>
+<dd class="field-even"><p>True if the settings are set, otherwise False</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.drivers.uhp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test_system.src.drivers.uhp" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test_system.src.nms_entities.html" class="btn btn-neutral float-right" title="test_system.src.nms_entities package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test_system.src.drivers.snmp.html" class="btn btn-neutral float-left" title="test_system.src.drivers.snmp package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Memotech.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

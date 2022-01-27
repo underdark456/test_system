@@ -1,0 +1,307 @@
+[
+    {
+        "value": "34",
+        "name": "LF QPSK 1/3",
+        "acm_thr": "0.4"
+    },
+    {
+        "value": "35",
+        "name": "LF QPSK 2/5",
+        "acm_thr": "0.6"
+    },
+    {
+        "value": "67",
+        "name": "LX QPSK 9/20",
+        "acm_thr": "0.7"
+    },
+    {
+        "value": "36",
+        "name": "LF QPSK 1/2",
+        "acm_thr": "1.4"
+    },
+    {
+        "value": "68",
+        "name": "LX QPSK 11/20",
+        "acm_thr": "1.9"
+    },
+    {
+        "value": "37",
+        "name": "LF QPSK 3/5",
+        "acm_thr": "2.6"
+    },
+    {
+        "value": "38",
+        "name": "LF QPSK 2/3",
+        "acm_thr": "3.4"
+    },
+    {
+        "value": "39",
+        "name": "LF QPSK 3/4",
+        "acm_thr": "4.4"
+    },
+    {
+        "value": "40",
+        "name": "LF QPSK 4/5",
+        "acm_thr": "5.0"
+    },
+    {
+        "value": "69",
+        "name": "LX 8APSK 100/180",
+        "acm_thr": "5.5"
+    },
+    {
+        "value": "41",
+        "name": "LF QPSK 5/6",
+        "acm_thr": "5.6"
+    },
+    {
+        "value": "70",
+        "name": "LX 8APSK 104/180",
+        "acm_thr": "6.0"
+    },
+    {
+        "value": "44",
+        "name": "LF 8PSK 3/5",
+        "acm_thr": "6.2"
+    },
+    {
+        "value": "42",
+        "name": "LF QPSK 8/9",
+        "acm_thr": "6.6"
+    },
+    {
+        "value": "71",
+        "name": "LX 8PSK 23/36",
+        "acm_thr": "6.7"
+    },
+    {
+        "value": "43",
+        "name": "LF QPSK 9/10",
+        "acm_thr": "6.8"
+    },
+    {
+        "value": "75",
+        "name": "LX 16APSK 96/180",
+        "acm_thr": "6.9"
+    },
+    {
+        "value": "45",
+        "name": "LF 8PSK 2/3",
+        "acm_thr": "7.0"
+    },
+    {
+        "value": "76",
+        "name": "LX 16APSK 100/180",
+        "acm_thr": "7.4"
+    },
+    {
+        "value": "72",
+        "name": "LX 8PSK 25/36",
+        "acm_thr": "7.5"
+    },
+    {
+        "value": "73",
+        "name": "LX 8PSK 13/18",
+        "acm_thr": "7.7"
+    },
+    {
+        "value": "79",
+        "name": "LX 16APSK 18/30",
+        "acm_thr": "7.8"
+    },
+    {
+        "value": "46",
+        "name": "LF 8PSK 3/4",
+        "acm_thr": "8.2"
+    },
+    {
+        "value": "77",
+        "name": "LX 16APSK 26/45",
+        "acm_thr": "8.8"
+    },
+    {
+        "value": "82",
+        "name": "LX 16APSK 20/30",
+        "acm_thr": "8.8"
+    },
+    {
+        "value": "78",
+        "name": "LX 16APSK 3/5",
+        "acm_thr": "8.9"
+    },
+    {
+        "value": "80",
+        "name": "LX 16APSK 28/45",
+        "acm_thr": "9.0"
+    },
+    {
+        "value": "81",
+        "name": "LX 16APSK 23/36",
+        "acm_thr": "9.1"
+    },
+    {
+        "value": "50",
+        "name": "LF 16APSK 2/3",
+        "acm_thr": "9.4"
+    },
+    {
+        "value": "47",
+        "name": "LF 8PSK 5/6",
+        "acm_thr": "9.6"
+    },
+    {
+        "value": "83",
+        "name": "LX 16APSK 25/36",
+        "acm_thr": "9.6"
+    },
+    {
+        "value": "84",
+        "name": "LX 16APSK 13/18",
+        "acm_thr": "10.1"
+    },
+    {
+        "value": "51",
+        "name": "LF 16APSK 3/4",
+        "acm_thr": "10.5"
+    },
+    {
+        "value": "48",
+        "name": "LF 8PSK 8/9",
+        "acm_thr": "10.9"
+    },
+    {
+        "value": "85",
+        "name": "LX 16APSK 140/180",
+        "acm_thr": "11.1"
+    },
+    {
+        "value": "49",
+        "name": "LF 8PSK 9/10",
+        "acm_thr": "11.2"
+    },
+    {
+        "value": "52",
+        "name": "LF 16APSK 4/5",
+        "acm_thr": "11.3"
+    },
+    {
+        "value": "53",
+        "name": "LF 16APSK 5/6",
+        "acm_thr": "11.8"
+    },
+    {
+        "value": "87",
+        "name": "LX 32APSK 2/3",
+        "acm_thr": "12.1"
+    },
+    {
+        "value": "86",
+        "name": "LX 16APSK 154/180",
+        "acm_thr": "12.3"
+    },
+    {
+        "value": "89",
+        "name": "LX 32APSK 128/180",
+        "acm_thr": "12.6"
+    },
+    {
+        "value": "90",
+        "name": "LX 32APSK 132/180",
+        "acm_thr": "13.0"
+    },
+    {
+        "value": "54",
+        "name": "LF 16APSK 8/9",
+        "acm_thr": "13.2"
+    },
+    {
+        "value": "55",
+        "name": "LF 16APSK 9/10",
+        "acm_thr": "13.4"
+    },
+    {
+        "value": "56",
+        "name": "LF 32APSK 3/4",
+        "acm_thr": "13.6"
+    },
+    {
+        "value": "91",
+        "name": "LX 32APSK 140/180",
+        "acm_thr": "13.9"
+    },
+    {
+        "value": "57",
+        "name": "LF 32APSK 4/5",
+        "acm_thr": "14.8"
+    },
+    {
+        "value": "58",
+        "name": "LF 32APSK 5/6",
+        "acm_thr": "15.2"
+    },
+    {
+        "value": "92",
+        "name": "LX 64APSK 128/180",
+        "acm_thr": "15.4"
+    },
+    {
+        "value": "93",
+        "name": "LX 64APSK 132/180",
+        "acm_thr": "16.3"
+    },
+    {
+        "value": "59",
+        "name": "LF 32APSK 8/9",
+        "acm_thr": "16.7"
+    },
+    {
+        "value": "60",
+        "name": "LF 32APSK 9/10",
+        "acm_thr": "17.1"
+    },
+    {
+        "value": "95",
+        "name": "LX 64APSK 7/9",
+        "acm_thr": "17.5"
+    },
+    {
+        "value": "97",
+        "name": "LX 64APSK 4/5",
+        "acm_thr": "17.8"
+    },
+    {
+        "value": "99",
+        "name": "LX 64APSK 5/6",
+        "acm_thr": "18.8"
+    },
+    {
+        "value": "102",
+        "name": "LX 256APSK 116/180",
+        "acm_thr": "19.1"
+    },
+    {
+        "value": "105",
+        "name": "LX 256APSK 128/180",
+        "acm_thr": "20.2"
+    },
+    {
+        "value": "104",
+        "name": "LX 256APSK 124/180",
+        "acm_thr": "20.3"
+    },
+    {
+        "value": "101",
+        "name": "LX 128APSK 140/180",
+        "acm_thr": "20.5"
+    },
+    {
+        "value": "100",
+        "name": "LX 128APSK 135/180",
+        "acm_thr": "20.6"
+    },
+    {
+        "value": "107",
+        "name": "LX 256APSK 135/180",
+        "acm_thr": "21.2"
+    }
+]

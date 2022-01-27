@@ -1,0 +1,173 @@
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name mf_hub
+tx_stat_num 11
+rx_stat_num 11
+rx_number 4
+rx_stations station:0
+mode MF_hub
+model UHP200
+device_ip 10.56.24.11
+device_gateway 10.56.24.1
+teleport teleport:0
+tx_frq 1000000
+tx_on ON 
+tx_level 30.0
+rx1_frq 1000000
+mf1_tx 1100000
+mf1_rx 1100000
+ver_global 2
+ver_profile 2
+ver_routing 2
+ver_policy 1
+ver_shaper 1
+ver_station 2
+ver_map 2
+ver_beamsw 1
+current_ip 10.56.24.11
+cs_global 382046177
+cs_profile 119307111
+cs_routing 2584893611
+cs_station 1685530
+cs_map 21
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name test_net
+vnos vno:0
+controllers controller:0
+teleports teleport:0
+services service:0
+
+.nms 0
+name UHP NMS
+config_descr For_HUB_creating
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename case_sample_star_up.txt
+load_filename default_config.txt
+load_bkp_file None
+alert_mode Off
+
+.route 0
+next route:3
+uprow station:0
+type IP_address
+service service:0
+ip 10.56.24.12
+
+.route 1
+next route:4
+uprow station:1
+type IP_address
+service service:0
+ip 10.56.24.13
+
+.route 2
+next route:5
+uprow station:2
+type IP_address
+service service:0
+ip 10.56.24.14
+
+.route 3
+uprow station:0
+type Static_route
+service service:0
+mask /0
+gateway 10.56.24.1
+
+.route 4
+uprow station:1
+type Static_route
+service service:0
+mask /0
+gateway 10.56.24.1
+
+.route 5
+uprow station:2
+type Static_route
+service service:0
+mask /0
+gateway 10.56.24.1
+
+.service 0
+uprow network:0
+name stn_service
+
+.station 0
+next station:1
+uprow vno:0
+name stn1
+routes route:0
+enable ON 
+serial 40136144
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:1
+tx_number 2
+rx_number 2
+nms_version 2
+config_csum 1049998501
+
+.station 1
+next station:2
+uprow vno:0
+name stn2
+routes route:1
+enable ON 
+serial 40336453
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+rx_next station:2
+tx_number 3
+rx_number 3
+nms_version 2
+config_csum 1049999013
+
+.station 2
+uprow vno:0
+name stn3
+routes route:2
+enable ON 
+serial 20040014
+rx_controller controller:0
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 4
+rx_number 4
+nms_version 2
+config_csum 1049999525
+
+.teleport 0
+uprow network:0
+name test_tp
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name test_vno
+stations station:0

@@ -1,0 +1,5 @@
+2021-11-02 18:54:08 - RUN - SampleCase - Initializing test case, running set_up_class...
+FAIL - test_sample - teamcity.diff_tools.EqualsAssertionError:  :: None != -20.0
+INFO - test_sample - test execution time is 0.03 seconds
+2021-11-02 18:55:21 - INFO - SampleCase - Test case execution time is 72.54 seconds
+

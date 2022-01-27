@@ -1,0 +1,3 @@
+ERROR - test_sample - Exception in test case set up: The total number of the requested UHP modems is 2, the number of the available UHP modems is 1
+
+Test case execution time is 25.02 seconds

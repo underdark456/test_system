@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>test_system.src.options_providers package &mdash; NMS TEST SYSTEM</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_system.src.test package" href="test_system.src.test.html" />
+    <link rel="prev" title="test_system.src.nms_entities.basic_entities package" href="test_system.src.nms_entities.basic_entities.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NMS TEST SYSTEM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started_rus.html">Начало работы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage_rus.html">Возможности системы</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">test_system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="test_system.html">test_system package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="test_system.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="test_system.examples.html">test_system.examples package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.global_options.html">test_system.global_options package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="test_system.src.html">test_system.src package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.test_scenarios.html">test_system.test_scenarios package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="test_system.utilities.html">test_system.utilities package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.print_tests_list">test_system.print_tests_list module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.snmp_example">test_system.snmp_example module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system.starter">test_system.starter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_system.html#module-test_system">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NMS TEST SYSTEM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">test_system</a> &raquo;</li>
+        
+          <li><a href="test_system.html">test_system package</a> &raquo;</li>
+        
+          <li><a href="test_system.src.html">test_system.src package</a> &raquo;</li>
+        
+      <li>test_system.src.options_providers package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-system-src-options-providers-package">
+<h1>test_system.src.options_providers package<a class="headerlink" href="#test-system-src-options-providers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-test_system.src.options_providers.options_provider">
+<span id="test-system-src-options-providers-options-provider-module"></span><h2>test_system.src.options_providers.options_provider module<a class="headerlink" href="#module-test_system.src.options_providers.options_provider" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_system.src.options_providers.options_provider.OptionsProvider">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test_system.src.options_providers.options_provider.</span></span><span class="sig-name descname"><span class="pre">OptionsProvider</span></span><a class="headerlink" href="#test_system.src.options_providers.options_provider.OptionsProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Default reader of configuration(options) files.</p>
+<p>Предоставляет доступ к иерархической структуре конфигурационных файлов.
+При чтении конфигурации из любого пакета, автоматически считывает глобальные файлы конфигурации
+из модуля global_options.</p>
+<p>Любой пакет может содержать файлы options.py и(или) local_options.py из которых будет прочитан словарь
+с именем options. Файл options.py контролируется системой контроля версий(СКВ), файл local_options.py СКВ
+игнорируется и применяется для локального переопределения параметров.</p>
+<p>Options are redefined in the following order:</p>
+<p>global_options.options -&gt; global_options.local_options -&gt; &lt;your_packet&gt;.options -&gt; &lt;your_packet&gt;.local_options</p>
+<p>При слиянии все значения типа dict так же рекурсивно переопределяются</p>
+<p>Sample usage:</p>
+<p>default connection from the global options:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">connection</span> <span class="o">=</span> <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>API connection:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">connection</span> <span class="o">=</span> <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">(</span><span class="n">API_CONNECT</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.options_providers.options_provider.OptionsProvider.get_connection">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">get_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'global_options'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connection_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_system.src.options_providers.options_provider.OptionsProvider.get_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get connection related parameters such as IP address of NMS, username and password as well as
+other driver dependant parameters.</p>
+<p>Upon calling with no parameters returns default connection parameters from the global options</p>
+<p>Can be redefined by setting <cite>DRIVER</cite> environmental variable:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>DRIVER=0</cite> to set API connection</p></li>
+<li><p><cite>DRIVER=1</cite> to set CHROME connection</p></li>
+<li><p><cite>DRIVER=2</cite> to set FIREFOX connection</p></li>
+</ul>
+</div></blockquote>
+<p>For example, upon calling ‘<cite>DRIVER=1 python -m unittest some.test.path</cite>’ the driver is CHROME</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>package_name</strong> (<em>str</em>) – the package name to get connection data from</p></li>
+<li><p><strong>connection_type</strong> (<em>str</em>) – the type of connection API_CONNECT | CHROME_CONNECT | FIREFOX_CONNECT</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns dict</dt>
+<dd class="field-even"><p>a dictionary containing connection related parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.options_providers.options_provider.OptionsProvider.get_options">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">get_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">section</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#test_system.src.options_providers.options_provider.OptionsProvider.get_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a dictionary of options from the passed package name merged with the global options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>package_name</strong> (<em>str</em>) – the package name from which the options dictionary is loaded</p></li>
+<li><p><strong>section</strong> (<em>Optional</em><em>(</em><em>str</em><em>)</em>) – the name of a parameter to get value of. If set, the value of the</p></li>
+</ul>
+</dd>
+</dl>
+<p>parameter is returned or None if such parameter is absent.
+:param dict options: optional dictionary to merge with the loaded options. Original dictionary is not changed.
+:returns:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> - a dictionary of the options</p></li>
+<li><p>the value of the desired section</p></li>
+<li><p>None - if the passed section is absent in the options</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_system.src.options_providers.options_provider.OptionsProvider.get_system_options">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">get_system_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">section</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">any</span><a class="headerlink" href="#test_system.src.options_providers.options_provider.OptionsProvider.get_system_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a system options dictionary from the passed package name merged with the global system options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>package_name</strong> (<em>str</em>) – the package name from which the system options dictionary is loaded</p></li>
+<li><p><strong>section</strong> (<em>Optional</em><em>(</em><em>str</em><em>)</em>) – the name of a parameter to get value of. If set, the value of the</p></li>
+</ul>
+</dd>
+</dl>
+<p>parameter is returned or None if such parameter is absent.
+:returns:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> - a dictionary of the system options</p></li>
+<li><p>the value of the desired section</p></li>
+<li><p>None - if the passed section is absent in the system options</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-test_system.src.options_providers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test_system.src.options_providers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test_system.src.test.html" class="btn btn-neutral float-right" title="test_system.src.test package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test_system.src.nms_entities.basic_entities.html" class="btn btn-neutral float-left" title="test_system.src.nms_entities.basic_entities package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Memotech.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+2021-12-22 16:19:29 - RUN - SampleCase - Initializing test case, running set_up_class...
+2021-12-22 16:20:14 - ERROR - SampleCase - Exception in test case set up: Object of type UhpRequestsDriver is not JSON serializable
+2021-12-22 16:20:14 - INFO - SampleCase - Test case execution time is 45.7 seconds
+

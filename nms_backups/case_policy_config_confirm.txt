@@ -1,0 +1,375 @@
+
+.nms 0
+config_ver 20
+name UHP NMS
+created 1638950685
+http_port 8000
+fs_path1 /
+accesses access:0
+groups group:0
+networks network:0
+save_filename case_policy_config_confirm.txt
+load_filename default_config.txt
+
+.access 0
+uprow nms:0
+group group:0
+edit ON 
+
+.controller 0
+uprow network:0
+name test_ctrl
+routes route:0
+created 1638950685
+tx_stat_num 11
+rx_stat_num 11
+rx_number 2
+rx_stations station:0
+mode Hubless_master
+teleport teleport:0
+tx_on ON 
+tx_level 20.0
+
+.group 0
+uprow nms:0
+name Admins
+users user:0
+
+.network 0
+uprow nms:0
+name test_net
+vnos vno:0
+controllers controller:0
+teleports teleport:0
+services service:0
+qoses qos:0
+shapers shaper:0
+policies policy:0
+created 1638950685
+
+.policy 0
+next policy:1
+uprow network:0
+name policy1
+rules polrule:0
+
+.policy 1
+uprow network:0
+name policy2
+rules polrule:31
+
+.polrule 0
+next polrule:1
+uprow policy:0
+sequence 1
+check_type DST_Net
+net_ip 10.0.0.0
+net_mask /8
+
+.polrule 1
+next polrule:2
+uprow policy:0
+sequence 2
+check_type Protocol
+protocol 17
+goto_actions ON 
+
+.polrule 2
+next polrule:3
+uprow policy:0
+sequence 3
+check_type Protocol
+protocol 1
+
+.polrule 3
+next polrule:4
+uprow policy:0
+sequence 4
+type Action
+action_type Set_queue
+queue High
+
+.polrule 4
+next polrule:5
+uprow policy:0
+sequence 5
+type Action
+action_type Set_DSCP
+set_dscp 46
+
+.polrule 5
+next polrule:6
+uprow policy:0
+sequence 6
+check_type DST_Net
+not ON 
+net_ip 10.0.0.0
+net_mask /8
+
+.polrule 6
+next polrule:7
+uprow policy:0
+sequence 7
+check_type Protocol
+not ON 
+protocol 1
+
+.polrule 7
+next polrule:8
+uprow policy:0
+sequence 8
+check_type DST_UDP_port
+not ON 
+port_min 53
+port_max 53
+
+.polrule 8
+next polrule:9
+uprow policy:0
+sequence 9
+check_type DST_TCP_port
+not ON 
+port_min 25
+port_max 25
+
+.polrule 9
+next polrule:10
+uprow policy:0
+sequence 10
+check_type DST_TCP_port
+not ON 
+port_min 110
+port_max 110
+
+.polrule 10
+next polrule:11
+uprow policy:0
+sequence 11
+check_type DST_Net
+not ON 
+net_ip 31.47.189.230
+net_mask /32
+
+.polrule 11
+next polrule:12
+uprow policy:0
+sequence 12
+not ON 
+goto_actions ON 
+
+.polrule 12
+next polrule:13
+uprow policy:0
+sequence 13
+type Action
+
+.polrule 13
+next polrule:14
+uprow policy:0
+sequence 14
+check_type VLAN
+vlan_min 100
+vlan_max 200
+
+.polrule 14
+next polrule:15
+uprow policy:0
+sequence 15
+type Action
+action_type Set_TS_ch
+shaper shaper:0
+
+.polrule 15
+next polrule:16
+uprow policy:0
+sequence 16
+type Action
+action_type No_TCPA
+terminate ON 
+
+.polrule 16
+next polrule:17
+uprow policy:0
+sequence 17
+check_type TOS
+tos_min 1
+tos_max 5
+
+.polrule 17
+next polrule:18
+uprow policy:0
+sequence 18
+type Action
+action_type Compress_RTP
+
+.polrule 18
+next polrule:19
+uprow policy:0
+sequence 19
+type Action
+action_type No_screening
+
+.polrule 19
+next polrule:20
+uprow policy:0
+sequence 20
+check_type SRC_Net
+net_ip 172.16.7.0
+net_mask /24
+
+.polrule 20
+next polrule:21
+uprow policy:0
+sequence 21
+type Action
+action_type Set_ACM_channel
+acm_channel 3
+
+.polrule 21
+next polrule:22
+uprow policy:0
+sequence 22
+type Action
+action_type Drop_if_station_down
+terminate ON 
+
+.polrule 22
+next polrule:23
+uprow policy:0
+sequence 23
+check_type DSCP
+not ON 
+dscp_min 2
+dscp_max 3
+goto_actions ON 
+
+.polrule 23
+next polrule:24
+uprow policy:0
+sequence 24
+type Action
+action_type Encrypt
+key 28
+
+.polrule 24
+next polrule:25
+uprow policy:0
+sequence 25
+type Action
+action_type Set_TOS
+set_tos 255
+
+.polrule 25
+next polrule:26
+uprow policy:0
+sequence 26
+type Action
+action_type GOTO_policy
+policy policy:1
+
+.polrule 26
+next polrule:27
+uprow policy:0
+sequence 27
+check_type SRC_TCP_port
+port_min 20000
+port_max 25001
+
+.polrule 27
+next polrule:28
+uprow policy:0
+sequence 28
+type Action
+action_type CALL_policy
+policy policy:1
+
+.polrule 28
+next polrule:29
+uprow policy:0
+sequence 29
+check_type SRC_UDP_port
+not ON 
+port_min 30001
+port_max 35002
+
+.polrule 29
+next polrule:30
+uprow policy:0
+sequence 30
+check_type ICMP_type
+not ON 
+icmp_type 8
+
+.polrule 30
+uprow policy:0
+sequence 31
+type Action
+action_type Compress_GTP
+terminate ON 
+
+.polrule 31
+uprow policy:1
+sequence 1
+type Action
+
+.qos 0
+uprow network:0
+name test_qos
+priority Policy
+policy policy:0
+
+.route 0
+uprow controller:0
+type Network_TX
+service service:0
+forward_qos qos:0
+ip 172.16.0.0
+mask /16
+
+.route 1
+uprow station:0
+type Network_TX
+service service:0
+return_qos qos:0
+ip 192.168.13.0
+
+.service 0
+uprow network:0
+name test_service
+
+.shaper 0
+uprow network:0
+name test_shaper
+
+.station 0
+uprow vno:0
+name test_stn
+routes route:1
+enable ON 
+serial 12345
+mode Hubless
+rx_controller controller:0
+created 1638950685
+rx_ctr_dyn controller:0
+rx_ctr_act controller:0
+tx_number 2
+rx_number 2
+
+.teleport 0
+uprow network:0
+name test_tp
+sat_name test_sat
+tx_lo 0
+rx1_lo 0
+rx2_lo 0
+
+.user 0
+uprow group:0
+name admin
+password 3664045120
+
+.vno 0
+uprow network:0
+name test_vno
+stations station:0
+created 1638950685

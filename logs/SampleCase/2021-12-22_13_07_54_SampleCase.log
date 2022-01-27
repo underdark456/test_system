@@ -1,0 +1,4 @@
+2021-12-22 13:07:54 - RUN - SampleCase - Initializing test case, running set_up_class...
+2021-12-22 13:10:15 - ERROR - SampleCase - Exception in test case set up: The total number of the requested UHP modems is 2, the number of the available UHP modems is 1
+2021-12-22 13:10:15 - INFO - SampleCase - Test case execution time is 141.52 seconds
+

@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Начало работы &mdash; NMS TEST SYSTEM</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Возможности системы" href="advanced_usage_rus.html" />
+    <link rel="prev" title="NMS TEST SYSTEM" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NMS TEST SYSTEM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Начало работы</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Локальное использование</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Архитектура тестовой системы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Алгоритм создания простого тестового сценария</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rst-detail-description-case-snippet">Детальное описание шаблона простого тестового сценария</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Запуск тестового сценария</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Результаты тестового сценария</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage_rus.html">Возможности системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">test_system</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NMS TEST SYSTEM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Начало работы</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Начало работы<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Тестовая система представляет собой набор программных средств для тестирования возможностей NMS и спутниковых модемов UHP.
+На данный момент использование тестовой системы ограничено локальной копией.</p>
+<dl>
+<dt>Содержание:</dt><dd><p><a class="reference internal" href="#id2"><span class="std std-ref">Локальное использование</span></a></p>
+<p><a class="reference internal" href="#id3"><span class="std std-ref">Архитектура тестовой системы</span></a></p>
+<p><a class="reference internal" href="#id4"><span class="std std-ref">Алгоритм создания простого тестового сценария</span></a></p>
+<p><a class="reference internal" href="#rst-detail-description-case-snippet"><span class="std std-ref">Детальное описание шаблона простого тестового сценария</span></a></p>
+<p><a class="reference internal" href="#id6"><span class="std std-ref">Запуск тестового сценария</span></a></p>
+<p><a class="reference internal" href="#id7"><span class="std std-ref">Результаты тестового сценария</span></a></p>
+</dd>
+</dl>
+<div class="section" id="id2">
+<h2>Локальное использование<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>ОС Linux (рекомендуется) или Windows</p></li>
+<li><p>Python 3.6 и выше</p></li>
+<li><p>Mercurial Distributed SCM 5.3.1 и выше</p></li>
+</ul>
+</div>
+<p>Установка тест системы возможна из репозитария Mercurial:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">clone</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">10.0.0.16</span><span class="p">:</span><span class="mi">5000</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Для корректоной работы системы из консоли необходимо добавить путь к тестовой системе в переменную окружения <cite>PYTHONPATH</cite>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>OS Windows: My Computer -&gt; Properties -&gt; Advanced System Settings -&gt; Environment Variables &gt;</p></li>
+<li><p>OS LINUX: добавить строку <cite>export PYTHONPATH=&lt;путь/до/test_system&gt;</cite> в <cite>~/.bashrc</cite> или <cite>/etc/profile</cite></p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<p>Тест-кейсы, использующие пакет scapy (снифер, генератор пакетов), в Linux необходимо запускать или от имени суперпользователя, например</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo python3 -m unittest case_sample_test_case
+</pre></div>
+</div>
+<p>или дать интерпретатору Python следующие привелегии: CAP_NET_ADMIN и CAP_NET_RAW.
+Для этого необходимо выполнить следующую команду:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo setcap cap_net_admin,cap_net_raw+eip <span class="k">$(</span>readlink -f <span class="k">$(</span>which python3<span class="k">))</span>
+</pre></div>
+</div>
+<p>после чего тест-кейсы можно запускать без sudo.</p>
+<p>В Windows такие кейсы будут запрашивать разрешение на исполнение.</p>
+<hr class="docutils" />
+<p>Сконфигурировать файл глобальных локальных опций для определения адреса НМС и ряда других параметров.
+Для этого создать в <cite>test_system.global_options</cite> файл с именем <cite>local_options.py</cite>. Пример конфигурации в <span class="xref std std-doc">test_system.global_options.local_options_example</span>
+Подробнее об опциях рассказано в соответствующем <a class="reference internal" href="advanced_usage_rus.html#rst-detail-description-options"><span class="std std-ref">разделе.</span></a></p>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Для разработки новых тест-кейсов рекомендуется использовать IDE PyCharm.</p>
+</div>
+<p>Описание работы с IDE PyCharm приводится в соответствующем <a class="reference internal" href="advanced_usage_rus.html#rst-detail-description-pycharm"><span class="std std-ref">разделе.</span></a></p>
+<p>В случае использования других IDE, автоматически не предлагающих установку зависимостей проектов Python,
+произвести установку всех зависимостей тест системы из файла requirements.txt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install -r requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Архитектура тестовой системы<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Тестовая система использует встроенную библиотеку Python Unittest для загрузки и запуска тестов.
+Критерием прохождения теста является результат проверки так называемых утверждений библиотеки Unittest.
+Методы утверждений можно видеть <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual">https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Стандартные методы библиотек Unittest такие как setUpClass, tearDownClass, setUp и tearDown переопределены и соответствуют PEP 8:
+set_up_class, tear_down_class, set_up и tear_down соответственно. Их описание приводится в соответствующем <a class="reference internal" href="#rst-detail-description-case-snippet"><span class="std std-ref">разделе.</span></a></p>
+</div>
+<ol class="arabic simple">
+<li><p>NMS сущности представлены в <a class="reference internal" href="test_system.src.nms_entities.basic_entities.html"><span class="doc">test_system.src.nms_entities.basic_entities package</span></a></p></li>
+<li><p>Менеджер бэкапов находится в <a class="reference internal" href="test_system.src.backup_manager.html"><span class="doc">test_system.src.backup_manager package</span></a></p></li>
+<li><p>Драйвер взаимодействия с НМС инициализируется через <a class="reference internal" href="test_system.src.drivers.html#module-test_system.src.drivers.drivers_provider" title="test_system.src.drivers.drivers_provider"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_system.src.drivers.drivers_provider</span></code></a></p></li>
+<li><p>Драйвер взаимодействия с UHP инициализируется через <a class="reference internal" href="test_system.src.drivers.uhp.html#module-test_system.src.drivers.uhp.uhp_requests_driver" title="test_system.src.drivers.uhp.uhp_requests_driver"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_system.src.drivers.uhp.uhp_requests_driver</span></code></a></p></li>
+<li><p>Ридер конфигурационных файлов <a class="reference internal" href="test_system.src.options_providers.html#module-test_system.src.options_providers.options_provider" title="test_system.src.options_providers.options_provider"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_system.src.options_providers.options_provider</span></code></a></p></li>
+<li><p>Тестовые сценарии находятся в <a class="reference internal" href="test_system.test_scenarios.html"><span class="doc">test_system.test_scenarios package</span></a></p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>Алгоритм создания простого тестового сценария<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Создать в директории <cite>test_scenarios</cite> новую директорию с кратким именем, описывающим сценарий.</p></li>
+<li><p>Создать в новой директории файл __init__.py и скопировать в него содержимое <cite>test_system.examples.init_copy_paste.py</cite></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">load_tests</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">standard_tests</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pattern</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;case_*.py&quot;</span>
+    <span class="n">this_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+    <span class="n">package_tests</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">discover</span><span class="p">(</span><span class="n">start_dir</span><span class="o">=</span><span class="n">this_dir</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="n">pattern</span><span class="p">)</span>
+    <span class="n">standard_tests</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">package_tests</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">standard_tests</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Создать в этой директории файл с именем <cite>case_имя_сценария.py</cite> и скопировать в него шаблон простого тестового сценария из <cite>test_system.examples.full_copy_paste_template.py</cite></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.backup_manager.backup_manager</span> <span class="kn">import</span> <span class="n">BackupManager</span>
+<span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.drivers.drivers_provider</span> <span class="kn">import</span> <span class="n">DriversProvider</span>
+<span class="kn">from</span> <span class="nn">src.options_providers.options_provider</span> <span class="kn">import</span> <span class="n">OptionsProvider</span>
+
+<span class="n">options_path</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">backup_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+
+<span class="c1"># Rename `TemplateCase`</span>
+<span class="k">class</span> <span class="nc">TemplateCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">DriversProvider</span><span class="o">.</span><span class="n">get_driver_instance</span><span class="p">(</span>
+            <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">backup</span> <span class="o">=</span> <span class="n">BackupManager</span><span class="p">()</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">apply_backup</span><span class="p">(</span><span class="n">backup_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_up</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="c1"># tests</span>
+
+    <span class="k">def</span> <span class="nf">tear_down</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">tear_down_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rst-detail-description-case-snippet">
+<span id="id5"></span><h2>Детальное описание шаблона простого тестового сценария<a class="headerlink" href="#rst-detail-description-case-snippet" title="Permalink to this headline">¶</a></h2>
+<p>Детальное описание шаблона простого тестового сценария находится в <a class="reference internal" href="test_system.examples.html#module-test_system.examples.case_doc_test_template_ru" title="test_system.examples.case_doc_test_template_ru"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_system.examples.case_doc_test_template_ru</span></code></a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.backup_manager.backup_manager</span> <span class="kn">import</span> <span class="n">BackupManager</span>
+<span class="kn">from</span> <span class="nn">src.custom_test_case</span> <span class="kn">import</span> <span class="n">CustomTestCase</span>
+<span class="kn">from</span> <span class="nn">src.drivers.abstract_http_driver</span> <span class="kn">import</span> <span class="n">AbstractHttpDriver</span>
+<span class="kn">from</span> <span class="nn">src.drivers.drivers_provider</span> <span class="kn">import</span> <span class="n">DriversProvider</span>
+<span class="kn">from</span> <span class="nn">src.options_providers.options_provider</span> <span class="kn">import</span> <span class="n">OptionsProvider</span>
+
+<span class="c1"># имя пакета из которого нужно извлечь набор параметров</span>
+<span class="c1"># состоит из имен директорий относительно корня проекта разделенные точками</span>
+<span class="c1"># например для текущей директории &#39;examples&#39;</span>
+<span class="c1"># или &#39;test_scenarios.creating_objects.routing_objects&#39; пример из существующих тестов роутинга</span>
+<span class="n">options_path</span> <span class="o">=</span> <span class="s1">&#39;examples&#39;</span>
+
+
+<span class="c1"># имя набора тестов</span>
+<span class="c1"># имя файла в формате case_your_case_name.py</span>
+<span class="c1"># имя класса YourCaseNameCase</span>
+<span class="c1"># всегда наследуется от CustomTestCase</span>
+<span class="k">class</span> <span class="nc">DocTestTemplateCase</span><span class="p">(</span><span class="n">CustomTestCase</span><span class="p">):</span>
+    <span class="c1"># это docstring. Инструмент документирования python</span>
+    <span class="c1"># команда  &#39;python print_tests_list.py&#39; выведет в консоль список всех тестов и содержимое docstring</span>
+    <span class="sd">&quot;&quot;&quot;Описание набора тестов. Для чего предназначены или что делают.</span>
+<span class="sd">    Мне кажется разумным фиксировать здесь объяснения почему должно работать именно так, а не иначе.</span>
+<span class="sd">    Краткая документация.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">set_up_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Метод АВТОМАТИЧЕСКИ вызываемый один раз перед запуском всех тестов в данном модуле.</span>
+<span class="sd">        Вызывается один раз вне зависимости от количества исполняющихся тестов набора.</span>
+<span class="sd">        Декоратор @classmethod является обязательным!</span>
+<span class="sd">        Можно не описывать если не нужен.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Инициализация драйвера. Всегда выглядит так.</span>
+        <span class="c1"># Драйвер нужен только если в тестах используются обертки сущностей НМС.</span>
+        <span class="c1"># Например Controller, Vno, Shaper (все они лежат в src/nms_entities/basic_entities)</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">DriversProvider</span><span class="o">.</span><span class="n">get_driver_instance</span><span class="p">(</span>
+            <span class="c1"># извлечение параметров драйвера</span>
+            <span class="c1"># по умолчанию описаны в global_options в словаре system</span>
+            <span class="n">OptionsProvider</span><span class="o">.</span><span class="n">get_connection</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="c1"># Инструмент работы с бекапами НМС</span>
+        <span class="n">backup</span> <span class="o">=</span> <span class="n">BackupManager</span><span class="p">()</span>
+        <span class="c1"># apply_backup загрузит файл &#39;backup.txt&#39; из директории nms_backups в НМС</span>
+        <span class="n">backup</span><span class="o">.</span><span class="n">apply_backup</span><span class="p">(</span><span class="s1">&#39;backup.txt&#39;</span><span class="p">)</span>
+        <span class="c1"># Так же можно сохранить текущее состояние НМС в файл &#39;new_backup.txt&#39;</span>
+        <span class="n">backup</span><span class="o">.</span><span class="n">create_backup</span><span class="p">(</span><span class="s1">&#39;new_backup.txt&#39;</span><span class="p">)</span>
+
+        <span class="bp">cls</span><span class="o">.</span><span class="n">some_param</span> <span class="o">=</span> <span class="s1">&#39;Можно создавать произвольные свойства&#39;</span>
+
+    <span class="k">def</span> <span class="nf">set_up</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Данный метод вызывается АВТОМАТИЧЕСКИ ПЕРЕД каждым тестом из набора.</span>
+<span class="sd">        Можно не описывать если не нужен.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="c1"># Пример теста</span>
+    <span class="c1"># Имя теста всегда начинается с test_ слова разделяются _ (underscore)</span>
+    <span class="c1"># Описывает что делает тест</span>
+    <span class="k">def</span> <span class="nf">test_my_best_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Этот тест служит в качестве примера.</span>
+<span class="sd">        Описание теста объясняет ПОЧЕМУ тот или иной функционал должен работать именно таким образом</span>
+<span class="sd">        как описывает код теста.</span>
+<span class="sd">        Не следует здесь описыват ЧТО делает тест - это понятно из кода и названия теста.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Пример утверждения.</span>
+        <span class="c1"># Если утверждение ложно в результат теста выводится сообщение передаваемое параметром</span>
+        <span class="c1"># Описание ассертов можно посмотреть здесь</span>
+        <span class="c1"># https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual</span>
+        <span class="n">error_message</span> <span class="o">=</span> <span class="s1">&#39;Ложь стала истиной. Видимо мир рухнул!&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">error_message</span><span class="p">)</span>
+
+    <span class="c1"># Это еще один тест</span>
+    <span class="c1"># При запуске всего кейса порядок исполнения тестов стоит считать недетерминированным,</span>
+    <span class="c1"># таким образом нельзя использовать результат одного теста в качестве параметров другого.</span>
+    <span class="k">def</span> <span class="nf">test_always_fail_example</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;По законам этой вселенной число 42 не может быть эквивалентом строки &#39;BFG&#39;&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;BFG&#39;</span><span class="p">,</span> <span class="s1">&#39;Кадия стоит!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_driver_usage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Пример доступа к драйверу&quot;&quot;&quot;</span>
+        <span class="c1"># так так мы инициализировали драйвер в set_up_class</span>
+        <span class="c1"># и положили его в свойство driver нашего класса</span>
+        <span class="c1"># мы можем получить к нему доступ из любого теста</span>
+        <span class="n">our_driver</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span>
+        <span class="c1"># и убедится что это именно наш драйвер в качестве примера еще одного утерждения</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIsInstance</span><span class="p">(</span><span class="n">our_driver</span><span class="p">,</span> <span class="n">AbstractHttpDriver</span><span class="p">,</span> <span class="s1">&#39;Они украли нашу прелесть!&#39;</span><span class="p">)</span>
+
+    <span class="c1"># из тестов можно вызывать любые функции</span>
+    <span class="k">def</span> <span class="nf">test_use_custom_function</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># это пример функции описанной в текущем классе (метод)</span>
+        <span class="c1"># если имя не начинается с test_ система обнаружения тестов его проигнорирует</span>
+        <span class="n">self_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_function</span><span class="p">()</span>
+        <span class="n">result_message</span> <span class="o">=</span> <span class="s1">&#39;Можно создавать произвольные свойства&#39;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">F</span><span class="s1">&#39;custom_function сломали. Должна всегда возвращать строку &quot;</span><span class="si">{</span><span class="n">result_message</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">self_result</span><span class="p">,</span> <span class="n">result_message</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+
+        <span class="c1"># пример функции описонной в текущем файле.</span>
+        <span class="n">custom_result</span> <span class="o">=</span> <span class="n">free_function</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">custom_result</span><span class="p">)</span>
+
+        <span class="c1"># пример вызова функции импортированной из другого файла</span>
+        <span class="kn">from</span> <span class="nn">examples.shared_functions</span> <span class="kn">import</span> <span class="n">shared_function_example</span>
+        <span class="n">shared_result</span> <span class="o">=</span> <span class="n">shared_function_example</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">shared_result</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">custom_function</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># some_param мы так же определили в set_up_class</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">some_param</span>
+
+    <span class="k">def</span> <span class="nf">tear_down</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Данный метод вызывается АВТОМАТИЧЕСКИ ПОСЛЕ каждого теста из набора</span>
+<span class="sd">        Можно не описывать если не нужен.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">tear_down_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Данный метод вызывается АВТОМАТИЧЕСКИ ПОСЛЕ ПОСЛЕДНЕГО выполненного теста.</span>
+<span class="sd">        Декоратор @classmethod является обязательным!</span>
+<span class="sd">        Можно не описывать если не нужен.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+
+<span class="c1"># Обратите внимание! В декларировании обычных функции отсутствует отступы как у методов.</span>
+<span class="k">def</span> <span class="nf">free_function</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Free function&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Запуск тестового сценария<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Возможен запуск сценариев как из консоли так и из среды разработки PyCharm.</p>
+<p>Запуск из консоли:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m unittest case_имя_сценария
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Результаты тестового сценария<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>В консоль выводятся исключения, возникающие при выполнении сценариев, например, <cite>assertEqual</cite> при несовпадении ожидаемого и тестируемого параметра выводит:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">======================================================================</span>
+FAIL: test_traffic_protection <span class="o">(</span>case_hubless_controller_confirmation.HublessControllerCase<span class="o">)</span> <span class="o">[]</span> <span class="o">(</span><span class="nv">field_name</span><span class="o">=</span><span class="s1">&#39;ctl_key&#39;</span>, <span class="nv">value</span><span class="o">=</span><span class="s1">&#39;37&#39;</span><span class="o">)</span>
+----------------------------------------------------------------------
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">&quot;/home/dkudryashov/test_system/test_scenarios/form_confirmation/abstract_case.py&quot;</span>, line <span class="m">185</span>, <span class="k">in</span> _test_traffic_protection
+    self.assertEqual<span class="o">(</span>value.lower<span class="o">()</span>, uhp_values.get<span class="o">(</span>key, None<span class="o">))</span>
+AssertionError: <span class="s1">&#39;37&#39;</span> !<span class="o">=</span> <span class="s1">&#39;38&#39;</span>
+- <span class="m">37</span>
++ <span class="m">38</span>
+</pre></div>
+</div>
+<p>После всех тестов выводятся общие данные о количестве проведённых тестов,
+а также данные по количеству ошибок при попытке запустить тест (errors) и по количеству проваленных тестов (failures).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>errors возникают при исключениях не связанных с группой методов assert библиотеки unittest, например, ValueError</p></li>
+<li><p>failures возникают при исключениях связанных с группой методов assert библиотеки unittest</p></li>
+</ul>
+</div>
+<p>Пример вывода результата всех тестов:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>----------------------------------------------------------------------
+Ran <span class="m">23</span> tests <span class="k">in</span> <span class="m">15</span>.859s
+
+FAILED <span class="o">(</span><span class="nv">failures</span><span class="o">=</span><span class="m">9</span>, <span class="nv">errors</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Результаты сценария также выводятся в лог файл. Логи хранятся в директории <cite>logs</cite>.
+Имя лог файла соответствует следующему шаблону:</p>
+<p><cite>&lt;имя_класса_тестового_сценария&gt;_&lt;ГГГГ&gt;-&lt;ММ&gt;-&lt;ДД&gt;_&lt;ЧЧ&gt;_&lt;ММ&gt;_&lt;СС&gt;.log</cite></p>
+<p>В лог файле присутствуют записи уровня INFO о всех тестах, а также записи уровня CRITICAL для errors и failures</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Уровень логирования можно переопределить в опциях в словаре <cite>‘system’</cite> по ключу <cite>‘logging’</cite>.
+Пример файла <cite>local_options.py</cite> в директории тестового сценария для переопределения уровня логирования:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+
+<span class="n">system</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;logging&#39;</span> <span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>При использовании данных опций, в лог файл будут записываться только события уровня CRITICAL</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="advanced_usage_rus.html" class="btn btn-neutral float-right" title="Возможности системы" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="NMS TEST SYSTEM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Memotech.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

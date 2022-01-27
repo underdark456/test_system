@@ -1,0 +1,5 @@
+2021-10-14 17:28:41 - RUN - SampleCase - Initializing test case, running set_up_class...
+OK - test_sample - 
+INFO - test_sample - test execution time is 0.08 seconds
+2021-10-14 17:29:56 - INFO - SampleCase - Test case execution time is 75.1 seconds
+
